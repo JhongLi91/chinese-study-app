@@ -1,0 +1,19 @@
+I'm building a flashcard app to help me study chinese characters. I will be
+using react for frontend and sqlite3 for database to track progress. There is 
+no need to have a backend server. All the character data is in hanzi_db.json. 
+
+Here are the requirements:
+- There are 3 types: learned, new, and in-progress
+- The flashcard on the front will just be the word/phrase and at the back will
+be the pinying and definition
+- For each flashcard I should have a choice to click learned or in-progress.
+- Out of the 3000 entries, break them up into lessons, each with 25 entries. It
+should be by sorted by frequency (lesson 1 will have entries 1 to 25, lesson 2 
+will have entries 26 to 50, etc).
+- There should be a two tabs one to see the list of all learned words and a 
+different one for in-progress words, this tab is just to list the word, pinying, 
+and definition. It should not be flashcard style, however, there should be an
+option to run a flashcard quiz for all characters on the list in random ordering.
+- Use vim binding like l and h for going between left and right of the flashcard
+and j for learned and k in-progress. 
+- Have a stopwatch at top that I can start and reset whenever
