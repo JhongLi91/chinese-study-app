@@ -175,6 +175,31 @@ export function App() {
     if (next) playSound('click');
   };
 
+  const handlePrevLesson = () => {
+    playSound('click');
+    setActiveTab('lessons');
+    if (currentLessonNumber !== null) {
+      if (currentLessonNumber > 1) {
+        handleSelectLesson(currentLessonNumber - 1);
+      }
+    } else {
+      handleSelectLesson(1);
+    }
+  };
+
+  const handleNextLesson = () => {
+    const maxLessons = lessons.length || 120;
+    playSound('click');
+    setActiveTab('lessons');
+    if (currentLessonNumber !== null) {
+      if (currentLessonNumber < maxLessons) {
+        handleSelectLesson(currentLessonNumber + 1);
+      }
+    } else {
+      handleSelectLesson(1);
+    }
+  };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
@@ -190,6 +215,8 @@ export function App() {
       } else if (e.key === '?') {
         e.preventDefault();
         setIsVimModalOpen((prev) => !prev);
+      } else if (isQuizOpen || isDbModalOpen || isVimModalOpen) {
+        return;
       } else if (!e.ctrlKey && !e.metaKey && !e.altKey) {
         if (e.key === '1') {
           setActiveTab('lessons');
@@ -202,13 +229,19 @@ export function App() {
         } else if (e.key === '4') {
           setActiveTab('all');
           setCurrentLessonNumber(null);
+        } else if (e.key === '[') {
+          e.preventDefault();
+          handlePrevLesson();
+        } else if (e.key === ']') {
+          e.preventDefault();
+          handleNextLesson();
         }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isQuizOpen, isDbModalOpen, isVimModalOpen, currentLessonNumber]);
+  }, [isQuizOpen, isDbModalOpen, isVimModalOpen, currentLessonNumber, lessons]);
 
   if (isInitializing) {
     return (

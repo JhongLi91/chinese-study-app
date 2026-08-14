@@ -122,7 +122,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
             handleFlip();
           }
           break;
-        case 'enter':
+        case ';':
         case 'f':
           e.preventDefault();
           handleFlip();
@@ -239,7 +239,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
 
             <div className="flex items-center justify-between w-full pt-3 border-t border-slate-800/80 text-xs text-slate-500">
               <span className="flex items-center gap-1.5">
-                <RotateCw className="w-3.5 h-3.5" /> Click or <kbd className="font-mono bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-700">Enter</kbd> to flip
+                <RotateCw className="w-3.5 h-3.5" /> Click or <kbd className="font-mono bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-700">;</kbd> to flip
               </span>
               <span className="font-mono text-slate-400">
                 {cardIndex + 1} / {totalCards}
@@ -294,7 +294,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
 
             <div className="flex items-center justify-between w-full pt-3 border-t border-slate-800/80 text-xs text-slate-500">
               <span className="flex items-center gap-1.5">
-                <RotateCw className="w-3.5 h-3.5" /> Click or <kbd className="font-mono bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-700">Enter</kbd> to flip
+                <RotateCw className="w-3.5 h-3.5" /> Click or <kbd className="font-mono bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-700">;</kbd> to flip
               </span>
               <span className="font-mono text-slate-400">
                 {cardIndex + 1} / {totalCards}
@@ -363,7 +363,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
             <RotateCw className="w-3.5 h-3.5" />
             <span>Flip</span>
             <kbd className="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">
-              Enter
+              ;
             </kbd>
           </Button>
 
@@ -417,10 +417,12 @@ export const Flashcard: React.FC<FlashcardProps> = ({
       <div className="mt-4 text-center text-xs text-slate-500 flex items-center justify-center gap-3 flex-wrap font-mono">
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">h</kbd> Left</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">l</kbd> Right</span>
+        <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">[</kbd> Prev Lesson</span>
+        <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">]</kbd> Next Lesson</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">j</kbd> Learned</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">k</kbd> In-Progress</span>
+        <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">;</kbd> Flip</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">Space</kbd> Example</span>
-        <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">Enter</kbd> Flip</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">a</kbd> Audio</span>
       </div>
 

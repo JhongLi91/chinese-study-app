@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { Character, LessonInfo, StudyStatus } from '../types';
 import { Flashcard } from './Flashcard';
 import {
@@ -8,6 +8,7 @@ import {
   ArrowLeft,
   Search,
   Shuffle,
+  ChevronLeft,
   ChevronRight,
   RotateCcw,
   Trophy,
@@ -46,6 +47,13 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
   const [shuffledCards, setShuffledCards] = useState<Character[]>([]);
   const [isLessonCompleted, setIsLessonCompleted] = useState(false);
   const [lessonViewMode, setLessonViewMode] = useState<'flashcard' | 'list'>('flashcard');
+
+  useEffect(() => {
+    setCurrentCardIndex(0);
+    setIsShuffled(false);
+    setIsLessonCompleted(false);
+    setLessonViewMode('flashcard');
+  }, [currentLessonNumber]);
 
   const filteredLessons = useMemo(() => {
     return lessons.filter((lesson) => {
@@ -140,6 +148,34 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                 <ArrowLeft className="w-4 h-4" />
                 <span>Lessons</span>
               </Button>
+              <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded-lg p-0.5">
+                <Button
+                  variant="ghost"
+                  size="iconSm"
+                  disabled={currentLessonNumber <= 1}
+                  onClick={() => {
+                    playSound('click');
+                    onSelectLesson(currentLessonNumber - 1);
+                  }}
+                  title="Previous Lesson (or press '[')"
+                  className="rounded-md h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="iconSm"
+                  disabled={currentLessonNumber >= (lessons.length || 120)}
+                  onClick={() => {
+                    playSound('click');
+                    onSelectLesson(currentLessonNumber + 1);
+                  }}
+                  title="Next Lesson (or press ']')"
+                  className="rounded-md h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              </div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold text-slate-100 flex items-center gap-2">
                   <span>Lesson {currentLessonNumber}</span>

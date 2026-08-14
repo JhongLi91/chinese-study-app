@@ -13,10 +13,12 @@ export const VimHelpModal: React.FC<VimHelpModalProps> = ({ isOpen, onClose }) =
   const shortcuts = [
     { key: 'h / ←', desc: 'Previous card (navigate left)' },
     { key: 'l / →', desc: 'Next card (navigate right)' },
+    { key: '[', desc: 'Previous lesson (navigate back)' },
+    { key: ']', desc: 'Next lesson (navigate forward)' },
     { key: 'j', desc: 'Mark current card as Learned' },
     { key: 'k', desc: 'Mark current card as In-Progress' },
+    { key: '; / f', desc: 'Flip flashcard (Front ↔ Back)' },
     { key: 'Space', desc: 'Show example sentence popover (Press any key to close)' },
-    { key: 'Enter / f', desc: 'Flip flashcard (Front ↔ Back)' },
     { key: 'a', desc: 'Pronounce Mandarin audio (TTS)' },
     { key: 't', desc: 'Start / Pause top stopwatch' },
     { key: '1', desc: 'Switch to Lessons curriculum tab' },
