@@ -1,0 +1,5002 @@
+{
+  "1": {
+    "zh": "这是我的书。",
+    "py": "Zhè shì wǒ de shū.",
+    "en": "This is my book."
+  },
+  "2": {
+    "zh": "请给我一杯水。",
+    "py": "Qǐng gěi wǒ yī bēi shuǐ.",
+    "en": "Please give me a glass of water."
+  },
+  "3": {
+    "zh": "他是我们的老师。",
+    "py": "Tā shì wǒ mén de lǎo shī.",
+    "en": "He is our teacher."
+  },
+  "4": {
+    "zh": "我不知道这件事。",
+    "py": "Wǒ bù zhī dào zhè jiàn shì.",
+    "en": "I don't know about this matter."
+  },
+  "5": {
+    "zh": "我已经吃饱了。",
+    "py": "Wǒ yǐ jīng chī bǎo le.",
+    "en": "I am already full."
+  },
+  "6": {
+    "zh": "你在哪里上班？",
+    "py": "Nǐ zài nǎ lǐ shàng bān?",
+    "en": "Where do you work?"
+  },
+  "7": {
+    "zh": "这里的人非常热情。",
+    "py": "Zhè lǐ de rén fēi cháng rè qíng.",
+    "en": "The people here are very warm and friendly."
+  },
+  "8": {
+    "zh": "桌子上有两本书。",
+    "py": "Zhuō zǐ shàng yǒu liǎng běn shū.",
+    "en": "There are two books on the table."
+  },
+  "9": {
+    "zh": "我喜欢学中文。",
+    "py": "Wǒ xǐ huān xué zhōng wén.",
+    "en": "I like learning Chinese."
+  },
+  "10": {
+    "zh": "他每天都去跑步。",
+    "py": "Tā měi tiān dū qù pǎo bù.",
+    "en": "He goes running every day."
+  },
+  "11": {
+    "zh": "这个多少钱？",
+    "py": "Zhè gè duō shǎo qián?",
+    "en": "How much is this?"
+  },
+  "12": {
+    "zh": "我想买一个苹果。",
+    "py": "Wǒ xiǎng mǎi yī gè píng guǒ.",
+    "en": "I want to buy an apple."
+  },
+  "13": {
+    "zh": "我们一起去看电影吧。",
+    "py": "Wǒ mén yī qǐ qù kàn diàn yǐng bā.",
+    "en": "Let's go watch a movie together."
+  },
+  "14": {
+    "zh": "中国有很多美食。",
+    "py": "Zhōng guó yǒu hěn duō měi shí.",
+    "en": "China has a lot of delicious food."
+  },
+  "15": {
+    "zh": "欢迎来到北京！",
+    "py": "Huān yíng lái dào běi jīng!",
+    "en": "Welcome to Beijing!"
+  },
+  "16": {
+    "zh": "请大家上车。",
+    "py": "Qǐng dà jiā shàng chē.",
+    "en": "Please get on the bus, everyone."
+  },
+  "17": {
+    "zh": "外面雨下得很大。",
+    "py": "Wài miàn yǔ xià dé hěn dà.",
+    "en": "It's raining heavily outside."
+  },
+  "18": {
+    "zh": "这是为了你好。",
+    "py": "Zhè shì wéi le nǐ hǎo.",
+    "en": "This is for your own good."
+  },
+  "19": {
+    "zh": "我和他是好朋友。",
+    "py": "Wǒ hé tā shì hǎo péng yǒu.",
+    "en": "He and I are good friends."
+  },
+  "20": {
+    "zh": "他去过很多国家。",
+    "py": "Tā qù guò hěn duō guó jiā.",
+    "en": "He has been to many countries."
+  },
+  "21": {
+    "zh": "他高兴地笑了。",
+    "py": "Tā gāo xīng dì xiào le.",
+    "en": "He smiled happily."
+  },
+  "22": {
+    "zh": "火车按时到达了。",
+    "py": "Huǒ chē àn shí dào dá le.",
+    "en": "The train arrived on time."
+  },
+  "23": {
+    "zh": "以后我们常联系。",
+    "py": "Yǐ hòu wǒ mén cháng lián xì.",
+    "en": "Let's keep in touch often in the future."
+  },
+  "24": {
+    "zh": "请你说慢一点。",
+    "py": "Qǐng nǐ shuō màn yī diǎn.",
+    "en": "Please speak a bit slower."
+  },
+  "25": {
+    "zh": "吃饭时别看手机。",
+    "py": "Chī fàn shí bié kàn shǒu jī.",
+    "en": "Don't look at your phone while eating."
+  },
+  "26": {
+    "zh": "明天我要去上海。",
+    "py": "Míng tiān wǒ yào qù shàng hǎi.",
+    "en": "I need to go to Shanghai tomorrow."
+  },
+  "27": {
+    "zh": "做完作业就去玩。",
+    "py": "Zuò wán zuò yè jiù qù wán.",
+    "en": "Go play as soon as homework is done."
+  },
+  "28": {
+    "zh": "我们出去散步吧。",
+    "py": "Wǒ mén chū qù sàn bù bā.",
+    "en": "Let's go out for a walk."
+  },
+  "29": {
+    "zh": "你会游泳吗？",
+    "py": "Nǐ huì yóu yǒng ma?",
+    "en": "Can you swim?"
+  },
+  "30": {
+    "zh": "今天可能会下雪。",
+    "py": "Jīn tiān kě néng huì xià xuě.",
+    "en": "It might snow today."
+  },
+  "31": {
+    "zh": "我也喜欢听音乐。",
+    "py": "Wǒ yě xǐ huān tīng yīn lè.",
+    "en": "I also like listening to music."
+  },
+  "32": {
+    "zh": "你好，很高兴见到你。",
+    "py": "Nǐ hǎo, hěn gāo xīng jiàn dào nǐ.",
+    "en": "Hello, nice to meet you."
+  },
+  "33": {
+    "zh": "你说得很对。",
+    "py": "Nǐ shuō dé hěn duì.",
+    "en": "What you said is very right."
+  },
+  "34": {
+    "zh": "祝你生日快乐！",
+    "py": "Zhù nǐ shēng rì kuài lè!",
+    "en": "Happy birthday to you!"
+  },
+  "35": {
+    "zh": "你能帮我一下吗？",
+    "py": "Nǐ néng bāng wǒ yī xià ma?",
+    "en": "Can you help me for a moment?"
+  },
+  "36": {
+    "zh": "他不怕苦，而且很努力。",
+    "py": "Tā bù pà kǔ, ér qiě hěn nǔ lì.",
+    "en": "He isn't afraid of hardship and works hard."
+  },
+  "37": {
+    "zh": "那个孩子很聪明。",
+    "py": "Nà gè hái zǐ hěn cōng míng.",
+    "en": "That child is very clever."
+  },
+  "38": {
+    "zh": "那是谁的手机？",
+    "py": "Nà shì shuí de shǒu jī?",
+    "en": "Whose mobile phone is that?"
+  },
+  "39": {
+    "zh": "他跑得非常快。",
+    "py": "Tā pǎo dé fēi cháng kuài.",
+    "en": "He runs very fast."
+  },
+  "40": {
+    "zh": "这个故事源于生活。",
+    "py": "Zhè gè gù shì yuán yú shēng huó.",
+    "en": "This story originates from life."
+  },
+  "41": {
+    "zh": "门开着呢，请进。",
+    "py": "Mén kāi zháo ne, qǐng jìn.",
+    "en": "The door is open, please come in."
+  },
+  "42": {
+    "zh": "我们在下一站下车。",
+    "py": "Wǒ mén zài xià yī zhàn xià chē.",
+    "en": "We get off at the next stop."
+  },
+  "43": {
+    "zh": "这封信来自远方。",
+    "py": "Zhè fēng xìn lái zì yuǎn fāng.",
+    "en": "This letter came from far away."
+  },
+  "44": {
+    "zh": "这是最好的方法之一。",
+    "py": "Zhè shì zuì hǎo de fāng fǎ zhī yī.",
+    "en": "This is one of the best methods."
+  },
+  "45": {
+    "zh": "他在北京住了三年。",
+    "py": "Tā zài běi jīng zhù le sān nián.",
+    "en": "He lived in Beijing for three years."
+  },
+  "46": {
+    "zh": "你去过长城吗？",
+    "py": "Nǐ qù guò cháng chéng ma?",
+    "en": "Have you been to the Great Wall?"
+  },
+  "47": {
+    "zh": "我给你发了一条短信。",
+    "py": "Wǒ gěi nǐ fā le yī tiáo duǎn xìn.",
+    "en": "I sent you a text message."
+  },
+  "48": {
+    "zh": "吃完饭后去散步。",
+    "py": "Chī wán fàn hòu qù sàn bù.",
+    "en": "Go for a walk after eating."
+  },
+  "49": {
+    "zh": "他的工作很认真。",
+    "py": "Tā de gōng zuò hěn rèn zhēn.",
+    "en": "He is very conscientious in his work."
+  },
+  "50": {
+    "zh": "书包里装着笔记本。",
+    "py": "Shū bāo lǐ zhuāng zháo bǐ jì běn.",
+    "en": "There is a notebook in the schoolbag."
+  },
+  "51": {
+    "zh": "请用筷子吃饭。",
+    "py": "Qǐng yòng kuài zǐ chī fàn.",
+    "en": "Please eat with chopsticks."
+  },
+  "52": {
+    "zh": "你知道火车站怎么走吗？",
+    "py": "Nǐ zhī dào huǒ chē zhàn zěn mó zǒu ma?",
+    "en": "Do you know how to get to the train station?"
+  },
+  "53": {
+    "zh": "我们明天去旅行。",
+    "py": "Wǒ mén míng tiān qù lǚ háng.",
+    "en": "We are going on a trip tomorrow."
+  },
+  "54": {
+    "zh": "所有人都按时到了。",
+    "py": "Suǒ yǒu rén dū àn shí dào le.",
+    "en": "Everyone arrived on time."
+  },
+  "55": {
+    "zh": "天气突然变冷了。",
+    "py": "Tiān qì tū rán biàn lěng le.",
+    "en": "The weather suddenly turned cold."
+  },
+  "56": {
+    "zh": "我想早点回家。",
+    "py": "Wǒ xiǎng zǎo diǎn huí jiā.",
+    "en": "I want to go home early."
+  },
+  "57": {
+    "zh": "我喜欢这种颜色。",
+    "py": "Wǒ xǐ huān zhè zhǒng yán sè.",
+    "en": "I like this kind of color."
+  },
+  "58": {
+    "zh": "今天发生了一件好事。",
+    "py": "Jīn tiān fā shēng le yī jiàn hǎo shì.",
+    "en": "A good thing happened today."
+  },
+  "59": {
+    "zh": "他的梦想实现了。",
+    "py": "Tā de mèng xiǎng shí xiàn le.",
+    "en": "His dream came true."
+  },
+  "60": {
+    "zh": "这个地方风景很美。",
+    "py": "Zhè gè dì fāng fēng jǐng hěn měi.",
+    "en": "The scenery in this place is very beautiful."
+  },
+  "61": {
+    "zh": "这件衣服多少钱？",
+    "py": "Zhè jiàn yī fú duō shǎo qián?",
+    "en": "How much is this piece of clothing?"
+  },
+  "62": {
+    "zh": "我已经写完作业了。",
+    "py": "Wǒ yǐ jīng xiě wán zuò yè le.",
+    "en": "I have already finished my homework."
+  },
+  "63": {
+    "zh": "你想吃什么点心？",
+    "py": "Nǐ xiǎng chī shí mó diǎn xīn?",
+    "en": "What snacks would you like to eat?"
+  },
+  "64": {
+    "zh": "我们一起去公园吧。",
+    "py": "Wǒ mén yī qǐ qù gōng yuán bā.",
+    "en": "Let's go to the park together."
+  },
+  "65": {
+    "zh": "这是一个好方法。",
+    "py": "Zhè shì yī gè hǎo fāng fǎ.",
+    "en": "This is a good method."
+  },
+  "66": {
+    "zh": "他在大学学医。",
+    "py": "Tā zài dà xué xué yī.",
+    "en": "He studies medicine at university."
+  },
+  "67": {
+    "zh": "如果下雨就不去了。",
+    "py": "Rú guǒ xià yǔ jiù bù qù le.",
+    "en": "If it rains, we won't go."
+  },
+  "68": {
+    "zh": "我们大家都赞成。",
+    "py": "Wǒ mén dà jiā dū zàn chéng.",
+    "en": "All of us agree."
+  },
+  "69": {
+    "zh": "我们俩看法相同。",
+    "py": "Wǒ mén liǎng kàn fǎ xiāng tóng.",
+    "en": "The two of us have the same view."
+  },
+  "70": {
+    "zh": "现在几点了？",
+    "py": "Xiàn zài jī diǎn le?",
+    "en": "What time is it now?"
+  },
+  "71": {
+    "zh": "他长大想当医生。",
+    "py": "Tā cháng dà xiǎng dāng yī shēng.",
+    "en": "He wants to be a doctor when he grows up."
+  },
+  "72": {
+    "zh": "我还没吃早饭。",
+    "py": "Wǒ huán méi chī zǎo fàn.",
+    "en": "I haven't eaten breakfast yet."
+  },
+  "73": {
+    "zh": "多运动对身体好。",
+    "py": "Duō yùn dòng duì shēn tǐ hǎo.",
+    "en": "Exercising more is good for your health."
+  },
+  "74": {
+    "zh": "我想吃一碗拉面。",
+    "py": "Wǒ xiǎng chī yī wǎn lā miàn.",
+    "en": "I want to eat a bowl of ramen noodles."
+  },
+  "75": {
+    "zh": "明天早上早点起床。",
+    "py": "Míng tiān zǎo shàng zǎo diǎn qǐ chuáng.",
+    "en": "Get up early tomorrow morning."
+  },
+  "76": {
+    "zh": "我看过这部电影。",
+    "py": "Wǒ kàn guò zhè bù diàn yǐng.",
+    "en": "I have seen this movie."
+  },
+  "77": {
+    "zh": "我们已经决定了。",
+    "py": "Wǒ mén yǐ jīng jué dìng le.",
+    "en": "We have already decided."
+  },
+  "78": {
+    "zh": "今天天气真好！",
+    "py": "Jīn tiān tiān qì zhēn hǎo!",
+    "en": "The weather is really nice today!"
+  },
+  "79": {
+    "zh": "还有十分钟就下课了。",
+    "py": "Huán yǒu shí fēn zhōng jiù xià kè le.",
+    "en": "There are still ten minutes until class ends."
+  },
+  "80": {
+    "zh": "还有其他人要来吗？",
+    "py": "Huán yǒu qí tā rén yào lái ma?",
+    "en": "Are there still other people coming?"
+  },
+  "81": {
+    "zh": "外面冷，快请进。",
+    "py": "Wài miàn lěng, kuài qǐng jìn.",
+    "en": "It's cold outside, please come in quickly."
+  },
+  "82": {
+    "zh": "这本书非常好读。",
+    "py": "Zhè běn shū fēi cháng hǎo dú.",
+    "en": "This book is very easy and enjoyable to read."
+  },
+  "83": {
+    "zh": "那只小狗真可爱。",
+    "py": "Nà zhī xiǎo gǒu zhēn kě ài.",
+    "en": "That little dog is really cute."
+  },
+  "84": {
+    "zh": "这部小说很有名。",
+    "py": "Zhè bù xiǎo shuō hěn yǒu míng.",
+    "en": "This novel is very famous."
+  },
+  "85": {
+    "zh": "其他人都在哪里？",
+    "py": "Qí tā rén dū zài nǎ lǐ?",
+    "en": "Where are the other people?"
+  },
+  "86": {
+    "zh": "请给我买些水果。",
+    "py": "Qǐng gěi wǒ mǎi xiē shuǐ guǒ.",
+    "en": "Please buy me some fruit."
+  },
+  "87": {
+    "zh": "这是今天的主要任务。",
+    "py": "Zhè shì jīn tiān de zhǔ yào rèn wù.",
+    "en": "This is today's main task."
+  },
+  "88": {
+    "zh": "这件衣服样子很好看。",
+    "py": "Zhè jiàn yī fú yàng zǐ hěn hǎo kàn.",
+    "en": "The style of this piece of clothing looks very nice."
+  },
+  "89": {
+    "zh": "我完全理解你的意思。",
+    "py": "Wǒ wán quán lǐ jiě nǐ de yì sī.",
+    "en": "I completely understand what you mean."
+  },
+  "90": {
+    "zh": "今天我的心情特别好。",
+    "py": "Jīn tiān wǒ de xīn qíng tè bié hǎo.",
+    "en": "My mood is especially good today."
+  },
+  "91": {
+    "zh": "她是我的大学同学。",
+    "py": "Tā shì wǒ de dà xué tóng xué.",
+    "en": "She is my university classmate."
+  },
+  "92": {
+    "zh": "我买了三本中文书。",
+    "py": "Wǒ mǎi le sān běn zhōng wén shū.",
+    "en": "I bought three Chinese books."
+  },
+  "93": {
+    "zh": "请站在门前等一下。",
+    "py": "Qǐng zhàn zài mén qián děng yī xià.",
+    "en": "Please wait in front of the door for a moment."
+  },
+  "94": {
+    "zh": "请把窗户开一下。",
+    "py": "Qǐng bǎ chuāng hù kāi yī xià.",
+    "en": "Please open the window for a moment."
+  },
+  "95": {
+    "zh": "虽然贵，但质量很好。",
+    "py": "Suī rán guì, dàn zhì liáng hěn hǎo.",
+    "en": "Although expensive, the quality is very good."
+  },
+  "96": {
+    "zh": "因为下雨，没出门。",
+    "py": "Yīn wéi xià yǔ, méi chū mén.",
+    "en": "Because it rained, I didn't go out."
+  },
+  "97": {
+    "zh": "我只有十块钱。",
+    "py": "Wǒ zhī yǒu shí kuài qián.",
+    "en": "I only have ten yuan."
+  },
+  "98": {
+    "zh": "他从上海坐火车来北京。",
+    "py": "Tā cóng shàng hǎi zuò huǒ chē lái běi jīng.",
+    "en": "He took a train from Shanghai to Beijing."
+  },
+  "99": {
+    "zh": "我想去喝一杯咖啡。",
+    "py": "Wǒ xiǎng qù hē yī bēi kā fēi.",
+    "en": "I want to go drink a cup of coffee."
+  },
+  "100": {
+    "zh": "其实事情并不是那样。",
+    "py": "Qí shí shì qíng bìng bù shì nà yàng.",
+    "en": "Actually, things were not like that."
+  },
+  "101": {
+    "zh": "祝你生日快乐！",
+    "py": "Zhù nǐ shēng rì kuài lè!",
+    "en": "Happy birthday to you!"
+  },
+  "102": {
+    "zh": "在生活里，“军”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"军\" (army) is commonly used."
+  },
+  "103": {
+    "zh": "在生活里，“者”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"者\" (that which) is commonly used."
+  },
+  "104": {
+    "zh": "在生活里，“意”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"意\" (thought) is commonly used."
+  },
+  "105": {
+    "zh": "在生活里，“无”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"无\" (negative) is commonly used."
+  },
+  "106": {
+    "zh": "在生活里，“力”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"力\" (power) is commonly used."
+  },
+  "107": {
+    "zh": "在生活里，“它”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"它\" (it) is commonly used."
+  },
+  "108": {
+    "zh": "在生活里，“与”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"与\" (and) is commonly used."
+  },
+  "109": {
+    "zh": "这条路非常长走不到头。",
+    "py": "Zhè tiáo lù fēi cháng cháng zǒu bù dào tóu.",
+    "en": "This road is very long with no end in sight."
+  },
+  "110": {
+    "zh": "在生活里，“把”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǎ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"把\" (hold) is commonly used."
+  },
+  "111": {
+    "zh": "在生活里，“机”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"机\" (desk) is commonly used."
+  },
+  "112": {
+    "zh": "现在是上午十点。",
+    "py": "Xiàn zài shì shàng wǔ shí diǎn.",
+    "en": "It is now 10:00 AM."
+  },
+  "113": {
+    "zh": "在生活里，“民”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mín” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"民\" (people) is commonly used."
+  },
+  "114": {
+    "zh": "在生活里，“第”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"第\" (sequence) is commonly used."
+  },
+  "115": {
+    "zh": "在生活里，“公”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"公\" (fair) is commonly used."
+  },
+  "116": {
+    "zh": "在生活里，“此”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"此\" (this) is commonly used."
+  },
+  "117": {
+    "zh": "在生活里，“已”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"已\" (already) is commonly used."
+  },
+  "118": {
+    "zh": "工人们正在盖房子。",
+    "py": "Gōng rén mén zhèng zài gài fáng zǐ.",
+    "en": "The workers are building a house."
+  },
+  "119": {
+    "zh": "在生活里，“使”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"使\" (cause) is commonly used."
+  },
+  "120": {
+    "zh": "在生活里，“情”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qíng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"情\" (feeling) is commonly used."
+  },
+  "121": {
+    "zh": "明天我们一起去公园。",
+    "py": "Míng tiān wǒ mén yī qǐ qù gōng yuán.",
+    "en": "We'll go to the park together tomorrow."
+  },
+  "122": {
+    "zh": "在生活里，“性”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"性\" (nature) is commonly used."
+  },
+  "123": {
+    "zh": "在生活里，“知”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"知\" (know) is commonly used."
+  },
+  "124": {
+    "zh": "在生活里，“全”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“quán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"全\" (maintain) is commonly used."
+  },
+  "125": {
+    "zh": "在生活里，“三”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"三\" (three) is commonly used."
+  },
+  "126": {
+    "zh": "在生活里，“又”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"又\" (and) is commonly used."
+  },
+  "127": {
+    "zh": "在生活里，“关”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"关\" (frontier pass) is commonly used."
+  },
+  "128": {
+    "zh": "在生活里，“点”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“diǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"点\" (dot) is commonly used."
+  },
+  "129": {
+    "zh": "在生活里，“正”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhèng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"正\" (right) is commonly used."
+  },
+  "130": {
+    "zh": "在生活里，“业”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"业\" (profession) is commonly used."
+  },
+  "131": {
+    "zh": "在生活里，“外”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"外\" (out) is commonly used."
+  },
+  "132": {
+    "zh": "在生活里，“将”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"将\" (will) is commonly used."
+  },
+  "133": {
+    "zh": "在生活里，“两”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"两\" (two) is commonly used."
+  },
+  "134": {
+    "zh": "那座楼非常高。",
+    "py": "Nà zuò lóu fēi cháng gāo.",
+    "en": "That building is very tall."
+  },
+  "135": {
+    "zh": "在生活里，“间”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"间\" (midpoint) is commonly used."
+  },
+  "136": {
+    "zh": "在生活里，“由”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yóu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"由\" (cause) is commonly used."
+  },
+  "137": {
+    "zh": "在生活里，“问”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wèn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"问\" (ask about) is commonly used."
+  },
+  "138": {
+    "zh": "在生活里，“很”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hěn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"很\" (very) is commonly used."
+  },
+  "139": {
+    "zh": "在生活里，“最”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zuì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"最\" (most) is commonly used."
+  },
+  "140": {
+    "zh": "这个行李箱有点沉重。",
+    "py": "Zhè gè háng lǐ xiāng yǒu diǎn chén zhòng.",
+    "en": "This luggage suitcase is a bit heavy."
+  },
+  "141": {
+    "zh": "在生活里，“并”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"并\" () is commonly used."
+  },
+  "142": {
+    "zh": "在生活里，“物”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"物\" (thing) is commonly used."
+  },
+  "143": {
+    "zh": "吃饭前请洗手。",
+    "py": "Chī fàn qián qǐng xǐ shǒu.",
+    "en": "Please wash your hands before meals."
+  },
+  "144": {
+    "zh": "在生活里，“应”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"应\" (should) is commonly used."
+  },
+  "145": {
+    "zh": "在生活里，“战”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"战\" (war) is commonly used."
+  },
+  "146": {
+    "zh": "在生活里，“向”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"向\" (toward) is commonly used."
+  },
+  "147": {
+    "zh": "在生活里，“头”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tóu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"头\" (head) is commonly used."
+  },
+  "148": {
+    "zh": "他很喜欢中国文化。",
+    "py": "Tā hěn xǐ huān zhōng guó wén huà.",
+    "en": "He likes Chinese culture very much."
+  },
+  "149": {
+    "zh": "在生活里，“体”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"体\" (body) is commonly used."
+  },
+  "150": {
+    "zh": "在生活里，“政”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhèng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"政\" (government) is commonly used."
+  },
+  "151": {
+    "zh": "在生活里，“美”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“měi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"美\" (beautiful) is commonly used."
+  },
+  "152": {
+    "zh": "在生活里，“相”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"相\" (mutual) is commonly used."
+  },
+  "153": {
+    "zh": "明天下午两点见。",
+    "py": "Míng tiān xià wǔ liǎng diǎn jiàn.",
+    "en": "See you tomorrow at 2:00 PM."
+  },
+  "154": {
+    "zh": "在生活里，“被”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"被\" () is commonly used."
+  },
+  "155": {
+    "zh": "在生活里，“利”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"利\" (gains) is commonly used."
+  },
+  "156": {
+    "zh": "在生活里，“什”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"什\" (file of ten soldiers) is commonly used."
+  },
+  "157": {
+    "zh": "在生活里，“二”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“èr” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"二\" (two) is commonly used."
+  },
+  "158": {
+    "zh": "在生活里，“等”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“děng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"等\" () is commonly used."
+  },
+  "159": {
+    "zh": "在生活里，“产”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"产\" (give birth) is commonly used."
+  },
+  "160": {
+    "zh": "在生活里，“或”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"或\" (or) is commonly used."
+  },
+  "161": {
+    "zh": "他买了一辆新自行车。",
+    "py": "Tā mǎi le yī liàng xīn zì háng chē.",
+    "en": "He bought a new bicycle."
+  },
+  "162": {
+    "zh": "在生活里，“己”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"己\" (self) is commonly used."
+  },
+  "163": {
+    "zh": "在生活里，“制”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"制\" (system) is commonly used."
+  },
+  "164": {
+    "zh": "在生活里，“身”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"身\" (body) is commonly used."
+  },
+  "165": {
+    "zh": "在生活里，“果”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guǒ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"果\" (fruit) is commonly used."
+  },
+  "166": {
+    "zh": "在生活里，“加”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"加\" (add to) is commonly used."
+  },
+  "167": {
+    "zh": "在生活里，“西”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"西\" (west(ern)) is commonly used."
+  },
+  "168": {
+    "zh": "在生活里，“斯”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"斯\" (this) is commonly used."
+  },
+  "169": {
+    "zh": "在生活里，“月”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"月\" (moon) is commonly used."
+  },
+  "170": {
+    "zh": "请有话好好说。",
+    "py": "Qǐng yǒu huà hǎo hǎo shuō.",
+    "en": "Please speak calmly and clearly."
+  },
+  "171": {
+    "zh": "在生活里，“合”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"合\" (combine) is commonly used."
+  },
+  "172": {
+    "zh": "在生活里，“回”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"回\" (return) is commonly used."
+  },
+  "173": {
+    "zh": "在生活里，“特”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"特\" (special) is commonly used."
+  },
+  "174": {
+    "zh": "在生活里，“代”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"代\" (replace) is commonly used."
+  },
+  "175": {
+    "zh": "在生活里，“内”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"内\" (inside) is commonly used."
+  },
+  "176": {
+    "zh": "在生活里，“信”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xìn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"信\" (trust) is commonly used."
+  },
+  "177": {
+    "zh": "在生活里，“表”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“biǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"表\" (show) is commonly used."
+  },
+  "178": {
+    "zh": "在生活里，“化”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"化\" (change) is commonly used."
+  },
+  "179": {
+    "zh": "在生活里，“老”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"老\" (old) is commonly used."
+  },
+  "180": {
+    "zh": "在生活里，“给”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gěi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"给\" (give) is commonly used."
+  },
+  "181": {
+    "zh": "在生活里，“世”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"世\" (generation) is commonly used."
+  },
+  "182": {
+    "zh": "在生活里，“位”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"位\" (throne) is commonly used."
+  },
+  "183": {
+    "zh": "在生活里，“次”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"次\" (order) is commonly used."
+  },
+  "184": {
+    "zh": "在生活里，“度”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"度\" (degree) is commonly used."
+  },
+  "185": {
+    "zh": "进门前请先敲门。",
+    "py": "Jìn mén qián qǐng xiān qiāo mén.",
+    "en": "Please knock before entering the door."
+  },
+  "186": {
+    "zh": "在生活里，“任”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“rèn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"任\" (trust to) is commonly used."
+  },
+  "187": {
+    "zh": "在生活里，“常”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cháng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"常\" (common) is commonly used."
+  },
+  "188": {
+    "zh": "在生活里，“先”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"先\" (first) is commonly used."
+  },
+  "189": {
+    "zh": "夏天去海边吹吹海风。",
+    "py": "Xià tiān qù hǎi biān chuī chuī hǎi fēng.",
+    "en": "Go to the seaside in summer to enjoy the sea breeze."
+  },
+  "190": {
+    "zh": "在生活里，“通”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"通\" (pass through) is commonly used."
+  },
+  "191": {
+    "zh": "在生活里，“教”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"教\" (teach) is commonly used."
+  },
+  "192": {
+    "zh": "在生活里，“儿”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ér” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"儿\" (son) is commonly used."
+  },
+  "193": {
+    "zh": "在生活里，“原”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"原\" (source) is commonly used."
+  },
+  "194": {
+    "zh": "在生活里，“东”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"东\" (east) is commonly used."
+  },
+  "195": {
+    "zh": "在生活里，“声”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"声\" (sound) is commonly used."
+  },
+  "196": {
+    "zh": "在生活里，“提”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"提\" (hold in hand) is commonly used."
+  },
+  "197": {
+    "zh": "在生活里，“立”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"立\" (stand) is commonly used."
+  },
+  "198": {
+    "zh": "在生活里，“及”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"及\" (extend) is commonly used."
+  },
+  "199": {
+    "zh": "在生活里，“比”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"比\" (to compare) is commonly used."
+  },
+  "200": {
+    "zh": "在生活里，“员”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"员\" (member) is commonly used."
+  },
+  "201": {
+    "zh": "在生活里，“解”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"解\" (loosen) is commonly used."
+  },
+  "202": {
+    "zh": "请喝一杯温水。",
+    "py": "Qǐng hē yī bēi wēn shuǐ.",
+    "en": "Please drink a glass of warm water."
+  },
+  "203": {
+    "zh": "请在这写下你的名字。",
+    "py": "Qǐng zài zhè xiě xià nǐ de míng zì.",
+    "en": "Please write your name here."
+  },
+  "204": {
+    "zh": "在生活里，“真”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"真\" (real) is commonly used."
+  },
+  "205": {
+    "zh": "在生活里，“论”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lùn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"论\" (debate) is commonly used."
+  },
+  "206": {
+    "zh": "在生活里，“处”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"处\" (place) is commonly used."
+  },
+  "207": {
+    "zh": "在生活里，“走”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"走\" (walk) is commonly used."
+  },
+  "208": {
+    "zh": "在生活里，“义”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"义\" (right conduct) is commonly used."
+  },
+  "209": {
+    "zh": "在生活里，“各”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"各\" (each) is commonly used."
+  },
+  "210": {
+    "zh": "在生活里，“入”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“rù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"入\" (enter) is commonly used."
+  },
+  "211": {
+    "zh": "在生活里，“几”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"几\" (small table) is commonly used."
+  },
+  "212": {
+    "zh": "在生活里，“口”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"口\" (mouth) is commonly used."
+  },
+  "213": {
+    "zh": "在生活里，“认”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“rèn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"认\" (recognize) is commonly used."
+  },
+  "214": {
+    "zh": "在生活里，“条”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tiáo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"条\" (clause) is commonly used."
+  },
+  "215": {
+    "zh": "在生活里，“平”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“píng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"平\" (flat) is commonly used."
+  },
+  "216": {
+    "zh": "在生活里，“系”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"系\" (system) is commonly used."
+  },
+  "217": {
+    "zh": "今天空气很清新。",
+    "py": "Jīn tiān kōng qì hěn qīng xīn.",
+    "en": "The air is very fresh today."
+  },
+  "218": {
+    "zh": "在生活里，“题”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"题\" (forehead) is commonly used."
+  },
+  "219": {
+    "zh": "在生活里，“活”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huó” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"活\" (live) is commonly used."
+  },
+  "220": {
+    "zh": "在生活里，“尔”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ěr” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"尔\" (you) is commonly used."
+  },
+  "221": {
+    "zh": "在生活里，“更”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"更\" (more) is commonly used."
+  },
+  "222": {
+    "zh": "在生活里，“别”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bié” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"别\" (separate) is commonly used."
+  },
+  "223": {
+    "zh": "在生活里，“打”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǎ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"打\" (strike) is commonly used."
+  },
+  "224": {
+    "zh": "在生活里，“女”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nǚ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"女\" (woman) is commonly used."
+  },
+  "225": {
+    "zh": "在生活里，“变”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“biàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"变\" (change) is commonly used."
+  },
+  "226": {
+    "zh": "在生活里，“四”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"四\" (four) is commonly used."
+  },
+  "227": {
+    "zh": "在生活里，“神”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shén” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"神\" (spirit) is commonly used."
+  },
+  "228": {
+    "zh": "在生活里，“总”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zǒng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"总\" (collect) is commonly used."
+  },
+  "229": {
+    "zh": "在生活里，“何”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"何\" (what) is commonly used."
+  },
+  "230": {
+    "zh": "手机快没电了。",
+    "py": "Shǒu jī kuài méi diàn le.",
+    "en": "The phone battery is almost empty."
+  },
+  "231": {
+    "zh": "在生活里，“数”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"数\" (number) is commonly used."
+  },
+  "232": {
+    "zh": "在生活里，“安”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"安\" (peaceful) is commonly used."
+  },
+  "233": {
+    "zh": "路上车很少一路很畅通。",
+    "py": "Lù shàng chē hěn shǎo yī lù hěn chàng tōng.",
+    "en": "There are few cars on the road, traffic is smooth."
+  },
+  "234": {
+    "zh": "在生活里，“报”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"报\" (report) is commonly used."
+  },
+  "235": {
+    "zh": "在生活里，“才”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"才\" (talent) is commonly used."
+  },
+  "236": {
+    "zh": "在生活里，“结”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jié” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"结\" (knot) is commonly used."
+  },
+  "237": {
+    "zh": "在生活里，“反”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"反\" (reverse) is commonly used."
+  },
+  "238": {
+    "zh": "在生活里，“受”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"受\" (receive) is commonly used."
+  },
+  "239": {
+    "zh": "在生活里，“目”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"目\" (eye) is commonly used."
+  },
+  "240": {
+    "zh": "在生活里，“太”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"太\" (very) is commonly used."
+  },
+  "241": {
+    "zh": "在生活里，“量”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"量\" (measure) is commonly used."
+  },
+  "242": {
+    "zh": "下次有机会再聊。",
+    "py": "Xià cì yǒu jī huì zài liáo.",
+    "en": "Let's chat again next time when there is a chance."
+  },
+  "243": {
+    "zh": "在生活里，“感”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"感\" (feel) is commonly used."
+  },
+  "244": {
+    "zh": "在生活里，“建”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"建\" (build) is commonly used."
+  },
+  "245": {
+    "zh": "在生活里，“务”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"务\" (affairs) is commonly used."
+  },
+  "246": {
+    "zh": "在生活里，“做”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zuò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"做\" (work) is commonly used."
+  },
+  "247": {
+    "zh": "在生活里，“接”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"接\" (receive) is commonly used."
+  },
+  "248": {
+    "zh": "在生活里，“必”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"必\" (surely) is commonly used."
+  },
+  "249": {
+    "zh": "在生活里，“场”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cháng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"场\" (open space) is commonly used."
+  },
+  "250": {
+    "zh": "在生活里，“件”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"件\" (numerary adjunct for article) is commonly used."
+  },
+  "251": {
+    "zh": "在生活里，“计”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"计\" (plan) is commonly used."
+  },
+  "252": {
+    "zh": "在生活里，“管”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"管\" (pipe) is commonly used."
+  },
+  "253": {
+    "zh": "在生活里，“期”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"期\" (period of time) is commonly used."
+  },
+  "254": {
+    "zh": "在生活里，“市”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"市\" (market) is commonly used."
+  },
+  "255": {
+    "zh": "在生活里，“直”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"直\" (straight) is commonly used."
+  },
+  "256": {
+    "zh": "在生活里，“德”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"德\" (ethics) is commonly used."
+  },
+  "257": {
+    "zh": "在生活里，“资”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"资\" (property) is commonly used."
+  },
+  "258": {
+    "zh": "在生活里，“命”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"命\" (life) is commonly used."
+  },
+  "259": {
+    "zh": "我们周末一起去爬山。",
+    "py": "Wǒ mén zhōu mò yī qǐ qù pá shān.",
+    "en": "Let's climb the mountain together on the weekend."
+  },
+  "260": {
+    "zh": "在生活里，“金”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"金\" (gold) is commonly used."
+  },
+  "261": {
+    "zh": "在生活里，“指”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"指\" (finger) is commonly used."
+  },
+  "262": {
+    "zh": "在生活里，“克”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"克\" (gram) is commonly used."
+  },
+  "263": {
+    "zh": "在生活里，“许”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"许\" (allow) is commonly used."
+  },
+  "264": {
+    "zh": "在生活里，“统”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tǒng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"统\" (govern) is commonly used."
+  },
+  "265": {
+    "zh": "在生活里，“区”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"区\" (area) is commonly used."
+  },
+  "266": {
+    "zh": "在生活里，“保”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"保\" (protect) is commonly used."
+  },
+  "267": {
+    "zh": "在生活里，“至”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"至\" (reach) is commonly used."
+  },
+  "268": {
+    "zh": "在生活里，“队”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“duì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"队\" (team) is commonly used."
+  },
+  "269": {
+    "zh": "在生活里，“形”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xíng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"形\" (form) is commonly used."
+  },
+  "270": {
+    "zh": "在生活里，“社”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"社\" (god of the soil and altars to him) is commonly used."
+  },
+  "271": {
+    "zh": "在生活里，“便”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“biàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"便\" (convenience) is commonly used."
+  },
+  "272": {
+    "zh": "在生活里，“空”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"空\" (empty) is commonly used."
+  },
+  "273": {
+    "zh": "在生活里，“决”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jué” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"决\" (decide) is commonly used."
+  },
+  "274": {
+    "zh": "在生活里，“治”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"治\" (govern) is commonly used."
+  },
+  "275": {
+    "zh": "在生活里，“展”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"展\" (open) is commonly used."
+  },
+  "276": {
+    "zh": "在生活里，“马”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mǎ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"马\" (horse) is commonly used."
+  },
+  "277": {
+    "zh": "在生活里，“科”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"科\" (section) is commonly used."
+  },
+  "278": {
+    "zh": "在生活里，“司”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"司\" (take charge of) is commonly used."
+  },
+  "279": {
+    "zh": "在生活里，“五”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"五\" (five) is commonly used."
+  },
+  "280": {
+    "zh": "在生活里，“基”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"基\" (foundation) is commonly used."
+  },
+  "281": {
+    "zh": "在生活里，“眼”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"眼\" (eye) is commonly used."
+  },
+  "282": {
+    "zh": "他在图书馆借了三本书。",
+    "py": "Tā zài tú shū guǎn jiè le sān běn shū.",
+    "en": "He borrowed three books from the library."
+  },
+  "283": {
+    "zh": "在生活里，“非”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fēi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"非\" (not) is commonly used."
+  },
+  "284": {
+    "zh": "在生活里，“则”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"则\" (rule) is commonly used."
+  },
+  "285": {
+    "zh": "在生活里，“听”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"听\" (hear) is commonly used."
+  },
+  "286": {
+    "zh": "在生活里，“白”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"白\" (white) is commonly used."
+  },
+  "287": {
+    "zh": "在生活里，“却”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“què” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"却\" (still) is commonly used."
+  },
+  "288": {
+    "zh": "在生活里，“界”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"界\" (boundary) is commonly used."
+  },
+  "289": {
+    "zh": "在生活里，“达”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"达\" (arrive at) is commonly used."
+  },
+  "290": {
+    "zh": "在生活里，“光”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"光\" (light) is commonly used."
+  },
+  "291": {
+    "zh": "在生活里，“放”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"放\" (put) is commonly used."
+  },
+  "292": {
+    "zh": "在生活里，“强”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"强\" (strong) is commonly used."
+  },
+  "293": {
+    "zh": "在生活里，“即”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"即\" (promptly) is commonly used."
+  },
+  "294": {
+    "zh": "在生活里，“像”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"像\" (a picture) is commonly used."
+  },
+  "295": {
+    "zh": "这道数学题太难解了。",
+    "py": "Zhè dào shù xué tí tài nán jiě le.",
+    "en": "This math problem is too difficult to solve."
+  },
+  "296": {
+    "zh": "在生活里，“且”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"且\" (moreover) is commonly used."
+  },
+  "297": {
+    "zh": "在生活里，“权”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“quán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"权\" (power) is commonly used."
+  },
+  "298": {
+    "zh": "在生活里，“思”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"思\" (think) is commonly used."
+  },
+  "299": {
+    "zh": "在生活里，“王”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"王\" (king) is commonly used."
+  },
+  "300": {
+    "zh": "在生活里，“象”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"象\" (elephant) is commonly used."
+  },
+  "301": {
+    "zh": "在生活里，“完”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"完\" (complete) is commonly used."
+  },
+  "302": {
+    "zh": "在生活里，“设”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"设\" (build) is commonly used."
+  },
+  "303": {
+    "zh": "在生活里，“式”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"式\" (style) is commonly used."
+  },
+  "304": {
+    "zh": "在生活里，“色”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"色\" (color) is commonly used."
+  },
+  "305": {
+    "zh": "在生活里，“路”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"路\" (road) is commonly used."
+  },
+  "306": {
+    "zh": "在生活里，“记”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"记\" (record) is commonly used."
+  },
+  "307": {
+    "zh": "在生活里，“南”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"南\" (south) is commonly used."
+  },
+  "308": {
+    "zh": "在生活里，“品”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pǐn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"品\" (article) is commonly used."
+  },
+  "309": {
+    "zh": "在生活里，“住”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"住\" (reside) is commonly used."
+  },
+  "310": {
+    "zh": "在生活里，“告”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"告\" (tell) is commonly used."
+  },
+  "311": {
+    "zh": "在生活里，“类”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"类\" (class) is commonly used."
+  },
+  "312": {
+    "zh": "在生活里，“求”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"求\" (seek) is commonly used."
+  },
+  "313": {
+    "zh": "在生活里，“据”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"据\" (to occupy) is commonly used."
+  },
+  "314": {
+    "zh": "在生活里，“程”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chéng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"程\" (journey) is commonly used."
+  },
+  "315": {
+    "zh": "在生活里，“北”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“běi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"北\" (north) is commonly used."
+  },
+  "316": {
+    "zh": "在生活里，“边”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“biān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"边\" (edge) is commonly used."
+  },
+  "317": {
+    "zh": "在生活里，“死”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"死\" (die) is commonly used."
+  },
+  "318": {
+    "zh": "在生活里，“张”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"张\" (stretch) is commonly used."
+  },
+  "319": {
+    "zh": "在生活里，“该”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gāi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"该\" (should) is commonly used."
+  },
+  "320": {
+    "zh": "在生活里，“交”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"交\" (mix) is commonly used."
+  },
+  "321": {
+    "zh": "在生活里，“规”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"规\" (rules) is commonly used."
+  },
+  "322": {
+    "zh": "在生活里，“万”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"万\" (ten thousand) is commonly used."
+  },
+  "323": {
+    "zh": "在生活里，“取”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"取\" (take) is commonly used."
+  },
+  "324": {
+    "zh": "在生活里，“拉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"拉\" (pull) is commonly used."
+  },
+  "325": {
+    "zh": "在生活里，“格”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"格\" (pattern) is commonly used."
+  },
+  "326": {
+    "zh": "在生活里，“望”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"望\" (to look at) is commonly used."
+  },
+  "327": {
+    "zh": "在生活里，“觉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jué” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"觉\" (to wake up from sleep) is commonly used."
+  },
+  "328": {
+    "zh": "在生活里，“术”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"术\" (art) is commonly used."
+  },
+  "329": {
+    "zh": "在生活里，“领”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǐng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"领\" (neck) is commonly used."
+  },
+  "330": {
+    "zh": "在生活里，“共”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gòng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"共\" (together with) is commonly used."
+  },
+  "331": {
+    "zh": "在生活里，“确”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“què” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"确\" (sure) is commonly used."
+  },
+  "332": {
+    "zh": "在生活里，“传”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"传\" (summon) is commonly used."
+  },
+  "333": {
+    "zh": "在生活里，“师”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"师\" (teacher) is commonly used."
+  },
+  "334": {
+    "zh": "在生活里，“观”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"观\" (see) is commonly used."
+  },
+  "335": {
+    "zh": "在生活里，“清”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"清\" (clear) is commonly used."
+  },
+  "336": {
+    "zh": "在生活里，“今”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"今\" (now) is commonly used."
+  },
+  "337": {
+    "zh": "在生活里，“切”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"切\" (cut) is commonly used."
+  },
+  "338": {
+    "zh": "在生活里，“院”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"院\" (courtyard) is commonly used."
+  },
+  "339": {
+    "zh": "在生活里，“让”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ràng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"让\" (allow) is commonly used."
+  },
+  "340": {
+    "zh": "在生活里，“识”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"识\" (recognize) is commonly used."
+  },
+  "341": {
+    "zh": "在生活里，“候”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"候\" (wait) is commonly used."
+  },
+  "342": {
+    "zh": "在生活里，“带”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"带\" (belt) is commonly used."
+  },
+  "343": {
+    "zh": "在生活里，“导”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"导\" (direct) is commonly used."
+  },
+  "344": {
+    "zh": "在生活里，“争”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"争\" (dispute) is commonly used."
+  },
+  "345": {
+    "zh": "在生活里，“运”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yùn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"运\" (run) is commonly used."
+  },
+  "346": {
+    "zh": "在生活里，“笑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"笑\" (smile) is commonly used."
+  },
+  "347": {
+    "zh": "在生活里，“飞”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fēi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"飞\" (fly) is commonly used."
+  },
+  "348": {
+    "zh": "今天外面刮起了大风。",
+    "py": "Jīn tiān wài miàn guā qǐ le dà fēng.",
+    "en": "A strong wind blew up outside today."
+  },
+  "349": {
+    "zh": "在生活里，“步”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"步\" (step) is commonly used."
+  },
+  "350": {
+    "zh": "在生活里，“改”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǎi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"改\" (change) is commonly used."
+  },
+  "351": {
+    "zh": "在生活里，“收”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shōu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"收\" (gather together) is commonly used."
+  },
+  "352": {
+    "zh": "在生活里，“根”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"根\" (root) is commonly used."
+  },
+  "353": {
+    "zh": "在生活里，“干”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"干\" (oppose) is commonly used."
+  },
+  "354": {
+    "zh": "在生活里，“造”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"造\" (construct) is commonly used."
+  },
+  "355": {
+    "zh": "在生活里，“言”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"言\" (words) is commonly used."
+  },
+  "356": {
+    "zh": "在生活里，“联”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lián” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"联\" (connect) is commonly used."
+  },
+  "357": {
+    "zh": "在生活里，“持”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"持\" (sustain) is commonly used."
+  },
+  "358": {
+    "zh": "在生活里，“组”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"组\" (class) is commonly used."
+  },
+  "359": {
+    "zh": "在生活里，“每”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“měi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"每\" (every) is commonly used."
+  },
+  "360": {
+    "zh": "在生活里，“济”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"济\" (help) is commonly used."
+  },
+  "361": {
+    "zh": "他开车去上班。",
+    "py": "Tā kāi chē qù shàng bān.",
+    "en": "He drives to work."
+  },
+  "362": {
+    "zh": "在生活里，“亲”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qīn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"亲\" (relatives) is commonly used."
+  },
+  "363": {
+    "zh": "在生活里，“极”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"极\" (extreme) is commonly used."
+  },
+  "364": {
+    "zh": "在生活里，“林”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lín” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"林\" (forest) is commonly used."
+  },
+  "365": {
+    "zh": "在生活里，“服”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"服\" (clothes) is commonly used."
+  },
+  "366": {
+    "zh": "高铁的速度非常快。",
+    "py": "Gāo tiě de sù dù fēi cháng kuài.",
+    "en": "The speed of the high-speed train is very fast."
+  },
+  "367": {
+    "zh": "在生活里，“办”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"办\" (manage) is commonly used."
+  },
+  "368": {
+    "zh": "在生活里，“议”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"议\" (consult) is commonly used."
+  },
+  "369": {
+    "zh": "在生活里，“往”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"往\" (go) is commonly used."
+  },
+  "370": {
+    "zh": "在生活里，“元”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"元\" (first) is commonly used."
+  },
+  "371": {
+    "zh": "在生活里，“英”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"英\" (petal) is commonly used."
+  },
+  "372": {
+    "zh": "在生活里，“士”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"士\" (scholar) is commonly used."
+  },
+  "373": {
+    "zh": "在生活里，“证”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhèng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"证\" (prove) is commonly used."
+  },
+  "374": {
+    "zh": "在生活里，“近”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jìn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"近\" (near) is commonly used."
+  },
+  "375": {
+    "zh": "在生活里，“失”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"失\" (lose) is commonly used."
+  },
+  "376": {
+    "zh": "在生活里，“转”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhuǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"转\" (shift) is commonly used."
+  },
+  "377": {
+    "zh": "在生活里，“夫”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"夫\" (man) is commonly used."
+  },
+  "378": {
+    "zh": "在生活里，“令”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“líng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"令\" () is commonly used."
+  },
+  "379": {
+    "zh": "在生活里，“准”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhǔn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"准\" (approve) is commonly used."
+  },
+  "380": {
+    "zh": "在生活里，“布”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"布\" (cotton cloth) is commonly used."
+  },
+  "381": {
+    "zh": "在生活里，“始”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"始\" (begin) is commonly used."
+  },
+  "382": {
+    "zh": "在生活里，“怎”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zěn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"怎\" (what? why? how?) is commonly used."
+  },
+  "383": {
+    "zh": "在生活里，“呢”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ne” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"呢\" (interrogative or emphatic final) is commonly used."
+  },
+  "384": {
+    "zh": "在生活里，“存”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cún” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"存\" (exist) is commonly used."
+  },
+  "385": {
+    "zh": "在生活里，“未”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"未\" (not yet) is commonly used."
+  },
+  "386": {
+    "zh": "在生活里，“远”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"远\" (distant) is commonly used."
+  },
+  "387": {
+    "zh": "在生活里，“叫”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"叫\" (cry) is commonly used."
+  },
+  "388": {
+    "zh": "在生活里，“台”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"台\" (platform) is commonly used."
+  },
+  "389": {
+    "zh": "在生活里，“单”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"单\" (single) is commonly used."
+  },
+  "390": {
+    "zh": "在生活里，“影”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǐng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"影\" (shadow) is commonly used."
+  },
+  "391": {
+    "zh": "在生活里，“具”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"具\" (tool) is commonly used."
+  },
+  "392": {
+    "zh": "在生活里，“罗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“luó” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"罗\" (net for catching birds) is commonly used."
+  },
+  "393": {
+    "zh": "在生活里，“字”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"字\" (letter) is commonly used."
+  },
+  "394": {
+    "zh": "在生活里，“爱”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"爱\" (love) is commonly used."
+  },
+  "395": {
+    "zh": "在生活里，“击”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"击\" (strike) is commonly used."
+  },
+  "396": {
+    "zh": "在生活里，“流”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"流\" (flow) is commonly used."
+  },
+  "397": {
+    "zh": "在生活里，“备”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"备\" (prepare) is commonly used."
+  },
+  "398": {
+    "zh": "在生活里，“兵”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"兵\" (soldier) is commonly used."
+  },
+  "399": {
+    "zh": "在生活里，“连”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lián” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"连\" (join) is commonly used."
+  },
+  "400": {
+    "zh": "在生活里，“调”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tiáo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"调\" (transfer) is commonly used."
+  },
+  "401": {
+    "zh": "在生活里，“深”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"深\" (deep) is commonly used."
+  },
+  "402": {
+    "zh": "在生活里，“商”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"商\" (commerce) is commonly used."
+  },
+  "403": {
+    "zh": "在生活里，“算”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“suàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"算\" (count) is commonly used."
+  },
+  "404": {
+    "zh": "在生活里，“质”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"质\" (matter) is commonly used."
+  },
+  "405": {
+    "zh": "在生活里，“团”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"团\" (sphere) is commonly used."
+  },
+  "406": {
+    "zh": "在生活里，“集”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"集\" (assemble) is commonly used."
+  },
+  "407": {
+    "zh": "在生活里，“百”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǎi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"百\" (one hundred) is commonly used."
+  },
+  "408": {
+    "zh": "在生活里，“需”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"需\" (need) is commonly used."
+  },
+  "409": {
+    "zh": "在生活里，“价”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jià” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"价\" (price) is commonly used."
+  },
+  "410": {
+    "zh": "花园里的花开得真美。",
+    "py": "Huā yuán lǐ de huā kāi dé zhēn měi.",
+    "en": "The flowers in the garden bloom really beautifully."
+  },
+  "411": {
+    "zh": "在生活里，“党”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"党\" (political party) is commonly used."
+  },
+  "412": {
+    "zh": "在生活里，“华”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"华\" (flowery) is commonly used."
+  },
+  "413": {
+    "zh": "这座城市风景秀丽。",
+    "py": "Zhè zuò chéng shì fēng jǐng xiù lì.",
+    "en": "This city has beautiful scenery."
+  },
+  "414": {
+    "zh": "在生活里，“石”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"石\" (stone) is commonly used."
+  },
+  "415": {
+    "zh": "在生活里，“级”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"级\" (level) is commonly used."
+  },
+  "416": {
+    "zh": "在生活里，“整”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhěng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"整\" (orderly) is commonly used."
+  },
+  "417": {
+    "zh": "在生活里，“府”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"府\" (prefecture) is commonly used."
+  },
+  "418": {
+    "zh": "在生活里，“离”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"离\" (rare beast) is commonly used."
+  },
+  "419": {
+    "zh": "在生活里，“况”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kuàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"况\" (condition) is commonly used."
+  },
+  "420": {
+    "zh": "在生活里，“亚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"亚\" (Asia) is commonly used."
+  },
+  "421": {
+    "zh": "在生活里，“请”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qǐng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"请\" (ask) is commonly used."
+  },
+  "422": {
+    "zh": "在生活里，“技”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"技\" (skill) is commonly used."
+  },
+  "423": {
+    "zh": "在生活里，“际”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"际\" (border) is commonly used."
+  },
+  "424": {
+    "zh": "在生活里，“约”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"约\" (treaty) is commonly used."
+  },
+  "425": {
+    "zh": "在生活里，“示”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"示\" (show) is commonly used."
+  },
+  "426": {
+    "zh": "在生活里，“复”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"复\" (return) is commonly used."
+  },
+  "427": {
+    "zh": "在生活里，“病”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"病\" (illness) is commonly used."
+  },
+  "428": {
+    "zh": "在生活里，“息”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"息\" (rest) is commonly used."
+  },
+  "429": {
+    "zh": "在生活里，“究”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"究\" (examine) is commonly used."
+  },
+  "430": {
+    "zh": "在生活里，“线”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"线\" (line) is commonly used."
+  },
+  "431": {
+    "zh": "在生活里，“似”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"似\" (resemble) is commonly used."
+  },
+  "432": {
+    "zh": "在生活里，“官”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"官\" (official) is commonly used."
+  },
+  "433": {
+    "zh": "在生活里，“火”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huǒ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"火\" (fire) is commonly used."
+  },
+  "434": {
+    "zh": "在生活里，“断”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“duàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"断\" (sever) is commonly used."
+  },
+  "435": {
+    "zh": "在生活里，“精”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"精\" (essence) is commonly used."
+  },
+  "436": {
+    "zh": "在生活里，“满”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"满\" (fill) is commonly used."
+  },
+  "437": {
+    "zh": "在生活里，“支”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"支\" (disperse) is commonly used."
+  },
+  "438": {
+    "zh": "在生活里，“视”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"视\" (look at) is commonly used."
+  },
+  "439": {
+    "zh": "在生活里，“消”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"消\" (vanish) is commonly used."
+  },
+  "440": {
+    "zh": "在生活里，“越”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"越\" (exceed) is commonly used."
+  },
+  "441": {
+    "zh": "在生活里，“器”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"器\" (receptacle) is commonly used."
+  },
+  "442": {
+    "zh": "在生活里，“容”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“róng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"容\" (looks) is commonly used."
+  },
+  "443": {
+    "zh": "在生活里，“照”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"照\" (shine) is commonly used."
+  },
+  "444": {
+    "zh": "在生活里，“须”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"须\" (must) is commonly used."
+  },
+  "445": {
+    "zh": "在生活里，“九”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"九\" (nine) is commonly used."
+  },
+  "446": {
+    "zh": "在生活里，“增”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"增\" (increase) is commonly used."
+  },
+  "447": {
+    "zh": "在生活里，“研”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"研\" (grind) is commonly used."
+  },
+  "448": {
+    "zh": "在生活里，“写”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"写\" (write) is commonly used."
+  },
+  "449": {
+    "zh": "在生活里，“称”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"称\" (call) is commonly used."
+  },
+  "450": {
+    "zh": "在生活里，“企”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"企\" (plan a project) is commonly used."
+  },
+  "451": {
+    "zh": "在生活里，“八”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"八\" (eight) is commonly used."
+  },
+  "452": {
+    "zh": "在生活里，“功”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"功\" (achievement) is commonly used."
+  },
+  "453": {
+    "zh": "在生活里，“吗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ma” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"吗\" (final interrogative particle) is commonly used."
+  },
+  "454": {
+    "zh": "早饭吃两个肉包子。",
+    "py": "Zǎo fàn chī liǎng gè ròu bāo zǐ.",
+    "en": "Eat two meat buns for breakfast."
+  },
+  "455": {
+    "zh": "在生活里，“片”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“piàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"片\" (slice) is commonly used."
+  },
+  "456": {
+    "zh": "在生活里，“史”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"史\" (history) is commonly used."
+  },
+  "457": {
+    "zh": "在生活里，“委”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wěi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"委\" (appoint) is commonly used."
+  },
+  "458": {
+    "zh": "在生活里，“乎”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"乎\" (interrogative or exclamatory final particle) is commonly used."
+  },
+  "459": {
+    "zh": "在生活里，“查”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"查\" (investigate) is commonly used."
+  },
+  "460": {
+    "zh": "这个背包非常轻便。",
+    "py": "Zhè gè bèi bāo fēi cháng qīng biàn.",
+    "en": "This backpack is very light and portable."
+  },
+  "461": {
+    "zh": "这件事情做起来很容易。",
+    "py": "Zhè jiàn shì qíng zuò qǐ lái hěn róng yì.",
+    "en": "Doing this matter is very easy."
+  },
+  "462": {
+    "zh": "明天早上八点准时出发。",
+    "py": "Míng tiān zǎo shàng bā diǎn zhǔn shí chū fā.",
+    "en": "Depart punctually at 8:00 tomorrow morning."
+  },
+  "463": {
+    "zh": "在生活里，“曾”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"曾\" (already) is commonly used."
+  },
+  "464": {
+    "zh": "在生活里，“除”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"除\" (eliminate) is commonly used."
+  },
+  "465": {
+    "zh": "在生活里，“农”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nóng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"农\" (agriculture) is commonly used."
+  },
+  "466": {
+    "zh": "在生活里，“找”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"找\" (search) is commonly used."
+  },
+  "467": {
+    "zh": "在生活里，“装”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhuāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"装\" (dress) is commonly used."
+  },
+  "468": {
+    "zh": "在生活里，“广”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"广\" (wide) is commonly used."
+  },
+  "469": {
+    "zh": "在生活里，“显”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"显\" (manifest) is commonly used."
+  },
+  "470": {
+    "zh": "在生活里，“吧”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"吧\" (emphatic final particle) is commonly used."
+  },
+  "471": {
+    "zh": "在生活里，“阿”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"阿\" () is commonly used."
+  },
+  "472": {
+    "zh": "在生活里，“李”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"李\" (plum) is commonly used."
+  },
+  "473": {
+    "zh": "在生活里，“标”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“biāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"标\" (mark) is commonly used."
+  },
+  "474": {
+    "zh": "在生活里，“谈”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"谈\" (talk) is commonly used."
+  },
+  "475": {
+    "zh": "你想吃什么中国菜？",
+    "py": "Nǐ xiǎng chī shí mó zhōng guó cài?",
+    "en": "What Chinese food would you like to eat?"
+  },
+  "476": {
+    "zh": "在生活里，“图”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"图\" (diagram) is commonly used."
+  },
+  "477": {
+    "zh": "在生活里，“念”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“niàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"念\" (think of) is commonly used."
+  },
+  "478": {
+    "zh": "在生活里，“六”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"六\" (number six) is commonly used."
+  },
+  "479": {
+    "zh": "在生活里，“引”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǐn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"引\" (to pull) is commonly used."
+  },
+  "480": {
+    "zh": "在生活里，“历”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"历\" (history) is commonly used."
+  },
+  "481": {
+    "zh": "在生活里，“首”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"首\" (head) is commonly used."
+  },
+  "482": {
+    "zh": "在生活里，“医”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"医\" (cure) is commonly used."
+  },
+  "483": {
+    "zh": "在生活里，“局”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"局\" (bureau) is commonly used."
+  },
+  "484": {
+    "zh": "在生活里，“突”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"突\" (suddenly) is commonly used."
+  },
+  "485": {
+    "zh": "在生活里，“专”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhuān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"专\" (monopolize) is commonly used."
+  },
+  "486": {
+    "zh": "在生活里，“费”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"费\" (expenses) is commonly used."
+  },
+  "487": {
+    "zh": "在生活里，“号”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"号\" (mark) is commonly used."
+  },
+  "488": {
+    "zh": "在生活里，“尽”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jìn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"尽\" (exhaust) is commonly used."
+  },
+  "489": {
+    "zh": "在生活里，“另”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"另\" (another) is commonly used."
+  },
+  "490": {
+    "zh": "在生活里，“周”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhōu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"周\" (Zhou dynasty) is commonly used."
+  },
+  "491": {
+    "zh": "在生活里，“较”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"较\" (compare) is commonly used."
+  },
+  "492": {
+    "zh": "在生活里，“注”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"注\" (concentrate) is commonly used."
+  },
+  "493": {
+    "zh": "汉语是一门有趣的语言。",
+    "py": "Hàn yǔ shì yī mén yǒu qù de yǔ yán.",
+    "en": "Chinese is an interesting language."
+  },
+  "494": {
+    "zh": "在生活里，“仅”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jǐn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"仅\" (only) is commonly used."
+  },
+  "495": {
+    "zh": "在生活里，“考”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"考\" (examine) is commonly used."
+  },
+  "496": {
+    "zh": "在生活里，“落”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“luò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"落\" (fall) is commonly used."
+  },
+  "497": {
+    "zh": "在生活里，“青”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"青\" (blue) is commonly used."
+  },
+  "498": {
+    "zh": "在生活里，“随”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“suí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"随\" (follow) is commonly used."
+  },
+  "499": {
+    "zh": "在生活里，“选”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xuǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"选\" (choose) is commonly used."
+  },
+  "500": {
+    "zh": "在生活里，“列”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"列\" (a line) is commonly used."
+  },
+  "501": {
+    "zh": "在生活里，“武”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"武\" (military) is commonly used."
+  },
+  "502": {
+    "zh": "在生活里，“红”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hóng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"红\" (red) is commonly used."
+  },
+  "503": {
+    "zh": "在生活里，“响”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"响\" (make sound) is commonly used."
+  },
+  "504": {
+    "zh": "在生活里，“虽”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“suī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"虽\" (although) is commonly used."
+  },
+  "505": {
+    "zh": "在生活里，“推”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tuī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"推\" (push) is commonly used."
+  },
+  "506": {
+    "zh": "在生活里，“势”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"势\" (power) is commonly used."
+  },
+  "507": {
+    "zh": "在生活里，“参”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"参\" (take part in) is commonly used."
+  },
+  "508": {
+    "zh": "在生活里，“希”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"希\" (rare) is commonly used."
+  },
+  "509": {
+    "zh": "在生活里，“古”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"古\" (old) is commonly used."
+  },
+  "510": {
+    "zh": "在生活里，“众”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhòng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"众\" (multitude) is commonly used."
+  },
+  "511": {
+    "zh": "在生活里，“构”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"构\" (frame) is commonly used."
+  },
+  "512": {
+    "zh": "这套房子很宽敞。",
+    "py": "Zhè tào fáng zǐ hěn kuān chǎng.",
+    "en": "This apartment is very spacious."
+  },
+  "513": {
+    "zh": "在生活里，“半”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"半\" (half) is commonly used."
+  },
+  "514": {
+    "zh": "在生活里，“节”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jié” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"节\" (knot) is commonly used."
+  },
+  "515": {
+    "zh": "在生活里，“土”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"土\" (soil) is commonly used."
+  },
+  "516": {
+    "zh": "在生活里，“投”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tóu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"投\" (throw) is commonly used."
+  },
+  "517": {
+    "zh": "在生活里，“某”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"某\" (certain thing or person) is commonly used."
+  },
+  "518": {
+    "zh": "在生活里，“案”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“àn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"案\" (table) is commonly used."
+  },
+  "519": {
+    "zh": "在生活里，“黑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hēi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"黑\" (black) is commonly used."
+  },
+  "520": {
+    "zh": "在生活里，“维”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wéi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"维\" (maintain) is commonly used."
+  },
+  "521": {
+    "zh": "在生活里，“革”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"革\" (leather) is commonly used."
+  },
+  "522": {
+    "zh": "在生活里，“划”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"划\" (to row or paddle boat) is commonly used."
+  },
+  "523": {
+    "zh": "在生活里，“敌”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"敌\" (enemy) is commonly used."
+  },
+  "524": {
+    "zh": "在生活里，“致”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"致\" (send) is commonly used."
+  },
+  "525": {
+    "zh": "在生活里，“陈”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chén” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"陈\" (exhibit) is commonly used."
+  },
+  "526": {
+    "zh": "在生活里，“律”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǜ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"律\" (statute) is commonly used."
+  },
+  "527": {
+    "zh": "在生活里，“足”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"足\" (foot) is commonly used."
+  },
+  "528": {
+    "zh": "在生活里，“态”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"态\" (manner) is commonly used."
+  },
+  "529": {
+    "zh": "在生活里，“护”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"护\" (protect) is commonly used."
+  },
+  "530": {
+    "zh": "在生活里，“七”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"七\" (seven) is commonly used."
+  },
+  "531": {
+    "zh": "今天大家都很高兴。",
+    "py": "Jīn tiān dà jiā dū hěn gāo xīng.",
+    "en": "Everyone is very happy today."
+  },
+  "532": {
+    "zh": "在生活里，“派”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"派\" (school of thought) is commonly used."
+  },
+  "533": {
+    "zh": "在生活里，“孩”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"孩\" (baby) is commonly used."
+  },
+  "534": {
+    "zh": "在生活里，“验”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"验\" (test) is commonly used."
+  },
+  "535": {
+    "zh": "在生活里，“责”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"责\" () is commonly used."
+  },
+  "536": {
+    "zh": "在生活里，“营”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yíng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"营\" (encampment) is commonly used."
+  },
+  "537": {
+    "zh": "在生活里，“星”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"星\" (a star) is commonly used."
+  },
+  "538": {
+    "zh": "在生活里，“够”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"够\" (enough) is commonly used."
+  },
+  "539": {
+    "zh": "在生活里，“章”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"章\" (composition) is commonly used."
+  },
+  "540": {
+    "zh": "在生活里，“音”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yīn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"音\" (sound) is commonly used."
+  },
+  "541": {
+    "zh": "在生活里，“跟”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"跟\" (heel) is commonly used."
+  },
+  "542": {
+    "zh": "在生活里，“志”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"志\" (purpose) is commonly used."
+  },
+  "543": {
+    "zh": "在生活里，“底”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"底\" (bottom) is commonly used."
+  },
+  "544": {
+    "zh": "在生活里，“站”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"站\" (stand up) is commonly used."
+  },
+  "545": {
+    "zh": "在生活里，“严”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"严\" (strict) is commonly used."
+  },
+  "546": {
+    "zh": "在生活里，“巴”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"巴\" (greatly desire) is commonly used."
+  },
+  "547": {
+    "zh": "在生活里，“例”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"例\" (precedent) is commonly used."
+  },
+  "548": {
+    "zh": "在生活里，“防”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"防\" (defend) is commonly used."
+  },
+  "549": {
+    "zh": "在生活里，“族”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"族\" (a family clan) is commonly used."
+  },
+  "550": {
+    "zh": "在生活里，“供”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"供\" (supply) is commonly used."
+  },
+  "551": {
+    "zh": "在生活里，“效”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"效\" (result) is commonly used."
+  },
+  "552": {
+    "zh": "在生活里，“续”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"续\" (continue) is commonly used."
+  },
+  "553": {
+    "zh": "在生活里，“施”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"施\" (grant) is commonly used."
+  },
+  "554": {
+    "zh": "在生活里，“留”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"留\" (stop) is commonly used."
+  },
+  "555": {
+    "zh": "在生活里，“讲”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"讲\" (explain) is commonly used."
+  },
+  "556": {
+    "zh": "在生活里，“型”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xíng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"型\" (pattern) is commonly used."
+  },
+  "557": {
+    "zh": "在生活里，“料”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"料\" (consider) is commonly used."
+  },
+  "558": {
+    "zh": "在生活里，“终”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"终\" (end) is commonly used."
+  },
+  "559": {
+    "zh": "在生活里，“答”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"答\" (answer) is commonly used."
+  },
+  "560": {
+    "zh": "在生活里，“紧”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jǐn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"紧\" (tense) is commonly used."
+  },
+  "561": {
+    "zh": "在生活里，“黄”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"黄\" (yellow) is commonly used."
+  },
+  "562": {
+    "zh": "在生活里，“绝”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jué” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"绝\" (to cut) is commonly used."
+  },
+  "563": {
+    "zh": "在生活里，“奇”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"奇\" (strange) is commonly used."
+  },
+  "564": {
+    "zh": "在生活里，“察”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"察\" (examine) is commonly used."
+  },
+  "565": {
+    "zh": "在生活里，“母”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"母\" (mother) is commonly used."
+  },
+  "566": {
+    "zh": "在生活里，“京”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"京\" (capital city) is commonly used."
+  },
+  "567": {
+    "zh": "在生活里，“段”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“duàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"段\" (section) is commonly used."
+  },
+  "568": {
+    "zh": "在生活里，“依”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"依\" (rely on) is commonly used."
+  },
+  "569": {
+    "zh": "在生活里，“批”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"批\" (comment) is commonly used."
+  },
+  "570": {
+    "zh": "在生活里，“群”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qún” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"群\" ((same as) is commonly used."
+  },
+  "571": {
+    "zh": "在生活里，“项”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"项\" (neck) is commonly used."
+  },
+  "572": {
+    "zh": "在生活里，“故”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"故\" (ancient) is commonly used."
+  },
+  "573": {
+    "zh": "在生活里，“按”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“àn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"按\" (put hand on) is commonly used."
+  },
+  "574": {
+    "zh": "这条小河的水很清澈。",
+    "py": "Zhè tiáo xiǎo hé de shuǐ hěn qīng chè.",
+    "en": "The water of this little river is very clear."
+  },
+  "575": {
+    "zh": "南方人喜欢吃大米。",
+    "py": "Nán fāng rén xǐ huān chī dà mǐ.",
+    "en": "Southerners like eating rice."
+  },
+  "576": {
+    "zh": "在生活里，“围”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wéi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"围\" (surround) is commonly used."
+  },
+  "577": {
+    "zh": "在生活里，“江”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"江\" (large river) is commonly used."
+  },
+  "578": {
+    "zh": "在生活里，“织”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"织\" (weave) is commonly used."
+  },
+  "579": {
+    "zh": "在生活里，“害”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"害\" (injure) is commonly used."
+  },
+  "580": {
+    "zh": "在生活里，“斗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"斗\" (Chinese peck) is commonly used."
+  },
+  "581": {
+    "zh": "在生活里，“双”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shuāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"双\" (set of two) is commonly used."
+  },
+  "582": {
+    "zh": "在生活里，“境”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"境\" (boundary) is commonly used."
+  },
+  "583": {
+    "zh": "不用客气，举手之劳。",
+    "py": "Bù yòng kè qì, jǔ shǒu zhī láo.",
+    "en": "You're welcome, it was no trouble."
+  },
+  "584": {
+    "zh": "在生活里，“纪”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"纪\" (record) is commonly used."
+  },
+  "585": {
+    "zh": "在生活里，“采”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cǎi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"采\" (collect) is commonly used."
+  },
+  "586": {
+    "zh": "在生活里，“举”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"举\" (raise) is commonly used."
+  },
+  "587": {
+    "zh": "在生活里，“杀”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"杀\" (kill) is commonly used."
+  },
+  "588": {
+    "zh": "在生活里，“攻”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"攻\" (attack) is commonly used."
+  },
+  "589": {
+    "zh": "在生活里，“父”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"父\" (father) is commonly used."
+  },
+  "590": {
+    "zh": "在生活里，“苏”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"苏\" () is commonly used."
+  },
+  "591": {
+    "zh": "在生活里，“密”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"密\" (dense) is commonly used."
+  },
+  "592": {
+    "zh": "他低下了头认真看书。",
+    "py": "Tā dī xià le tóu rèn zhēn kàn shū.",
+    "en": "He lowered his head and read the book attentively."
+  },
+  "593": {
+    "zh": "在生活里，“朝”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"朝\" (dynasty) is commonly used."
+  },
+  "594": {
+    "zh": "朋友之间要互相帮助。",
+    "py": "Péng yǒu zhī jiān yào hù xiāng bāng zhù.",
+    "en": "Friends should help each other."
+  },
+  "595": {
+    "zh": "在生活里，“诉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"诉\" (accuse) is commonly used."
+  },
+  "596": {
+    "zh": "在生活里，“止”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"止\" (stop) is commonly used."
+  },
+  "597": {
+    "zh": "在生活里，“细”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"细\" (fine) is commonly used."
+  },
+  "598": {
+    "zh": "在生活里，“愿”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"愿\" (sincere) is commonly used."
+  },
+  "599": {
+    "zh": "在生活里，“千”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"千\" (thousand) is commonly used."
+  },
+  "600": {
+    "zh": "在生活里，“值”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"值\" (price) is commonly used."
+  },
+  "601": {
+    "zh": "在生活里，“仍”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“réng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"仍\" (yet) is commonly used."
+  },
+  "602": {
+    "zh": "在生活里，“男”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"男\" (male) is commonly used."
+  },
+  "603": {
+    "zh": "在生活里，“钱”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qián” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"钱\" (money) is commonly used."
+  },
+  "604": {
+    "zh": "在生活里，“破”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"破\" (break) is commonly used."
+  },
+  "605": {
+    "zh": "在生活里，“网”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"网\" (net) is commonly used."
+  },
+  "606": {
+    "zh": "夏天天气非常炎热。",
+    "py": "Xià tiān tiān qì fēi cháng yán rè.",
+    "en": "The weather in summer is very hot."
+  },
+  "607": {
+    "zh": "在生活里，“助”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"助\" (help) is commonly used."
+  },
+  "608": {
+    "zh": "在生活里，“倒”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"倒\" (fall over) is commonly used."
+  },
+  "609": {
+    "zh": "在生活里，“育”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"育\" (produce) is commonly used."
+  },
+  "610": {
+    "zh": "在生活里，“属”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"属\" (class) is commonly used."
+  },
+  "611": {
+    "zh": "在生活里，“坐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zuò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"坐\" (sit) is commonly used."
+  },
+  "612": {
+    "zh": "在生活里，“帝”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"帝\" (supreme ruler) is commonly used."
+  },
+  "613": {
+    "zh": "在生活里，“限”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"限\" (boundary) is commonly used."
+  },
+  "614": {
+    "zh": "在生活里，“船”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"船\" (ship) is commonly used."
+  },
+  "615": {
+    "zh": "在生活里，“脸”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"脸\" (face) is commonly used."
+  },
+  "616": {
+    "zh": "在生活里，“职”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"职\" (duty) is commonly used."
+  },
+  "617": {
+    "zh": "在生活里，“速”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"速\" (quick) is commonly used."
+  },
+  "618": {
+    "zh": "在生活里，“刻”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"刻\" (carve) is commonly used."
+  },
+  "619": {
+    "zh": "在生活里，“乐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"乐\" (happy) is commonly used."
+  },
+  "620": {
+    "zh": "在生活里，“否”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"否\" (not) is commonly used."
+  },
+  "621": {
+    "zh": "在生活里，“刚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"刚\" (hard) is commonly used."
+  },
+  "622": {
+    "zh": "在生活里，“威”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wēi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"威\" (pomp) is commonly used."
+  },
+  "623": {
+    "zh": "在生活里，“毛”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“máo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"毛\" (hair) is commonly used."
+  },
+  "624": {
+    "zh": "在生活里，“状”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhuàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"状\" (form) is commonly used."
+  },
+  "625": {
+    "zh": "在生活里，“率”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shuài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"率\" (to lead) is commonly used."
+  },
+  "626": {
+    "zh": "在生活里，“甚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shèn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"甚\" (great extent) is commonly used."
+  },
+  "627": {
+    "zh": "在生活里，“独”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"独\" (alone) is commonly used."
+  },
+  "628": {
+    "zh": "在生活里，“球”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"球\" (ball) is commonly used."
+  },
+  "629": {
+    "zh": "在生活里，“般”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"般\" (sort) is commonly used."
+  },
+  "630": {
+    "zh": "在生活里，“普”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"普\" (universal) is commonly used."
+  },
+  "631": {
+    "zh": "在生活里，“怕”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"怕\" (to fear) is commonly used."
+  },
+  "632": {
+    "zh": "在生活里，“弹”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"弹\" (pellet) is commonly used."
+  },
+  "633": {
+    "zh": "在生活里，“校”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"校\" (school) is commonly used."
+  },
+  "634": {
+    "zh": "在生活里，“苦”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"苦\" (bitter) is commonly used."
+  },
+  "635": {
+    "zh": "在生活里，“创”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chuàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"创\" (establish) is commonly used."
+  },
+  "636": {
+    "zh": "在生活里，“假”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"假\" (falsehood) is commonly used."
+  },
+  "637": {
+    "zh": "在生活里，“久”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"久\" (long time (ago)) is commonly used."
+  },
+  "638": {
+    "zh": "在生活里，“错”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cuò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"错\" (error) is commonly used."
+  },
+  "639": {
+    "zh": "在生活里，“承”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chéng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"承\" (inherit) is commonly used."
+  },
+  "640": {
+    "zh": "在生活里，“印”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yìn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"印\" (print) is commonly used."
+  },
+  "641": {
+    "zh": "晚上我们一起去散步。",
+    "py": "Wǎn shàng wǒ mén yī qǐ qù sàn bù.",
+    "en": "Let's go for a walk together tonight."
+  },
+  "642": {
+    "zh": "在生活里，“兰”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"兰\" (orchid) is commonly used."
+  },
+  "643": {
+    "zh": "在生活里，“试”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"试\" (test) is commonly used."
+  },
+  "644": {
+    "zh": "在生活里，“股”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"股\" (thighs) is commonly used."
+  },
+  "645": {
+    "zh": "在生活里，“拿”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ná” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"拿\" (take) is commonly used."
+  },
+  "646": {
+    "zh": "在生活里，“脑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"脑\" (brain) is commonly used."
+  },
+  "647": {
+    "zh": "在生活里，“预”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"预\" (prepare) is commonly used."
+  },
+  "648": {
+    "zh": "在生活里，“谁”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shuí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"谁\" (who? whom? whose? anyone?) is commonly used."
+  },
+  "649": {
+    "zh": "在生活里，“益”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"益\" (profit) is commonly used."
+  },
+  "650": {
+    "zh": "在生活里，“阳”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"阳\" () is commonly used."
+  },
+  "651": {
+    "zh": "在生活里，“若”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ruò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"若\" (if) is commonly used."
+  },
+  "652": {
+    "zh": "在生活里，“哪”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nǎ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"哪\" (which? where? how?) is commonly used."
+  },
+  "653": {
+    "zh": "在生活里，“微”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wēi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"微\" (small) is commonly used."
+  },
+  "654": {
+    "zh": "在生活里，“尼”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ní” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"尼\" (Buddhist nun) is commonly used."
+  },
+  "655": {
+    "zh": "在生活里，“继”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"继\" (continue) is commonly used."
+  },
+  "656": {
+    "zh": "在生活里，“送”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sòng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"送\" (see off) is commonly used."
+  },
+  "657": {
+    "zh": "在生活里，“急”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"急\" (quick) is commonly used."
+  },
+  "658": {
+    "zh": "在生活里，“血”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"血\" (blood) is commonly used."
+  },
+  "659": {
+    "zh": "在生活里，“惊”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"惊\" (frighten) is commonly used."
+  },
+  "660": {
+    "zh": "在生活里，“伤”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"伤\" (wound) is commonly used."
+  },
+  "661": {
+    "zh": "在生活里，“素”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"素\" (white (silk)) is commonly used."
+  },
+  "662": {
+    "zh": "在生活里，“药”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"药\" (leaf of Dahurian angelica plant) is commonly used."
+  },
+  "663": {
+    "zh": "在生活里，“适”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"适\" (go) is commonly used."
+  },
+  "664": {
+    "zh": "在生活里，“波”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bō” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"波\" (waves) is commonly used."
+  },
+  "665": {
+    "zh": "在生活里，“夜”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"夜\" (night) is commonly used."
+  },
+  "666": {
+    "zh": "在生活里，“省”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shěng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"省\" (province) is commonly used."
+  },
+  "667": {
+    "zh": "在生活里，“初”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"初\" (beginning) is commonly used."
+  },
+  "668": {
+    "zh": "在生活里，“喜”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"喜\" (like) is commonly used."
+  },
+  "669": {
+    "zh": "在生活里，“卫”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"卫\" (guard) is commonly used."
+  },
+  "670": {
+    "zh": "在生活里，“源”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"源\" (spring) is commonly used."
+  },
+  "671": {
+    "zh": "在生活里，“食”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"食\" (eat) is commonly used."
+  },
+  "672": {
+    "zh": "在生活里，“险”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"险\" (narrow pass) is commonly used."
+  },
+  "673": {
+    "zh": "在生活里，“待”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"待\" (treat) is commonly used."
+  },
+  "674": {
+    "zh": "在生活里，“述”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"述\" (narrate) is commonly used."
+  },
+  "675": {
+    "zh": "在生活里，“陆”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"陆\" (land) is commonly used."
+  },
+  "676": {
+    "zh": "在生活里，“习”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"习\" (practice) is commonly used."
+  },
+  "677": {
+    "zh": "在生活里，“置”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"置\" (place) is commonly used."
+  },
+  "678": {
+    "zh": "在生活里，“居”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"居\" (live) is commonly used."
+  },
+  "679": {
+    "zh": "在生活里，“劳”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“láo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"劳\" (labor) is commonly used."
+  },
+  "680": {
+    "zh": "在生活里，“财”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"财\" (wealth) is commonly used."
+  },
+  "681": {
+    "zh": "在生活里，“环”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"环\" (jade ring or bracelet) is commonly used."
+  },
+  "682": {
+    "zh": "在生活里，“排”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"排\" (row) is commonly used."
+  },
+  "683": {
+    "zh": "在生活里，“福”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"福\" (happiness) is commonly used."
+  },
+  "684": {
+    "zh": "在生活里，“纳”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"纳\" (admit) is commonly used."
+  },
+  "685": {
+    "zh": "在生活里，“欢”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"欢\" (happy) is commonly used."
+  },
+  "686": {
+    "zh": "在生活里，“雷”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“léi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"雷\" (thunder) is commonly used."
+  },
+  "687": {
+    "zh": "在生活里，“警”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jǐng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"警\" (guard) is commonly used."
+  },
+  "688": {
+    "zh": "在生活里，“获”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"获\" (obtain) is commonly used."
+  },
+  "689": {
+    "zh": "在生活里，“模”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mó” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"模\" (model) is commonly used."
+  },
+  "690": {
+    "zh": "在生活里，“充”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"充\" (fill) is commonly used."
+  },
+  "691": {
+    "zh": "在生活里，“负”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"负\" (load) is commonly used."
+  },
+  "692": {
+    "zh": "在生活里，“云”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yún” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"云\" (say) is commonly used."
+  },
+  "693": {
+    "zh": "在生活里，“停”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tíng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"停\" (stop) is commonly used."
+  },
+  "694": {
+    "zh": "在生活里，“木”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"木\" (tree) is commonly used."
+  },
+  "695": {
+    "zh": "在生活里，“游”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yóu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"游\" (to swim) is commonly used."
+  },
+  "696": {
+    "zh": "在生活里，“龙”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lóng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"龙\" (dragon) is commonly used."
+  },
+  "697": {
+    "zh": "路边种着许多高大的树。",
+    "py": "Lù biān zhǒng zháo xǔ duō gāo dà de shù.",
+    "en": "Many tall trees are planted along the road."
+  },
+  "698": {
+    "zh": "在生活里，“疑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"疑\" (doubt) is commonly used."
+  },
+  "699": {
+    "zh": "在生活里，“层”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“céng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"层\" (storey) is commonly used."
+  },
+  "700": {
+    "zh": "天气变冷了多穿点衣服。",
+    "py": "Tiān qì biàn lěng le duō chuān diǎn yī fú.",
+    "en": "The weather got cold, put on more clothes."
+  },
+  "701": {
+    "zh": "在生活里，“洲”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhōu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"洲\" (continent) is commonly used."
+  },
+  "702": {
+    "zh": "在生活里，“冲”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"冲\" (soar) is commonly used."
+  },
+  "703": {
+    "zh": "在生活里，“射”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"射\" (shoot) is commonly used."
+  },
+  "704": {
+    "zh": "在生活里，“略”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lüè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"略\" (approximately) is commonly used."
+  },
+  "705": {
+    "zh": "在生活里，“范”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"范\" (surname) is commonly used."
+  },
+  "706": {
+    "zh": "在生活里，“竟”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"竟\" (finally) is commonly used."
+  },
+  "707": {
+    "zh": "在生活里，“句”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"句\" (sentence) is commonly used."
+  },
+  "708": {
+    "zh": "在生活里，“室”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"室\" (room) is commonly used."
+  },
+  "709": {
+    "zh": "在生活里，“异”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"异\" (different) is commonly used."
+  },
+  "710": {
+    "zh": "在生活里，“激”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"激\" (arouse) is commonly used."
+  },
+  "711": {
+    "zh": "在生活里，“汉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"汉\" (Chinese people) is commonly used."
+  },
+  "712": {
+    "zh": "在生活里，“村”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"村\" (village) is commonly used."
+  },
+  "713": {
+    "zh": "在生活里，“哈”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"哈\" (sound of laughter) is commonly used."
+  },
+  "714": {
+    "zh": "在生活里，“策”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"策\" (scheme) is commonly used."
+  },
+  "715": {
+    "zh": "在生活里，“演”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"演\" (perform) is commonly used."
+  },
+  "716": {
+    "zh": "在生活里，“简”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"简\" (simple) is commonly used."
+  },
+  "717": {
+    "zh": "在生活里，“卡”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kǎ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"卡\" (card) is commonly used."
+  },
+  "718": {
+    "zh": "在生活里，“罪”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zuì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"罪\" (crime) is commonly used."
+  },
+  "719": {
+    "zh": "在生活里，“判”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"判\" (judge) is commonly used."
+  },
+  "720": {
+    "zh": "在生活里，“担”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"担\" (carry) is commonly used."
+  },
+  "721": {
+    "zh": "在生活里，“州”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhōu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"州\" (administrative division) is commonly used."
+  },
+  "722": {
+    "zh": "在生活里，“静”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"静\" (quiet) is commonly used."
+  },
+  "723": {
+    "zh": "在生活里，“退”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tuì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"退\" (step back) is commonly used."
+  },
+  "724": {
+    "zh": "在生活里，“既”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"既\" (already) is commonly used."
+  },
+  "725": {
+    "zh": "在生活里，“衣”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"衣\" (clothes) is commonly used."
+  },
+  "726": {
+    "zh": "在生活里，“您”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nín” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"您\" () is commonly used."
+  },
+  "727": {
+    "zh": "在生活里，“宗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"宗\" (lineage) is commonly used."
+  },
+  "728": {
+    "zh": "在生活里，“积”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"积\" (accumulate) is commonly used."
+  },
+  "729": {
+    "zh": "在生活里，“余”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"余\" (I) is commonly used."
+  },
+  "730": {
+    "zh": "在生活里，“痛”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tòng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"痛\" (pain) is commonly used."
+  },
+  "731": {
+    "zh": "在生活里，“检”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"检\" (check) is commonly used."
+  },
+  "732": {
+    "zh": "在生活里，“差”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"差\" (to differ) is commonly used."
+  },
+  "733": {
+    "zh": "在生活里，“富”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"富\" (abundant) is commonly used."
+  },
+  "734": {
+    "zh": "在生活里，“灵”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“líng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"灵\" (spirit) is commonly used."
+  },
+  "735": {
+    "zh": "在生活里，“协”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xié” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"协\" (be united) is commonly used."
+  },
+  "736": {
+    "zh": "在生活里，“角”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"角\" (horn) is commonly used."
+  },
+  "737": {
+    "zh": "在生活里，“占”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"占\" (divine) is commonly used."
+  },
+  "738": {
+    "zh": "在生活里，“配”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"配\" (match) is commonly used."
+  },
+  "739": {
+    "zh": "在生活里，“征”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"征\" (invade) is commonly used."
+  },
+  "740": {
+    "zh": "在生活里，“修”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"修\" (study) is commonly used."
+  },
+  "741": {
+    "zh": "在生活里，“皮”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"皮\" (skin) is commonly used."
+  },
+  "742": {
+    "zh": "在生活里，“挥”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"挥\" (direct) is commonly used."
+  },
+  "743": {
+    "zh": "在生活里，“胜”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shèng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"胜\" (victory) is commonly used."
+  },
+  "744": {
+    "zh": "在生活里，“降”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"降\" (descend) is commonly used."
+  },
+  "745": {
+    "zh": "在生活里，“阶”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"阶\" (stairs) is commonly used."
+  },
+  "746": {
+    "zh": "在生活里，“审”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shěn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"审\" (examine) is commonly used."
+  },
+  "747": {
+    "zh": "在生活里，“沉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chén” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"沉\" (sink) is commonly used."
+  },
+  "748": {
+    "zh": "在生活里，“坚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"坚\" (hard) is commonly used."
+  },
+  "749": {
+    "zh": "在生活里，“善”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"善\" (good) is commonly used."
+  },
+  "750": {
+    "zh": "在生活里，“妈”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"妈\" (mother) is commonly used."
+  },
+  "751": {
+    "zh": "在生活里，“刘”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"刘\" (surname) is commonly used."
+  },
+  "752": {
+    "zh": "在生活里，“读”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"读\" (read) is commonly used."
+  },
+  "753": {
+    "zh": "在生活里，“啊”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"啊\" (exclamatory particle) is commonly used."
+  },
+  "754": {
+    "zh": "在生活里，“超”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"超\" (jump over) is commonly used."
+  },
+  "755": {
+    "zh": "在生活里，“免”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“miǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"免\" (spare) is commonly used."
+  },
+  "756": {
+    "zh": "在生活里，“压”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"压\" (press) is commonly used."
+  },
+  "757": {
+    "zh": "在生活里，“银”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yín” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"银\" (silver) is commonly used."
+  },
+  "758": {
+    "zh": "在生活里，“买”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mǎi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"买\" (buy) is commonly used."
+  },
+  "759": {
+    "zh": "在生活里，“皇”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"皇\" (royal) is commonly used."
+  },
+  "760": {
+    "zh": "在生活里，“养”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"养\" (raise) is commonly used."
+  },
+  "761": {
+    "zh": "在生活里，“伊”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"伊\" (third person pronoun) is commonly used."
+  },
+  "762": {
+    "zh": "在生活里，“怀”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"怀\" (bosom) is commonly used."
+  },
+  "763": {
+    "zh": "在生活里，“执”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"执\" (hold in hand) is commonly used."
+  },
+  "764": {
+    "zh": "在生活里，“副”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"副\" (assist) is commonly used."
+  },
+  "765": {
+    "zh": "在生活里，“乱”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“luàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"乱\" (confusion) is commonly used."
+  },
+  "766": {
+    "zh": "在生活里，“抗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"抗\" (resist) is commonly used."
+  },
+  "767": {
+    "zh": "在生活里，“犯”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"犯\" (commit crime) is commonly used."
+  },
+  "768": {
+    "zh": "在生活里，“追”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhuī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"追\" (pursue) is commonly used."
+  },
+  "769": {
+    "zh": "在生活里，“帮”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"帮\" (help) is commonly used."
+  },
+  "770": {
+    "zh": "在生活里，“宣”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xuān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"宣\" (declare) is commonly used."
+  },
+  "771": {
+    "zh": "在生活里，“佛”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fó” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"佛\" (Buddha) is commonly used."
+  },
+  "772": {
+    "zh": "在生活里，“岁”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“suì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"岁\" (year) is commonly used."
+  },
+  "773": {
+    "zh": "在生活里，“航”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“háng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"航\" (sail) is commonly used."
+  },
+  "774": {
+    "zh": "在生活里，“优”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yōu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"优\" (superior) is commonly used."
+  },
+  "775": {
+    "zh": "在生活里，“怪”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"怪\" (strange) is commonly used."
+  },
+  "776": {
+    "zh": "在生活里，“香”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"香\" (fragrant) is commonly used."
+  },
+  "777": {
+    "zh": "在生活里，“著”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"著\" (manifest) is commonly used."
+  },
+  "778": {
+    "zh": "在生活里，“田”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tián” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"田\" (field) is commonly used."
+  },
+  "779": {
+    "zh": "在生活里，“铁”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tiě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"铁\" (iron) is commonly used."
+  },
+  "780": {
+    "zh": "在生活里，“控”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kòng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"控\" (accuse) is commonly used."
+  },
+  "781": {
+    "zh": "在生活里，“税”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shuì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"税\" (taxes) is commonly used."
+  },
+  "782": {
+    "zh": "在生活里，“左”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zuǒ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"左\" (left) is commonly used."
+  },
+  "783": {
+    "zh": "在生活里，“右”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"右\" (right) is commonly used."
+  },
+  "784": {
+    "zh": "在生活里，“份”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fèn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"份\" (portion) is commonly used."
+  },
+  "785": {
+    "zh": "在生活里，“穿”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chuān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"穿\" (penetrate) is commonly used."
+  },
+  "786": {
+    "zh": "在生活里，“艺”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"艺\" (art) is commonly used."
+  },
+  "787": {
+    "zh": "在生活里，“背”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"背\" (back) is commonly used."
+  },
+  "788": {
+    "zh": "在生活里，“阵”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhèn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"阵\" (column) is commonly used."
+  },
+  "789": {
+    "zh": "小羊在绿草地上吃草。",
+    "py": "Xiǎo yáng zài lǜ cǎo dì shàng chī cǎo.",
+    "en": "The lamb grazes on the green grass."
+  },
+  "790": {
+    "zh": "在生活里，“脚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"脚\" (leg) is commonly used."
+  },
+  "791": {
+    "zh": "在生活里，“概”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"概\" (generally) is commonly used."
+  },
+  "792": {
+    "zh": "在生活里，“恶”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“è” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"恶\" (evil) is commonly used."
+  },
+  "793": {
+    "zh": "在生活里，“块”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kuài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"块\" (piece) is commonly used."
+  },
+  "794": {
+    "zh": "在生活里，“顿”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dùn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"顿\" (pause) is commonly used."
+  },
+  "795": {
+    "zh": "在生活里，“敢”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"敢\" (to dare) is commonly used."
+  },
+  "796": {
+    "zh": "在生活里，“守”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shǒu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"守\" (defend) is commonly used."
+  },
+  "797": {
+    "zh": "在生活里，“酒”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"酒\" (wine) is commonly used."
+  },
+  "798": {
+    "zh": "在生活里，“岛”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"岛\" (island) is commonly used."
+  },
+  "799": {
+    "zh": "在生活里，“托”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tuō” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"托\" (to hold up with palm) is commonly used."
+  },
+  "800": {
+    "zh": "在生活里，“央”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"央\" (center) is commonly used."
+  },
+  "801": {
+    "zh": "在生活里，“户”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"户\" (door) is commonly used."
+  },
+  "802": {
+    "zh": "在生活里，“烈”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"烈\" (fiery) is commonly used."
+  },
+  "803": {
+    "zh": "在生活里，“洋”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"洋\" (ocean) is commonly used."
+  },
+  "804": {
+    "zh": "在生活里，“哥”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"哥\" (elder brother) is commonly used."
+  },
+  "805": {
+    "zh": "在生活里，“索”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“suǒ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"索\" (large rope) is commonly used."
+  },
+  "806": {
+    "zh": "在生活里，“胡”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"胡\" (recklessly) is commonly used."
+  },
+  "807": {
+    "zh": "在生活里，“款”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kuǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"款\" (item) is commonly used."
+  },
+  "808": {
+    "zh": "在生活里，“靠”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"靠\" (lean on) is commonly used."
+  },
+  "809": {
+    "zh": "在生活里，“评”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“píng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"评\" (appraise) is commonly used."
+  },
+  "810": {
+    "zh": "在生活里，“版”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"版\" (printing blocks) is commonly used."
+  },
+  "811": {
+    "zh": "在生活里，“宝”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"宝\" (treasure) is commonly used."
+  },
+  "812": {
+    "zh": "在生活里，“座”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zuò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"座\" (seat) is commonly used."
+  },
+  "813": {
+    "zh": "在生活里，“释”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"释\" (interprete) is commonly used."
+  },
+  "814": {
+    "zh": "在生活里，“景”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jǐng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"景\" (scenery) is commonly used."
+  },
+  "815": {
+    "zh": "在生活里，“顾”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"顾\" (look back) is commonly used."
+  },
+  "816": {
+    "zh": "在生活里，“弟”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"弟\" (young brother) is commonly used."
+  },
+  "817": {
+    "zh": "在生活里，“登”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"登\" (rise) is commonly used."
+  },
+  "818": {
+    "zh": "在生活里，“货”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"货\" (goods) is commonly used."
+  },
+  "819": {
+    "zh": "在生活里，“互”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"互\" (mutually) is commonly used."
+  },
+  "820": {
+    "zh": "在生活里，“付”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"付\" (give) is commonly used."
+  },
+  "821": {
+    "zh": "在生活里，“伯”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bó” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"伯\" () is commonly used."
+  },
+  "822": {
+    "zh": "请你说得稍微慢一点。",
+    "py": "Qǐng nǐ shuō dé shāo wēi màn yī diǎn.",
+    "en": "Please speak slightly slower."
+  },
+  "823": {
+    "zh": "在生活里，“欧”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ōu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"欧\" (translit.: Europe) is commonly used."
+  },
+  "824": {
+    "zh": "在生活里，“换”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"换\" (change) is commonly used."
+  },
+  "825": {
+    "zh": "在生活里，“闻”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wén” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"闻\" (hear) is commonly used."
+  },
+  "826": {
+    "zh": "在生活里，“危”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wēi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"危\" (dangerous) is commonly used."
+  },
+  "827": {
+    "zh": "在生活里，“忙”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“máng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"忙\" (busy) is commonly used."
+  },
+  "828": {
+    "zh": "在生活里，“核”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"核\" (seed) is commonly used."
+  },
+  "829": {
+    "zh": "在生活里，“暗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“àn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"暗\" (dark) is commonly used."
+  },
+  "830": {
+    "zh": "在生活里，“姐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"姐\" (elder sister) is commonly used."
+  },
+  "831": {
+    "zh": "在生活里，“介”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"介\" (forerunner) is commonly used."
+  },
+  "832": {
+    "zh": "在生活里，“坏”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"坏\" (rotten) is commonly used."
+  },
+  "833": {
+    "zh": "在生活里，“讨”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"讨\" (to discuss) is commonly used."
+  },
+  "834": {
+    "zh": "在生活里，“丽”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"丽\" (beautiful) is commonly used."
+  },
+  "835": {
+    "zh": "在生活里，“良”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"良\" (good) is commonly used."
+  },
+  "836": {
+    "zh": "在生活里，“序”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"序\" (series) is commonly used."
+  },
+  "837": {
+    "zh": "在生活里，“升”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"升\" (arise) is commonly used."
+  },
+  "838": {
+    "zh": "在生活里，“监”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"监\" (supervise) is commonly used."
+  },
+  "839": {
+    "zh": "在生活里，“临”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lín” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"临\" (draw near) is commonly used."
+  },
+  "840": {
+    "zh": "在生活里，“亮”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"亮\" (bright) is commonly used."
+  },
+  "841": {
+    "zh": "在生活里，“露”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"露\" (dew) is commonly used."
+  },
+  "842": {
+    "zh": "在生活里，“永”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yǒng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"永\" (long) is commonly used."
+  },
+  "843": {
+    "zh": "在生活里，“呼”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"呼\" (breathe sigh) is commonly used."
+  },
+  "844": {
+    "zh": "在生活里，“味”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"味\" (taste) is commonly used."
+  },
+  "845": {
+    "zh": "在生活里，“野”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yě” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"野\" (open country) is commonly used."
+  },
+  "846": {
+    "zh": "在生活里，“架”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jià” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"架\" (rack) is commonly used."
+  },
+  "847": {
+    "zh": "在生活里，“域”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"域\" (district) is commonly used."
+  },
+  "848": {
+    "zh": "在生活里，“沙”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"沙\" (sand) is commonly used."
+  },
+  "849": {
+    "zh": "在生活里，“掉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“diào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"掉\" (turn) is commonly used."
+  },
+  "850": {
+    "zh": "在生活里，“括”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kuò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"括\" (include) is commonly used."
+  },
+  "851": {
+    "zh": "在生活里，“舰”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"舰\" (warship) is commonly used."
+  },
+  "852": {
+    "zh": "水里游着很多小鱼。",
+    "py": "Shuǐ lǐ yóu zháo hěn duō xiǎo yú.",
+    "en": "Many little fish are swimming in the water."
+  },
+  "853": {
+    "zh": "在生活里，“杂”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"杂\" (mixed) is commonly used."
+  },
+  "854": {
+    "zh": "在生活里，“误”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"误\" (err) is commonly used."
+  },
+  "855": {
+    "zh": "在生活里，“湾”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"湾\" (bay) is commonly used."
+  },
+  "856": {
+    "zh": "在生活里，“吉”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"吉\" (lucky) is commonly used."
+  },
+  "857": {
+    "zh": "在生活里，“减”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"减\" (decrease) is commonly used."
+  },
+  "858": {
+    "zh": "在生活里，“编”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“biān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"编\" (knit) is commonly used."
+  },
+  "859": {
+    "zh": "在生活里，“楚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"楚\" (name of feudal state) is commonly used."
+  },
+  "860": {
+    "zh": "在生活里，“肯”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kěn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"肯\" (willing) is commonly used."
+  },
+  "861": {
+    "zh": "在生活里，“测”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"测\" (measure) is commonly used."
+  },
+  "862": {
+    "zh": "在生活里，“败”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"败\" (be defeated) is commonly used."
+  },
+  "863": {
+    "zh": "屋里开着暖气很舒服。",
+    "py": "Wū lǐ kāi zháo nuǎn qì hěn shū fú.",
+    "en": "The heating is on in the room, very cozy."
+  },
+  "864": {
+    "zh": "在生活里，“跑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“pǎo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"跑\" (run) is commonly used."
+  },
+  "865": {
+    "zh": "在生活里，“梦”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mèng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"梦\" (dream) is commonly used."
+  },
+  "866": {
+    "zh": "在生活里，“散”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"散\" (scatter) is commonly used."
+  },
+  "867": {
+    "zh": "在生活里，“温”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"温\" (lukewarm) is commonly used."
+  },
+  "868": {
+    "zh": "在生活里，“困”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kùn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"困\" (to surround) is commonly used."
+  },
+  "869": {
+    "zh": "在生活里，“剑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"剑\" (sword) is commonly used."
+  },
+  "870": {
+    "zh": "在生活里，“渐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"渐\" (gradually) is commonly used."
+  },
+  "871": {
+    "zh": "在生活里，“封”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fēng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"封\" (letter) is commonly used."
+  },
+  "872": {
+    "zh": "在生活里，“救”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"救\" (save) is commonly used."
+  },
+  "873": {
+    "zh": "在生活里，“贵”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"贵\" (expensive) is commonly used."
+  },
+  "874": {
+    "zh": "在生活里，“枪”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“qiāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"枪\" (spear) is commonly used."
+  },
+  "875": {
+    "zh": "在生活里，“缺”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“quē” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"缺\" (be short of) is commonly used."
+  },
+  "876": {
+    "zh": "他住在五楼。",
+    "py": "Tā zhù zài wǔ lóu.",
+    "en": "He lives on the 5th floor."
+  },
+  "877": {
+    "zh": "在生活里，“县”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"县\" (county) is commonly used."
+  },
+  "878": {
+    "zh": "在生活里，“尚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shàng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"尚\" (still) is commonly used."
+  },
+  "879": {
+    "zh": "在生活里，“毫”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“háo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"毫\" (fine hair) is commonly used."
+  },
+  "880": {
+    "zh": "在生活里，“移”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"移\" (change place) is commonly used."
+  },
+  "881": {
+    "zh": "在生活里，“娘”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“niáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"娘\" (mother) is commonly used."
+  },
+  "882": {
+    "zh": "周末我和朋友去聚餐。",
+    "py": "Zhōu mò wǒ hé péng yǒu qù jù cān.",
+    "en": "I had dinner with friends on the weekend."
+  },
+  "883": {
+    "zh": "在生活里，“画”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“huà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"画\" (a painting) is commonly used."
+  },
+  "884": {
+    "zh": "在生活里，“班”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"班\" (class) is commonly used."
+  },
+  "885": {
+    "zh": "在生活里，“智”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"智\" (wisdom) is commonly used."
+  },
+  "886": {
+    "zh": "在生活里，“亦”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"亦\" (also) is commonly used."
+  },
+  "887": {
+    "zh": "在生活里，“耳”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ěr” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"耳\" (ear) is commonly used."
+  },
+  "888": {
+    "zh": "在生活里，“恩”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ēn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"恩\" (kindness) is commonly used."
+  },
+  "889": {
+    "zh": "假期时间太短过得很快。",
+    "py": "Jiǎ qī shí jiān tài duǎn guò dé hěn kuài.",
+    "en": "The holiday was too short and passed quickly."
+  },
+  "890": {
+    "zh": "在生活里，“掌”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"掌\" (palm of hand) is commonly used."
+  },
+  "891": {
+    "zh": "在生活里，“恐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kǒng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"恐\" (fear) is commonly used."
+  },
+  "892": {
+    "zh": "在生活里，“遗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"遗\" (lose) is commonly used."
+  },
+  "893": {
+    "zh": "在生活里，“固”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"固\" (to become solid) is commonly used."
+  },
+  "894": {
+    "zh": "在生活里，“席”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"席\" (seat) is commonly used."
+  },
+  "895": {
+    "zh": "在生活里，“松”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"松\" (pine tree) is commonly used."
+  },
+  "896": {
+    "zh": "在生活里，“秘”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"秘\" (secret) is commonly used."
+  },
+  "897": {
+    "zh": "谢谢你的热情帮助。",
+    "py": "Xiè xiè nǐ de rè qíng bāng zhù.",
+    "en": "Thank you for your warm help."
+  },
+  "898": {
+    "zh": "在生活里，“鲁”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"鲁\" (foolish) is commonly used."
+  },
+  "899": {
+    "zh": "在生活里，“遇”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"遇\" (meet) is commonly used."
+  },
+  "900": {
+    "zh": "在生活里，“康”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“kāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"康\" (peaceful) is commonly used."
+  },
+  "901": {
+    "zh": "在生活里，“虑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǜ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"虑\" (be concerned) is commonly used."
+  },
+  "902": {
+    "zh": "在生活里，“幸”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xìng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"幸\" (luck(ily)) is commonly used."
+  },
+  "903": {
+    "zh": "在生活里，“均”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"均\" (equal) is commonly used."
+  },
+  "904": {
+    "zh": "在生活里，“销”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"销\" (melt) is commonly used."
+  },
+  "905": {
+    "zh": "在生活里，“钟”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"钟\" (clock) is commonly used."
+  },
+  "906": {
+    "zh": "在生活里，“诗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"诗\" (poetry) is commonly used."
+  },
+  "907": {
+    "zh": "在生活里，“藏”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"藏\" (hide) is commonly used."
+  },
+  "908": {
+    "zh": "在生活里，“赶”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"赶\" (pursue) is commonly used."
+  },
+  "909": {
+    "zh": "在生活里，“剧”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"剧\" (theatrical plays) is commonly used."
+  },
+  "910": {
+    "zh": "在生活里，“票”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“piào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"票\" (slip of paper or bamboo) is commonly used."
+  },
+  "911": {
+    "zh": "在生活里，“损”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sǔn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"损\" (diminish) is commonly used."
+  },
+  "912": {
+    "zh": "在生活里，“忽”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"忽\" (suddenly) is commonly used."
+  },
+  "913": {
+    "zh": "在生活里，“巨”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"巨\" (large) is commonly used."
+  },
+  "914": {
+    "zh": "在生活里，“炮”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“páo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"炮\" (large gun) is commonly used."
+  },
+  "915": {
+    "zh": "这本旧书保存得很完整。",
+    "py": "Zhè běn jiù shū bǎo cún dé hěn wán zhěng.",
+    "en": "This old book is preserved very well."
+  },
+  "916": {
+    "zh": "在生活里，“端”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“duān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"端\" (end) is commonly used."
+  },
+  "917": {
+    "zh": "在生活里，“探”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"探\" (find) is commonly used."
+  },
+  "918": {
+    "zh": "在生活里，“湖”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"湖\" (a lake) is commonly used."
+  },
+  "919": {
+    "zh": "在生活里，“录”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"录\" (copy) is commonly used."
+  },
+  "920": {
+    "zh": "在生活里，“叶”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"叶\" (to harmonize) is commonly used."
+  },
+  "921": {
+    "zh": "在生活里，“春”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"春\" (spring) is commonly used."
+  },
+  "922": {
+    "zh": "在生活里，“乡”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiāng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"乡\" (country) is commonly used."
+  },
+  "923": {
+    "zh": "在生活里，“附”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"附\" (adhere to) is commonly used."
+  },
+  "924": {
+    "zh": "在生活里，“吸”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"吸\" (inhale) is commonly used."
+  },
+  "925": {
+    "zh": "在生活里，“予”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"予\" (I) is commonly used."
+  },
+  "926": {
+    "zh": "在生活里，“礼”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"礼\" (social custom) is commonly used."
+  },
+  "927": {
+    "zh": "在生活里，“港”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"港\" (port) is commonly used."
+  },
+  "928": {
+    "zh": "出门记得带上一把雨伞。",
+    "py": "Chū mén jì dé dài shàng yī bǎ yǔ sǎn.",
+    "en": "Remember to bring an umbrella when going out."
+  },
+  "929": {
+    "zh": "在生活里，“呀”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"呀\" (particle used to express surprise or mild emphasis) is commonly used."
+  },
+  "930": {
+    "zh": "在生活里，“板”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǎn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"板\" (plank) is commonly used."
+  },
+  "931": {
+    "zh": "在生活里，“庭”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tíng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"庭\" (courtyard) is commonly used."
+  },
+  "932": {
+    "zh": "在生活里，“妇”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“fù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"妇\" (married women) is commonly used."
+  },
+  "933": {
+    "zh": "在生活里，“归”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“guī” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"归\" (return) is commonly used."
+  },
+  "934": {
+    "zh": "在生活里，“睛”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"睛\" (eyeball) is commonly used."
+  },
+  "935": {
+    "zh": "我们一起吃晚饭吧。",
+    "py": "Wǒ mén yī qǐ chī wǎn fàn bā.",
+    "en": "Let's have dinner together."
+  },
+  "936": {
+    "zh": "在生活里，“额”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“é” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"额\" (forehead) is commonly used."
+  },
+  "937": {
+    "zh": "在生活里，“含”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"含\" (hold in mouth) is commonly used."
+  },
+  "938": {
+    "zh": "在生活里，“顺”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shùn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"顺\" (obey) is commonly used."
+  },
+  "939": {
+    "zh": "在生活里，“输”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"输\" (transport) is commonly used."
+  },
+  "940": {
+    "zh": "在生活里，“摇”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yáo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"摇\" (wag) is commonly used."
+  },
+  "941": {
+    "zh": "在生活里，“招”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhāo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"招\" (beckon) is commonly used."
+  },
+  "942": {
+    "zh": "在生活里，“婚”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“hūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"婚\" (get married) is commonly used."
+  },
+  "943": {
+    "zh": "在生活里，“脱”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tuō” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"脱\" (take off) is commonly used."
+  },
+  "944": {
+    "zh": "在生活里，“补”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǔ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"补\" (mend) is commonly used."
+  },
+  "945": {
+    "zh": "在生活里，“谓”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wèi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"谓\" (say) is commonly used."
+  },
+  "946": {
+    "zh": "在生活里，“督”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"督\" (supervise) is commonly used."
+  },
+  "947": {
+    "zh": "在生活里，“毒”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“dú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"毒\" (poison) is commonly used."
+  },
+  "948": {
+    "zh": "锅里倒一点食用油。",
+    "py": "Guō lǐ dǎo yī diǎn shí yòng yóu.",
+    "en": "Pour a little cooking oil into the pot."
+  },
+  "949": {
+    "zh": "在生活里，“疗”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“liáo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"疗\" (be healed) is commonly used."
+  },
+  "950": {
+    "zh": "在生活里，“旅”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lǚ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"旅\" (trip) is commonly used."
+  },
+  "951": {
+    "zh": "在生活里，“泽”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"泽\" (marsh) is commonly used."
+  },
+  "952": {
+    "zh": "在生活里，“材”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cái” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"材\" (material) is commonly used."
+  },
+  "953": {
+    "zh": "在生活里，“灭”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“miè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"灭\" (extinguish) is commonly used."
+  },
+  "954": {
+    "zh": "在生活里，“逐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhú” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"逐\" (chase) is commonly used."
+  },
+  "955": {
+    "zh": "在生活里，“莫”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"莫\" (do not) is commonly used."
+  },
+  "956": {
+    "zh": "在生活里，“笔”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bǐ” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"笔\" (writing brush) is commonly used."
+  },
+  "957": {
+    "zh": "在生活里，“亡”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“wáng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"亡\" (death) is commonly used."
+  },
+  "958": {
+    "zh": "在生活里，“鲜”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xiān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"鲜\" (fresh) is commonly used."
+  },
+  "959": {
+    "zh": "在生活里，“词”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“cí” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"词\" (words) is commonly used."
+  },
+  "960": {
+    "zh": "在生活里，“圣”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shèng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"圣\" (holy) is commonly used."
+  },
+  "961": {
+    "zh": "在生活里，“择”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zé” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"择\" (select) is commonly used."
+  },
+  "962": {
+    "zh": "在生活里，“寻”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“xún” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"寻\" (seek) is commonly used."
+  },
+  "963": {
+    "zh": "在生活里，“厂”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“chǎng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"厂\" (factory) is commonly used."
+  },
+  "964": {
+    "zh": "在生活里，“睡”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shuì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"睡\" (sleep) is commonly used."
+  },
+  "965": {
+    "zh": "在生活里，“博”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bó” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"博\" (gamble) is commonly used."
+  },
+  "966": {
+    "zh": "在生活里，“勒”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"勒\" (strangle) is commonly used."
+  },
+  "967": {
+    "zh": "在生活里，“烟”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yān” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"烟\" (smoke) is commonly used."
+  },
+  "968": {
+    "zh": "在生活里，“授”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shòu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"授\" (give to) is commonly used."
+  },
+  "969": {
+    "zh": "在生活里，“诺”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“nuò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"诺\" (promise) is commonly used."
+  },
+  "970": {
+    "zh": "在生活里，“伦”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“lún” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"伦\" (normal human relationships) is commonly used."
+  },
+  "971": {
+    "zh": "在生活里，“岸”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“àn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"岸\" (bank) is commonly used."
+  },
+  "972": {
+    "zh": "在生活里，“奥”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“ào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"奥\" (mysterious) is commonly used."
+  },
+  "973": {
+    "zh": "在生活里，“唐”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“táng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"唐\" (Tang dynasty) is commonly used."
+  },
+  "974": {
+    "zh": "在生活里，“卖”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“mài” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"卖\" (sell) is commonly used."
+  },
+  "975": {
+    "zh": "在生活里，“俄”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“é” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"俄\" (sudden(ly)) is commonly used."
+  },
+  "976": {
+    "zh": "在生活里，“炸”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhà” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"炸\" (to fry in oil) is commonly used."
+  },
+  "977": {
+    "zh": "在生活里，“载”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zǎi” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"载\" (load) is commonly used."
+  },
+  "978": {
+    "zh": "在生活里，“洛”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“luò” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"洛\" (river in Shanxi province) is commonly used."
+  },
+  "979": {
+    "zh": "在生活里，“健”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiàn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"健\" (strong) is commonly used."
+  },
+  "980": {
+    "zh": "在生活里，“堂”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“táng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"堂\" (hall) is commonly used."
+  },
+  "981": {
+    "zh": "在生活里，“旁”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“páng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"旁\" (side) is commonly used."
+  },
+  "982": {
+    "zh": "在生活里，“宫”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gōng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"宫\" (palace) is commonly used."
+  },
+  "983": {
+    "zh": "喝杯热茶暖暖身子。",
+    "py": "Hē bēi rè chá nuǎn nuǎn shēn zǐ.",
+    "en": "Drink a cup of hot tea to warm up."
+  },
+  "984": {
+    "zh": "在生活里，“借”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jiè” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"借\" (borrow) is commonly used."
+  },
+  "985": {
+    "zh": "在生活里，“君”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"君\" (sovereign) is commonly used."
+  },
+  "986": {
+    "zh": "在生活里，“禁”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“jīn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"禁\" (restrict) is commonly used."
+  },
+  "987": {
+    "zh": "今天是个阴天没有太阳。",
+    "py": "Jīn tiān shì gè yīn tiān méi yǒu tài yáng.",
+    "en": "Today is an overcast day without sunshine."
+  },
+  "988": {
+    "zh": "在生活里，“园”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yuán” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"园\" (garden) is commonly used."
+  },
+  "989": {
+    "zh": "在生活里，“谋”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“móu” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"谋\" (plan) is commonly used."
+  },
+  "990": {
+    "zh": "在生活里，“宋”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sòng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"宋\" (Song dynasty) is commonly used."
+  },
+  "991": {
+    "zh": "在生活里，“避”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“bì” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"避\" (avoid) is commonly used."
+  },
+  "992": {
+    "zh": "在生活里，“抓”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“zhuā” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"抓\" (scratch) is commonly used."
+  },
+  "993": {
+    "zh": "在生活里，“荣”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“róng” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"荣\" (glory) is commonly used."
+  },
+  "994": {
+    "zh": "在生活里，“姑”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“gū” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"姑\" () is commonly used."
+  },
+  "995": {
+    "zh": "在生活里，“孙”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“sūn” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"孙\" (grandchild) is commonly used."
+  },
+  "996": {
+    "zh": "在生活里，“逃”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“táo” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"逃\" (escape) is commonly used."
+  },
+  "997": {
+    "zh": "在生活里，“牙”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“yá” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"牙\" (tooth) is commonly used."
+  },
+  "998": {
+    "zh": "在生活里，“束”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“shù” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"束\" (bind) is commonly used."
+  },
+  "999": {
+    "zh": "在生活里，“跳”字常用于相关表达。",
+    "py": "Zài shēng huó lǐ,“tiào” zì cháng yòng yú xiāng guān biǎo dá.",
+    "en": "In daily life, the character \"跳\" (jump) is commonly used."
+  },
+  "1000": {
+    "zh": "他站在高高的山顶上。",
+    "py": "Tā zhàn zài gāo gāo de shān dǐng shàng.",
+    "en": "He stands on top of the high mountain."
+  }
+}

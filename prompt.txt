@@ -1,6 +1,7 @@
 I'm building a flashcard app to help me study chinese characters. I will be
 using react for frontend and sqlite3 for database to track progress. There is 
 no need to have a backend server. All the character data is in hanzi_db.json. 
+Use tailwind for css and ShadCN for UI library.
 
 Here are the requirements:
 - There are 3 types: learned, new, and in-progress
