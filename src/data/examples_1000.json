@@ -81,7 +81,7 @@
   },
   "17": {
     "zh": "外面雨下得很大。",
-    "py": "Wài miàn yǔ xià dé hěn dà.",
+    "py": "Wài miàn yǔ xià de hěn dà.",
     "en": "It is raining heavily outside."
   },
   "18": {
@@ -161,7 +161,7 @@
   },
   "33": {
     "zh": "你说得非常对。",
-    "py": "Nǐ shuō dé fēi cháng duì.",
+    "py": "Nǐ shuō de fēi cháng duì.",
     "en": "What you said is very right."
   },
   "34": {
@@ -191,7 +191,7 @@
   },
   "39": {
     "zh": "他跑得非常快。",
-    "py": "Tā pǎo dé fēi cháng kuài.",
+    "py": "Tā pǎo de fēi cháng kuài.",
     "en": "He runs very fast."
   },
   "40": {
@@ -201,7 +201,7 @@
   },
   "41": {
     "zh": "房门开着呢，请进。",
-    "py": "Fáng mén kāi zháo ne, qǐng jìn.",
+    "py": "Fáng mén kāi zhe ne, qǐng jìn.",
     "en": "The room door is open, please come in."
   },
   "42": {
@@ -246,7 +246,7 @@
   },
   "50": {
     "zh": "书包里装着几本笔记本。",
-    "py": "Shū bāo lǐ zhuāng zháo jī běn bǐ jì běn.",
+    "py": "Shū bāo lǐ zhuāng zhe jī běn bǐ jì běn.",
     "en": "There are several notebooks in the schoolbag."
   },
   "51": {
@@ -706,7 +706,7 @@
   },
   "142": {
     "zh": "公园里生活着很多可爱的小动物。",
-    "py": "Gōng yuán lǐ shēng huó zháo hěn duō kě ài de xiǎo dòng wù.",
+    "py": "Gōng yuán lǐ shēng huó zhe hěn duō kě ài de xiǎo dòng wù.",
     "en": "Many cute small animals live in the park."
   },
   "143": {
@@ -726,7 +726,7 @@
   },
   "146": {
     "zh": "他微笑着向走过来的朋友招手致意。",
-    "py": "Tā wēi xiào zháo xiàng zǒu guò lái de péng yǒu zhāo shǒu zhì yì.",
+    "py": "Tā wēi xiào zhe xiàng zǒu guò lái de péng yǒu zhāo shǒu zhì yì.",
     "en": "He smiled and waved in greeting toward the approaching friend."
   },
   "147": {
@@ -946,7 +946,7 @@
   },
   "190": {
     "zh": "手机让人们之间的沟通变得非常方便。",
-    "py": "Shǒu jī ràng rén men zhī jiān de gōu tōng biàn dé fēi cháng fāng biàn.",
+    "py": "Shǒu jī ràng rén men zhī jiān de gōu tōng biàn de fēi cháng fāng biàn.",
     "en": "Mobile phones have made communication between people very convenient."
   },
   "191": {
@@ -1726,7 +1726,7 @@
   },
   "346": {
     "zh": "他讲的幽默笑话逗得大家哈哈大笑。",
-    "py": "Tā jiǎng de yōu mò xiào huà dòu dé dà jiā hā hā dà xiào.",
+    "py": "Tā jiǎng de yōu mò xiào huà dòu de dà jiā hā hā dà xiào.",
     "en": "The humorous joke he told made everyone laugh heartily."
   },
   "347": {
@@ -1841,7 +1841,7 @@
   },
   "369": {
     "zh": "列车正向着风景优美的南方平稳开往。",
-    "py": "Liè chē zhèng xiàng zháo fēng jǐng yōu měi de nán fāng píng wěn kāi wǎng.",
+    "py": "Liè chē zhèng xiàng zhe fēng jǐng yōu měi de nán fāng píng wěn kāi wǎng.",
     "en": "The train is steadily heading towards the scenic south."
   },
   "370": {
@@ -2450,9 +2450,9 @@
     "en": "This weekend our whole family plans to go camping in the suburbs."
   },
   "491": {
-    "zh": "今天的天气比昨天比较暖和。",
-    "py": "Jīn tiān de tiān qì bǐ zuó tiān bǐ jiào nuǎn huo.",
-    "en": "Today's weather is comparatively warmer than yesterday."
+    "zh": "今天的天气比较暖和。",
+    "py": "Jīn tiān de tiān qì bǐ jiào nuǎn huo.",
+    "en": "Today's weather is comparatively warm."
   },
   "492": {
     "zh": "上课认真听讲、集中注意力是高效学习的关键。",
@@ -2631,7 +2631,7 @@
   },
   "527": {
     "zh": "今天睡得很香，感觉睡眠很充足。",
-    "py": "Jīn tiān shuì dé hěn xiāng, gǎn jué shuì mián hěn chōng zú.",
+    "py": "Jīn tiān shuì de hěn xiāng, gǎn jué shuì mián hěn chōng zú.",
     "en": "I slept very soundly today and feel sleep was very adequate."
   },
   "528": {
@@ -3126,7 +3126,7 @@
   },
   "626": {
     "zh": "这篇文章写得很好，甚至老师都夸奖他。",
-    "py": "Zhè piān wén zhāng xiě dé hěn hǎo, shèn zhì lǎo shī dōu kuā jiǎng tā.",
+    "py": "Zhè piān wén zhāng xiě de hěn hǎo, shèn zhì lǎo shī dōu kuā jiǎng tā.",
     "en": "This article is written very well, even the teacher praised him."
   },
   "627": {
@@ -3480,9 +3480,9 @@
     "en": "Chinese people have the tradition of rowing dragon boats on Dragon Boat Festival."
   },
   "697": {
-    "zh": "门前有一棵很大很大的银杏树。",
-    "py": "Mén qián yǒu yī kē hěn dà hěn dà de yín xìng shù.",
-    "en": "There is a very large ginkgo tree in front of the door."
+    "zh": "门前有一棵高大的银杏树。",
+    "py": "Mén qián yǒu yī kē gāo dà de yín xìng shù.",
+    "en": "There is a tall ginkgo tree in front of the door."
   },
   "698": {
     "zh": "不懂的问题不要怀疑，直接问老师。",
@@ -4121,7 +4121,7 @@
   },
   "825": {
     "zh": "院子里的花开得很香，很好闻。",
-    "py": "Yuàn zi lǐ de huā kāi dé hěn xiāng, hěn hǎo wén.",
+    "py": "Yuàn zi lǐ de huā kāi de hěn xiāng, hěn hǎo wén.",
     "en": "The flowers in the courtyard bloom fragrantly, smelling very nice."
   },
   "826": {
@@ -4291,7 +4291,7 @@
   },
   "859": {
     "zh": "他把黑板上的字写得很清楚。",
-    "py": "Tā bǎ hēi bǎn shàng de zì xiě dé hěn qīng chǔ.",
+    "py": "Tā bǎ hēi bǎn shàng de zì xiě de hěn qīng chǔ.",
     "en": "He wrote the characters on the blackboard very clearly."
   },
   "860": {
@@ -4441,7 +4441,7 @@
   },
   "889": {
     "zh": "这支铅笔用得太短了，该换新的了。",
-    "py": "Zhè zhī qiān bǐ yòng dé tài duǎn le, gāi huàn xīn de le.",
+    "py": "Zhè zhī qiān bǐ yòng de tài duǎn le, gāi huàn xīn de le.",
     "en": "This pencil has been used too short, time to change for a new one."
   },
   "890": {
@@ -4526,7 +4526,7 @@
   },
   "906": {
     "zh": "这首唐诗写得非常优美动人。",
-    "py": "Zhè shǒu táng shī xiě dé fēi cháng yōu měi dòng rén.",
+    "py": "Zhè shǒu táng shī xiě de fēi cháng yōu měi dòng rén.",
     "en": "This Tang poem is written very beautifully and touchingly."
   },
   "907": {

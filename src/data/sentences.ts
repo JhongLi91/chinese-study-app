@@ -1,4 +1,5 @@
 import sentences1000 from './examples_1000.json';
+import sentences2000 from './examples_2000.json';
 
 export interface SentenceExample {
   zh: string;
@@ -6,15 +7,18 @@ export interface SentenceExample {
   en: string;
 }
 
-const sentenceMap = sentences1000 as Record<string, SentenceExample>;
+const sentenceMap: Record<string, SentenceExample> = {
+  ...(sentences1000 as Record<string, SentenceExample>),
+  ...(sentences2000 as Record<string, SentenceExample>),
+};
 
 export function getExampleSentence(
   character: string,
   rank: number,
   definition?: string
 ): SentenceExample | null {
-  // Only available for the top 1,000 characters
-  if (rank > 1000) return null;
+  // Available for the top 2,000 characters
+  if (rank > 2000) return null;
 
   const found = sentenceMap[String(rank)];
   if (found) {
@@ -33,3 +37,4 @@ export function getExampleSentence(
 export function getTotalExampleCount(): number {
   return Object.keys(sentenceMap).length;
 }
+
