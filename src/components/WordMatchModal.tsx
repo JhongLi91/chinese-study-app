@@ -8,7 +8,6 @@ import {
   Volume2,
   Zap,
   ArrowRight,
-  Flame,
   CheckCircle2,
   BookOpen,
 } from 'lucide-react';
@@ -37,14 +36,10 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
   isOpen,
   onClose,
   sourceCards = [],
-  title = '2-Character Word Match (Learned & In-Progress)',
+  title = '2-Character Word Match',
   onGoToLessons,
 }) => {
   const [round, setRound] = useState(1);
-  const [score, setScore] = useState(0);
-  const [streak, setStreak] = useState(0);
-  const [bestStreak, setBestStreak] = useState(0);
-
   const [activePairs, setActivePairs] = useState<WordPairItem[]>([]);
   const [leftCards, setLeftCards] = useState<ColumnCard[]>([]);
   const [rightCards, setRightCards] = useState<ColumnCard[]>([]);
@@ -89,9 +84,6 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
   const [prevIsOpen, setPrevIsOpen] = useState(false);
   if (isOpen && !prevIsOpen) {
     setPrevIsOpen(true);
-    setScore(0);
-    setStreak(0);
-    setBestStreak(0);
     startNewRound(1);
   } else if (!isOpen && prevIsOpen) {
     setPrevIsOpen(false);
@@ -140,11 +132,6 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
           prev.map((c) => (c.id === rightId ? { ...c, isMatched: true } : c))
         );
 
-        const newStreak = streak + 1;
-        setStreak(newStreak);
-        setBestStreak((prev) => Math.max(prev, newStreak));
-        setScore((prev) => prev + 100 * newStreak);
-
         setSelectedLeftId(null);
         setSelectedRightId(null);
 
@@ -169,7 +156,6 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
       // WRONG MATCH
       setWrongMatch({ leftId, rightId });
       playSound('flip');
-      setStreak(0);
 
       setTimeout(() => {
         setWrongMatch(null);
@@ -207,21 +193,7 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            {/* Score & Streak */}
-            {activePairs.length > 0 && (
-              <div className="hidden sm:flex items-center gap-3 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono">
-                <div className="flex items-center gap-1 text-amber-400">
-                  <Flame className="w-3.5 h-3.5 fill-current" />
-                  <span>Streak: {streak} (Best: {bestStreak})</span>
-                </div>
-                <div className="h-3 w-px bg-slate-700" />
-                <div className="text-emerald-400 font-bold">
-                  {score} pts
-                </div>
-              </div>
-            )}
-
+          <div className="flex items-center gap-2">
             {activePairs.length > 0 && (
               <Button
                 size="icon"
@@ -445,7 +417,7 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
                       <span className="text-slate-400 text-[11px]">
                         • {p.meaning}
                       </span>
-                      <Volume2 className="w-3.5 h-3.5 text-slate-400" />
+                      <Volume2 className="w-3 h-3 text-slate-400" />
                     </div>
                   ))}
                 </div>
