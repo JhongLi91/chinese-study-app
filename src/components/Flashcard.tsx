@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { Character, StudyStatus } from '../types';
 import { Volume2, CheckCircle2, Clock, RotateCw, ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { SentencePopover } from './SentencePopover';
 import { getExampleSentence } from '../data/sentences';
-import { playSound, speakChinese } from '../utils/audio';
+import { playSound, speakChinese, preloadChineseAudio } from '../utils/audio';
 
 interface FlashcardProps {
   card: Character;
@@ -33,12 +33,21 @@ export const Flashcard: React.FC<FlashcardProps> = ({
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const [isExampleOpen, setIsExampleOpen] = useState<boolean>(false);
 
-  const exampleSentence = getExampleSentence(card.character, card.frequency_rank, card.definition);
+  const exampleSentence = useMemo(() => {
+    return getExampleSentence(card.character, card.frequency_rank, card.definition);
+  }, [card.character, card.frequency_rank, card.definition]);
 
+  // Reset flip state and preload audio when card changes
   useEffect(() => {
     setIsFlipped(false);
     setIsExampleOpen(false);
-  }, [card.frequency_rank]);
+    if (card?.character) {
+      preloadChineseAudio(card.character);
+    }
+    if (cardsList && cardsList[cardIndex + 1]?.character) {
+      preloadChineseAudio(cardsList[cardIndex + 1].character);
+    }
+  }, [card, cardIndex, cardsList]);
 
   const handleFlip = () => {
     playSound('flip');
@@ -49,18 +58,14 @@ export const Flashcard: React.FC<FlashcardProps> = ({
     if (e) e.stopPropagation();
     playSound('learned');
     onStatusChange(card.frequency_rank, 'learned');
-    if (cardIndex < totalCards - 1) {
-      setTimeout(() => onNext(), 150);
-    }
+    onNext();
   };
 
   const handleSetInProgress = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     playSound('inProgress');
     onStatusChange(card.frequency_rank, 'in-progress');
-    if (cardIndex < totalCards - 1) {
-      setTimeout(() => onNext(), 150);
-    }
+    onNext();
   };
 
   const handleResetToNew = (e: React.MouseEvent) => {

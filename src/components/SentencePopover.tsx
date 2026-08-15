@@ -49,7 +49,7 @@ export const SentencePopover: React.FC<SentencePopoverProps> = ({
 
   const handlePlaySentenceAudio = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    speakChinese(sentence.zh, 0.8);
+    speakChinese(sentence.zh, 1.0);
   };
 
   // Highlight target character in Chinese sentence

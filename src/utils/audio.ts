@@ -1,7 +1,20 @@
-// Web Speech API for Mandarin Pronunciation and Web Audio API for subtle interface feedback
+// Audio Engine: Natural Studio Neural TTS with Intelligent Web Speech API Fallback & Sound Effects
 
 let audioCtx: AudioContext | null = null;
 let soundEnabled = true;
+let currentAudio: HTMLAudioElement | null = null;
+let cachedVoices: SpeechSynthesisVoice[] = [];
+
+// Pre-load system speech synthesis voices
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  const loadVoices = () => {
+    cachedVoices = window.speechSynthesis.getVoices();
+  };
+  loadVoices();
+  if (window.speechSynthesis.onvoiceschanged !== undefined) {
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+  }
+}
 
 export function setSoundEnabled(enabled: boolean) {
   soundEnabled = enabled;
@@ -91,31 +104,148 @@ export function playSound(type: 'flip' | 'learned' | 'inProgress' | 'click' | 'c
   }
 }
 
-export function speakChinese(text: string, rate: number = 0.85): void {
+/**
+ * Find the highest-quality Chinese voice available in the user's browser/system.
+ */
+function getBestWebSpeechVoice(): SpeechSynthesisVoice | null {
+  if (typeof window === 'undefined' || !window.speechSynthesis) return null;
+
+  const voices = cachedVoices.length > 0 ? cachedVoices : window.speechSynthesis.getVoices();
+  if (!voices || voices.length === 0) return null;
+
+  const zhVoices = voices.filter(
+    (v) =>
+      v.lang.toLowerCase().startsWith('zh') ||
+      v.name.toLowerCase().includes('chinese') ||
+      v.name.toLowerCase().includes('mandarin') ||
+      v.name.includes('中文') ||
+      v.name.includes('普通话')
+  );
+
+  if (zhVoices.length === 0) return null;
+
+  // Rank voices by quality and dialect
+  const ranked = zhVoices.map((v) => {
+    let score = 0;
+    const name = v.name.toLowerCase();
+    const lang = v.lang.toLowerCase();
+
+    // Prefer Mainland Mandarin (zh-CN)
+    if (lang === 'zh-cn' || lang === 'zh_cn') score += 30;
+    else if (lang.startsWith('zh')) score += 15;
+
+    // Prefer Natural / Neural / Enhanced / Premium voices
+    if (name.includes('natural') || name.includes('neural')) score += 60;
+    if (name.includes('enhanced') || name.includes('premium')) score += 50;
+    if (name.includes('xiaoxiao') || name.includes('yunxi') || name.includes('yunjian')) score += 45;
+    if (name.includes('google') || name.includes('siri') || name.includes('apple')) score += 35;
+    if (name.includes('tingting') || name.includes('meijia') || name.includes('sinji') || name.includes('sin-ji')) score += 25;
+
+    // Penalize robotic compact/legacy voices
+    if (name.includes('compact')) score -= 30;
+
+    return { voice: v, score };
+  });
+
+  ranked.sort((a, b) => b.score - a.score);
+  return ranked[0].voice;
+}
+
+/**
+ * Fallback synthesizer using Web Speech API with optimal natural parameters
+ */
+function speakWithWebSpeech(text: string, rate: number = 0.92): void {
   if (typeof window === 'undefined' || !window.speechSynthesis) return;
 
   try {
-    window.speechSynthesis.cancel(); // Stop any pending speech
+    window.speechSynthesis.cancel();
+
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
-    utterance.rate = rate;
+    utterance.rate = rate; // 0.92 sounds significantly less stretched and robotic than 0.8
+    utterance.pitch = 1.0;
 
-    // Find best Chinese voice if available
-    const voices = window.speechSynthesis.getVoices();
-    const zhVoice = voices.find(
-      (v) =>
-        v.lang === 'zh-CN' ||
-        v.lang === 'zh_CN' ||
-        v.lang.startsWith('zh') ||
-        v.name.includes('Chinese') ||
-        v.name.includes('Mandarin')
-    );
-    if (zhVoice) {
-      utterance.voice = zhVoice;
+    const bestVoice = getBestWebSpeechVoice();
+    if (bestVoice) {
+      utterance.voice = bestVoice;
     }
 
     window.speechSynthesis.speak(utterance);
   } catch (e) {
-    console.warn('Speech synthesis error:', e);
+    console.warn('Web Speech fallback error:', e);
+  }
+}
+
+/**
+ * Generates natural Google Neural Studio TTS audio URL for Mandarin Putonghua
+ */
+function getNaturalTtsUrl(text: string): string {
+  const clean = text.trim();
+  return `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=zh-CN&q=${encodeURIComponent(clean)}`;
+}
+
+/**
+ * Preloads audio for seamless, zero-latency playback
+ */
+export function preloadChineseAudio(text: string): void {
+  if (typeof window === 'undefined' || !text) return;
+  try {
+    const audio = new Audio();
+    audio.preload = 'auto';
+    audio.src = getNaturalTtsUrl(text);
+  } catch (e) {
+    // Ignore preloading errors
+  }
+}
+
+/**
+ * High-definition Natural Mandarin Pronunciation Engine.
+ * Plays studio-quality native neural audio, with seamless fallback to best system voice.
+ */
+export function speakChinese(text: string, rate: number = 1.0): void {
+  if (!text || typeof window === 'undefined') return;
+
+  // 1. Immediately cancel any currently playing audio or speech synthesis
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  }
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+
+  // 2. Play high-fidelity studio neural audio
+  try {
+    const audioUrl = getNaturalTtsUrl(text);
+    const audio = new Audio(audioUrl);
+    currentAudio = audio;
+
+    // Apply playback rate if requested (default 1.0 is standard native cadence)
+    if (rate && rate !== 1.0) {
+      audio.playbackRate = rate;
+    }
+
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback to enhanced Web Speech API if network or audio element fails
+        speakWithWebSpeech(text, Math.min(1.0, Math.max(0.85, rate)));
+      });
+    }
+
+    audio.onended = () => {
+      if (currentAudio === audio) {
+        currentAudio = null;
+      }
+    };
+
+    audio.onerror = () => {
+      // Offline or network error -> fallback to Web Speech API
+      speakWithWebSpeech(text, Math.min(1.0, Math.max(0.85, rate)));
+    };
+  } catch (e) {
+    // Fallback if Audio constructor fails
+    speakWithWebSpeech(text, rate);
   }
 }
