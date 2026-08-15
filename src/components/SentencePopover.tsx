@@ -23,12 +23,24 @@ export const SentencePopover: React.FC<SentencePopoverProps> = ({
   sentence,
   onClose,
 }) => {
-  // Listen for ANY key press to close the popover
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || !sentence) return;
 
-    const handleAnyKey = (e: KeyboardEvent) => {
-      // Prevent event from bubbling to card navigation when closing popover
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+        return;
+      }
+
+      // 'o' plays sentence audio without closing
+      if (e.key.toLowerCase() === 'o') {
+        e.preventDefault();
+        e.stopPropagation();
+        speakChinese(sentence.zh, 1.0);
+        return;
+      }
+
+      // Any other key closes the popover
       e.preventDefault();
       e.stopPropagation();
       onClose();
@@ -36,14 +48,14 @@ export const SentencePopover: React.FC<SentencePopoverProps> = ({
 
     // Small timeout so the triggering keypress (e.g. space) doesn't instantly close it in the same event tick
     const timer = setTimeout(() => {
-      window.addEventListener('keydown', handleAnyKey, { capture: true });
+      window.addEventListener('keydown', handleKeyDown, { capture: true });
     }, 50);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('keydown', handleAnyKey, { capture: true });
+      window.removeEventListener('keydown', handleKeyDown, { capture: true });
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, sentence, onClose]);
 
   if (!isOpen || !sentence) return null;
 
@@ -93,7 +105,7 @@ export const SentencePopover: React.FC<SentencePopoverProps> = ({
               size="icon"
               variant="secondary"
               onClick={handlePlaySentenceAudio}
-              title="Play Sentence Audio"
+              title="Play Sentence Audio (or press 'o')"
               className="rounded-full"
             >
               <Volume2 className="w-4 h-4 text-sky-400" />
@@ -138,12 +150,14 @@ export const SentencePopover: React.FC<SentencePopoverProps> = ({
         </div>
 
         {/* Footer Prompt */}
-        <div className="pt-2 text-center border-t border-slate-800 text-xs text-slate-400 flex items-center justify-center gap-2">
-          <span>Press</span>
-          <kbd className="font-mono text-xs px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-200">
-            any key
-          </kbd>
-          <span>or click anywhere to close</span>
+        <div className="pt-2 text-center border-t border-slate-800 text-xs text-slate-400 flex items-center justify-center gap-3 flex-wrap">
+          <span className="flex items-center gap-1">
+            Press <kbd className="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-sky-400">o</kbd> to listen
+          </span>
+          <span className="text-slate-600">•</span>
+          <span className="flex items-center gap-1">
+            Press <kbd className="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300">any key</kbd> or click outside to close
+          </span>
         </div>
       </Card>
     </div>

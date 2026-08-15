@@ -148,7 +148,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
           e.preventDefault();
           handleOpenExample();
           break;
-        case 'a':
+        case 'o':
           e.preventDefault();
           handlePlayAudio();
           break;
@@ -250,7 +250,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
                 variant="secondary"
                 onClick={handlePlayAudio}
                 className="rounded-full"
-                title="Play pronunciation (or press 'a')"
+                title="Play pronunciation (or press 'o')"
               >
                 <Volume2 className="w-5 h-5 text-slate-300 hover:text-sky-400" />
               </Button>
@@ -285,7 +285,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
                   variant="secondary"
                   onClick={handlePlayAudio}
                   className="rounded-full"
-                  title="Play pronunciation (or press 'a')"
+                  title="Play pronunciation (or press 'o')"
                 >
                   <Volume2 className="w-4 h-4 text-slate-300 hover:text-sky-400" />
                 </Button>
@@ -486,7 +486,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">k</kbd> In-Progress</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">;</kbd> Flip</span>
         <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">Space</kbd> Example</span>
-        <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">a</kbd> Audio</span>
+        <span><kbd className="bg-slate-900 text-slate-300 px-1.5 py-0.5 rounded border border-slate-800">o</kbd> Audio</span>
       </div>
 
       {/* Sentence Popover */}
