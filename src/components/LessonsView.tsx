@@ -2,9 +2,7 @@ import React, { useState, useMemo } from 'react';
 import type { Character, LessonInfo, StudyStatus } from '../types';
 import { Flashcard } from './Flashcard';
 import {
-  BookOpen,
   CheckCircle2,
-  Clock,
   ArrowLeft,
   Search,
   Shuffle,
@@ -12,7 +10,6 @@ import {
   ChevronRight,
   RotateCcw,
   Trophy,
-  List,
   Sparkles,
 } from 'lucide-react';
 import { Button } from './ui/button';
@@ -48,7 +45,6 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
   const [isShuffled, setIsShuffled] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<Character[]>([]);
   const [isLessonCompleted, setIsLessonCompleted] = useState(false);
-  const [lessonViewMode, setLessonViewMode] = useState<'flashcard' | 'list'>('flashcard');
 
   // Reset lesson internal state on lesson switch
   const [prevLessonNumber, setPrevLessonNumber] = useState<number | null>(null);
@@ -58,7 +54,6 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
     setIsShuffled(false);
     setShuffledCards([]);
     setIsLessonCompleted(false);
-    setLessonViewMode('flashcard');
   }
 
   const filteredLessons = useMemo(() => {
@@ -95,7 +90,6 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
     setCurrentCardIndex(0);
     setIsShuffled(false);
     setIsLessonCompleted(false);
-    setLessonViewMode('flashcard');
     onSelectLesson(lessonNum);
   };
 
@@ -208,28 +202,6 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                 <Shuffle className="w-3.5 h-3.5" />
                 <span>{isShuffled ? 'Shuffled' : 'Shuffle'}</span>
               </Button>
-
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => {
-                  playSound('click');
-                  setLessonViewMode((m) => (m === 'flashcard' ? 'list' : 'flashcard'));
-                }}
-                className="gap-1.5"
-              >
-                {lessonViewMode === 'flashcard' ? (
-                  <>
-                    <List className="w-3.5 h-3.5" />
-                    <span>List View</span>
-                  </>
-                ) : (
-                  <>
-                    <BookOpen className="w-3.5 h-3.5" />
-                    <span>Flashcards</span>
-                  </>
-                )}
-              </Button>
             </div>
           </div>
         </Card>
@@ -307,7 +279,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
               </Button>
             </div>
           </Card>
-        ) : lessonViewMode === 'flashcard' && activeDeck.length > 0 ? (
+        ) : activeDeck.length > 0 ? (
           <div className="w-full">
             <Flashcard
               card={activeDeck[currentCardIndex]}
@@ -320,61 +292,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
               cardsList={activeDeck}
             />
           </div>
-        ) : (
-          <Card className="overflow-hidden border-slate-800 bg-slate-900/90">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-slate-800 bg-slate-950/60 text-[11px] uppercase tracking-wider font-semibold text-slate-400">
-                  <th className="py-3 px-4 w-16">Rank</th>
-                  <th className="py-3 px-4 w-28">Character</th>
-                  <th className="py-3 px-4 w-32">Pinyin</th>
-                  <th className="py-3 px-4">Definition</th>
-                  <th className="py-3 px-4 w-32 text-right">Status</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800/70 text-sm">
-                {lessonCharacters.map((c, idx) => (
-                  <tr
-                    key={c.frequency_rank}
-                    onClick={() => {
-                      setCurrentCardIndex(idx);
-                      setLessonViewMode('flashcard');
-                    }}
-                    className="hover:bg-slate-850/80 transition-colors cursor-pointer"
-                  >
-                    <td className="py-3 px-4 font-mono text-xs text-slate-500">
-                      #{c.frequency_rank}
-                    </td>
-                    <td className="py-3 px-4 font-serif text-xl font-bold text-slate-100">
-                      {c.character}
-                    </td>
-                    <td className="py-3 px-4 font-medium text-sky-400">
-                      {c.pinyin}
-                    </td>
-                    <td className="py-3 px-4 text-slate-300">
-                      {c.definition}
-                    </td>
-                    <td className="py-3 px-4 text-right">
-                      {c.status === 'learned' ? (
-                        <Badge variant="learned">
-                          <CheckCircle2 className="w-3 h-3" /> Learned
-                        </Badge>
-                      ) : c.status === 'in-progress' ? (
-                        <Badge variant="inProgress">
-                          <Clock className="w-3 h-3" /> In-Progress
-                        </Badge>
-                      ) : (
-                        <Badge variant="outline" className="text-slate-500">
-                          New
-                        </Badge>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Card>
-        )}
+        ) : null}
       </div>
     );
   }

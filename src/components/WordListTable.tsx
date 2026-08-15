@@ -8,8 +8,8 @@ import {
   CheckCircle2,
   Clock,
   RotateCcw,
-  LayoutGrid,
-  List,
+  CheckSquare,
+  Square,
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -48,7 +48,6 @@ export const WordListTable: React.FC<WordListTableProps> = ({
   const [sortField, setSortField] = useState<'rank' | 'pinyin' | 'strokes'>('rank');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
   const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
-  const [viewMode, setViewMode] = useState<'tiles' | 'table'>('tiles');
 
   const filteredCharacters = useMemo(() => {
     return characters
@@ -93,8 +92,8 @@ export const WordListTable: React.FC<WordListTableProps> = ({
     }
   };
 
-  const handleSelectAll = () => {
-    if (selectedIds.size === filteredCharacters.length) {
+  const handleToggleSelectAll = () => {
+    if (selectedIds.size === filteredCharacters.length && filteredCharacters.length > 0) {
       setSelectedIds(new Set());
     } else {
       setSelectedIds(new Set(filteredCharacters.map((c) => c.frequency_rank)));
@@ -120,24 +119,28 @@ export const WordListTable: React.FC<WordListTableProps> = ({
     setSelectedIds(new Set());
   };
 
+  const isAllSelected = selectedIds.size > 0 && selectedIds.size === filteredCharacters.length;
+
   return (
-    <div className="flex flex-col gap-6 w-full max-w-6xl mx-auto">
+    <div className="flex flex-col gap-6 w-full max-w-6xl mx-auto animate-fade-in">
       {/* Header Banner */}
-      <Card className="p-6">
+      <Card className="p-6 sm:p-7 bg-slate-900/90 border-slate-800 backdrop-blur-md shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl sm:text-3xl font-bold text-slate-100">
+              <h1 className="text-2xl sm:text-3xl font-bold text-slate-100 tracking-tight">
                 {title}
               </h1>
               <Badge
                 variant="secondary"
-                className="font-mono text-sm px-3 py-1 font-bold text-sky-400"
+                className="font-mono text-xs px-3 py-1 font-bold text-sky-400 border-slate-700"
               >
-                {characters.length} words
+                {characters.length} characters
               </Badge>
             </div>
-            <p className="text-slate-400 text-sm mt-1">{description}</p>
+            <p className="text-slate-400 text-sm mt-1.5 leading-relaxed max-w-xl">
+              {description}
+            </p>
           </div>
 
           <div>
@@ -145,17 +148,17 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               size="lg"
               onClick={onStartQuiz}
               disabled={characters.length === 0}
-              className="w-full md:w-auto shadow-lg shadow-sky-500/25"
+              className="w-full md:w-auto shadow-lg shadow-sky-500/20 text-sm font-semibold h-11 gap-2"
             >
-              <Play className="w-5 h-5 fill-current" />
-              <span className="text-base">Start Flashcard Quiz (Randomized)</span>
+              <Play className="w-4 h-4 fill-current" />
+              <span>Start Flashcard Quiz</span>
             </Button>
           </div>
         </div>
       </Card>
 
       {/* Search & Filter Toolbar */}
-      <Card className="p-4">
+      <Card className="p-3.5 bg-slate-900/80 border-slate-800">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
           <div className="relative flex-1 min-w-[240px]">
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
@@ -164,103 +167,87 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search character, pinyin, or definition..."
-              className="pl-10"
+              className="pl-10 h-9.5 text-xs sm:text-sm bg-slate-950"
             />
           </div>
 
           <div className="flex items-center gap-2 flex-wrap justify-between sm:justify-end">
-            <div className="flex items-center gap-2 flex-wrap">
-              <select
-                value={selectedHsk}
-                onChange={(e) => setSelectedHsk(e.target.value)}
-                className="h-10 px-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-400"
-              >
-                <option value="all">All HSK Levels</option>
-                <option value="1">HSK 1</option>
-                <option value="2">HSK 2</option>
-                <option value="3">HSK 3</option>
-                <option value="4">HSK 4</option>
-                <option value="5">HSK 5</option>
-                <option value="6">HSK 6</option>
-                <option value="none">No HSK Level</option>
-              </select>
+            <select
+              value={selectedHsk}
+              onChange={(e) => setSelectedHsk(e.target.value)}
+              className="h-9 px-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-400 cursor-pointer"
+            >
+              <option value="all">All HSK Levels</option>
+              <option value="1">HSK 1</option>
+              <option value="2">HSK 2</option>
+              <option value="3">HSK 3</option>
+              <option value="4">HSK 4</option>
+              <option value="5">HSK 5</option>
+              <option value="6">HSK 6</option>
+              <option value="none">No HSK Level</option>
+            </select>
 
+            <Button
+              variant={sortField === 'rank' ? 'secondary' : 'outline'}
+              size="sm"
+              onClick={() => toggleSort('rank')}
+              className={`h-9 text-xs ${
+                sortField === 'rank'
+                  ? 'border-sky-500/40 text-sky-400 font-semibold'
+                  : ''
+              }`}
+            >
+              <ArrowUpDown className="w-3.5 h-3.5" />
+              <span>
+                Rank{' '}
+                {sortField === 'rank' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
+              </span>
+            </Button>
+
+            <Button
+              variant={sortField === 'pinyin' ? 'secondary' : 'outline'}
+              size="sm"
+              onClick={() => toggleSort('pinyin')}
+              className={`h-9 text-xs ${
+                sortField === 'pinyin'
+                  ? 'border-sky-500/40 text-sky-400 font-semibold'
+                  : ''
+              }`}
+            >
+              <span>
+                Pinyin{' '}
+                {sortField === 'pinyin' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
+              </span>
+            </Button>
+
+            {filteredCharacters.length > 0 && (
               <Button
-                variant={sortField === 'rank' ? 'secondary' : 'outline'}
+                variant="outline"
                 size="sm"
-                onClick={() => toggleSort('rank')}
-                className={
-                  sortField === 'rank'
-                    ? 'border-sky-500/40 text-sky-400 font-semibold'
-                    : ''
-                }
+                onClick={handleToggleSelectAll}
+                className="h-9 text-xs gap-1.5 text-slate-300"
+                title="Select all filtered characters for batch update"
               >
-                <ArrowUpDown className="w-3.5 h-3.5" />
-                <span>
-                  Rank{' '}
-                  {sortField === 'rank' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
-                </span>
+                {isAllSelected ? (
+                  <>
+                    <CheckSquare className="w-3.5 h-3.5 text-sky-400" />
+                    <span>Deselect All</span>
+                  </>
+                ) : (
+                  <>
+                    <Square className="w-3.5 h-3.5" />
+                    <span>Select All</span>
+                  </>
+                )}
               </Button>
-
-              <Button
-                variant={sortField === 'pinyin' ? 'secondary' : 'outline'}
-                size="sm"
-                onClick={() => toggleSort('pinyin')}
-                className={
-                  sortField === 'pinyin'
-                    ? 'border-sky-500/40 text-sky-400 font-semibold'
-                    : ''
-                }
-              >
-                <span>
-                  Pinyin{' '}
-                  {sortField === 'pinyin' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
-                </span>
-              </Button>
-            </div>
-
-            {/* View Mode Toggle: 10-per-row Tiles Grid vs Table List */}
-            <div className="flex items-center bg-slate-950 border border-slate-800 rounded-xl p-1 gap-1">
-              <button
-                type="button"
-                onClick={() => {
-                  playSound('click');
-                  setViewMode('tiles');
-                }}
-                title="10-per-row Tiles Grid view (hover for details)"
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
-                  viewMode === 'tiles'
-                    ? 'bg-sky-500 text-slate-950 font-semibold shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                <LayoutGrid className="w-3.5 h-3.5" />
-                <span>Tiles (10/row)</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  playSound('click');
-                  setViewMode('table');
-                }}
-                title="Table List view"
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
-                  viewMode === 'table'
-                    ? 'bg-sky-500 text-slate-950 font-semibold shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                <List className="w-3.5 h-3.5" />
-                <span>Table</span>
-              </button>
-            </div>
+            )}
           </div>
         </div>
       </Card>
 
-      {/* Batch selection toolbar */}
+      {/* Batch selection action bar */}
       {selectedIds.size > 0 && (
-        <div className="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sm animate-fade-in">
+        <div className="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-xs sm:text-sm animate-fade-in shadow-lg">
           <span className="text-sky-400 font-semibold">
             {selectedIds.size} characters selected
           </span>
@@ -269,6 +256,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               size="sm"
               variant="learned"
               onClick={() => handleBatchAction('learned')}
+              className="h-8 text-xs font-semibold"
             >
               Mark Learned
             </Button>
@@ -276,6 +264,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               size="sm"
               variant="inProgress"
               onClick={() => handleBatchAction('in-progress')}
+              className="h-8 text-xs font-semibold"
             >
               Mark In-Progress
             </Button>
@@ -283,6 +272,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               size="sm"
               variant="secondary"
               onClick={() => handleBatchAction('new')}
+              className="h-8 text-xs"
             >
               Reset to New
             </Button>
@@ -290,6 +280,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               size="sm"
               variant="ghost"
               onClick={() => setSelectedIds(new Set())}
+              className="h-8 text-xs text-slate-400"
             >
               Clear
             </Button>
@@ -299,11 +290,11 @@ export const WordListTable: React.FC<WordListTableProps> = ({
 
       {/* Empty State */}
       {filteredCharacters.length === 0 ? (
-        <Card className="flex flex-col items-center justify-center p-12 text-center">
-          <div className="w-16 h-16 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-500 mb-4">
+        <Card className="flex flex-col items-center justify-center p-12 text-center bg-slate-900/80 border-slate-800">
+          <div className="w-16 h-16 rounded-2xl bg-slate-800/80 flex items-center justify-center text-slate-500 mb-4">
             <Search className="w-8 h-8" />
           </div>
-          <CardTitle className="text-lg">No characters found</CardTitle>
+          <CardTitle className="text-lg text-slate-200">No characters found</CardTitle>
           <CardDescription className="text-sm mt-1 max-w-sm">
             {characters.length === 0
               ? activeStatusTab === 'learned'
@@ -312,22 +303,21 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               : "No characters match your current search and filter criteria."}
           </CardDescription>
         </Card>
-      ) : viewMode === 'tiles' ? (
+      ) : (
         /* TILES VIEW (10 CHARACTERS PER ROW ON DESKTOP) */
         <TooltipProvider delayDuration={80} skipDelayDuration={0}>
           <div className="flex flex-col gap-3">
-            {/* Tile count & Quick Guide */}
+            {/* Guide Info */}
             <div className="flex items-center justify-between text-xs text-slate-400 px-1">
               <span>
                 Showing <strong className="text-slate-200">{filteredCharacters.length}</strong> characters
-                • 10 per row
               </span>
-              <span className="italic text-[11px] text-slate-500">
-                Hover over a tile for pinyin & meaning • Click to play audio
+              <span className="italic text-[11px] text-slate-500 hidden sm:inline">
+                Hover for pinyin & definition • Click to hear native audio
               </span>
             </div>
 
-            <Card className="p-4 sm:p-6 bg-slate-900/60 border-slate-800">
+            <Card className="p-4 sm:p-6 bg-slate-900/80 border-slate-800 shadow-xl">
               <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 sm:gap-2.5">
                 {filteredCharacters.map((c) => {
                   const isSelected = selectedIds.has(c.frequency_rank);
@@ -343,10 +333,10 @@ export const WordListTable: React.FC<WordListTableProps> = ({
                             isSelected
                               ? 'border-sky-400 ring-2 ring-sky-400/40 bg-sky-500/15'
                               : c.status === 'learned'
-                              ? 'bg-slate-900/90 border-slate-800 hover:border-emerald-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/10'
+                              ? 'bg-slate-950 border-slate-800 hover:border-emerald-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/10'
                               : c.status === 'in-progress'
-                              ? 'bg-slate-900/90 border-slate-800 hover:border-amber-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10'
-                              : 'bg-slate-900/90 border-slate-800 hover:border-sky-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/10'
+                              ? 'bg-slate-950 border-slate-800 hover:border-amber-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10'
+                              : 'bg-slate-950 border-slate-800 hover:border-sky-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/10'
                           }`}
                         >
                           {/* Selection Checkbox (appears on hover or when selected) */}
@@ -358,7 +348,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
                             className={`absolute top-1.5 left-1.5 p-0.5 rounded transition-opacity ${
                               isSelected
                                 ? 'opacity-100'
-                                : 'opacity-0 group-hover:opacity-60 hover:!opacity-100'
+                                : 'opacity-0 group-hover:opacity-70 hover:!opacity-100'
                             }`}
                             title="Select for batch action"
                           >
@@ -578,150 +568,6 @@ export const WordListTable: React.FC<WordListTableProps> = ({
             </Card>
           </div>
         </TooltipProvider>
-      ) : (
-        /* TABLE LIST VIEW */
-        <Card className="overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-slate-800 bg-slate-950/60 text-[11px] uppercase tracking-wider font-semibold text-slate-400">
-                  <th className="py-3 px-4 w-10">
-                    <input
-                      type="checkbox"
-                      checked={
-                        selectedIds.size > 0 &&
-                        selectedIds.size === filteredCharacters.length
-                      }
-                      onChange={handleSelectAll}
-                      className="rounded border-slate-700 cursor-pointer accent-sky-500"
-                    />
-                  </th>
-                  <th className="py-3 px-3 w-16">Rank</th>
-                  <th className="py-3 px-4 w-28">Character</th>
-                  <th className="py-3 px-4 w-36">Pinyin</th>
-                  <th className="py-3 px-4">Definition</th>
-                  <th className="py-3 px-3 w-20 text-center">HSK</th>
-                  <th className="py-3 px-4 w-40 text-right">Status / Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800/70 text-sm">
-                {filteredCharacters.map((c) => {
-                  const isSelected = selectedIds.has(c.frequency_rank);
-
-                  return (
-                    <tr
-                      key={c.frequency_rank}
-                      className={`hover:bg-slate-850/80 transition-colors ${
-                        isSelected ? 'bg-sky-500/5' : ''
-                      }`}
-                    >
-                      <td className="py-3 px-4">
-                        <input
-                          type="checkbox"
-                          checked={isSelected}
-                          onChange={() => toggleSelectOne(c.frequency_rank)}
-                          className="rounded border-slate-700 cursor-pointer accent-sky-500"
-                        />
-                      </td>
-
-                      <td className="py-3 px-3 font-mono text-xs text-slate-500">
-                        #{c.frequency_rank}
-                      </td>
-
-                      <td className="py-3 px-4">
-                        <div className="flex items-center gap-2">
-                          <span className="text-2xl font-serif font-bold text-slate-100">
-                            {c.character}
-                          </span>
-                          <button
-                            onClick={() => speakChinese(c.character)}
-                            className="p-1 rounded-md text-slate-500 hover:text-sky-400 hover:bg-slate-800 transition-colors cursor-pointer"
-                            title="Play pronunciation"
-                          >
-                            <Volume2 className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
-                      </td>
-
-                      <td className="py-3 px-4 font-semibold text-sky-400">
-                        {c.pinyin}
-                      </td>
-
-                      <td className="py-3 px-4 text-slate-300">
-                        {c.definition || (
-                          <span className="text-slate-500 italic">None</span>
-                        )}
-                      </td>
-
-                      <td className="py-3 px-3 text-center">
-                        {c.hsk_level ? (
-                          <Badge variant="hsk">HSK {c.hsk_level}</Badge>
-                        ) : (
-                          <span className="text-xs text-slate-600">-</span>
-                        )}
-                      </td>
-
-                      <td className="py-3 px-4 text-right">
-                        <div className="flex items-center justify-end gap-1.5">
-                          <Button
-                            size="iconSm"
-                            variant={c.status === 'learned' ? 'learned' : 'ghost'}
-                            onClick={() => {
-                              playSound('learned');
-                              onStatusChange(c.frequency_rank, 'learned');
-                            }}
-                            title="Mark Learned"
-                            className={
-                              c.status !== 'learned'
-                                ? 'text-emerald-400 hover:bg-emerald-500/15'
-                                : ''
-                            }
-                          >
-                            <CheckCircle2 className="w-4 h-4" />
-                          </Button>
-
-                          <Button
-                            size="iconSm"
-                            variant={
-                              c.status === 'in-progress' ? 'inProgress' : 'ghost'
-                            }
-                            onClick={() => {
-                              playSound('inProgress');
-                              onStatusChange(c.frequency_rank, 'in-progress');
-                            }}
-                            title="Mark In-Progress"
-                            className={
-                              c.status !== 'in-progress'
-                                ? 'text-amber-400 hover:bg-amber-500/15'
-                                : ''
-                            }
-                          >
-                            <Clock className="w-4 h-4" />
-                          </Button>
-
-                          {c.status !== 'new' && (
-                            <Button
-                              size="iconSm"
-                              variant="ghost"
-                              onClick={() => {
-                                playSound('click');
-                                onStatusChange(c.frequency_rank, 'new');
-                              }}
-                              title="Reset to New"
-                              className="text-slate-500 hover:text-slate-200"
-                            >
-                              <RotateCcw className="w-3.5 h-3.5" />
-                            </Button>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </Card>
       )}
     </div>
   );
