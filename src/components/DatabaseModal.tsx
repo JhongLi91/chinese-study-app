@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Database, Download, Upload, Terminal, RotateCcw, X, Play, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
@@ -18,33 +18,56 @@ export const DatabaseModal: React.FC<DatabaseModalProps> = ({
   const [sqlQuery, setSqlQuery] = useState<string>(
     'SELECT status, count(*) as count FROM progress GROUP BY status;'
   );
-  const [queryResult, setQueryResult] = useState<{ columns: string[]; values: any[][] }[] | null>(null);
+  const [queryResult, setQueryResult] = useState<
+    { columns: string[]; values: (string | number | null)[][] }[] | null
+  >(null);
   const [queryError, setQueryError] = useState<string | null>(null);
   const [isResetConfirmOpen, setIsResetConfirmOpen] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
+  const handleRunQuery = useCallback(
+    async (queryToRun?: string) => {
+      const q = queryToRun || sqlQuery;
+      if (!q.trim()) return;
+
+      setQueryError(null);
+      setMessage(null);
+      try {
+        const results = await executeSqlConsole(q);
+        setQueryResult(results);
+        onDatabaseMutated();
+      } catch (err: unknown) {
+        console.error(err);
+        const errMsg = err instanceof Error ? err.message : String(err);
+        setQueryError(errMsg);
+        setQueryResult(null);
+      }
+    },
+    [sqlQuery, onDatabaseMutated]
+  );
+
   useEffect(() => {
+    let active = true;
     if (isOpen) {
-      handleRunQuery('SELECT status, count(*) as count FROM progress GROUP BY status;');
+      executeSqlConsole('SELECT status, count(*) as count FROM progress GROUP BY status;')
+        .then((res) => {
+          if (active) {
+            setQueryResult(res);
+            setQueryError(null);
+          }
+        })
+        .catch((err: unknown) => {
+          if (active) {
+            const errMsg = err instanceof Error ? err.message : String(err);
+            setQueryError(errMsg);
+            setQueryResult(null);
+          }
+        });
     }
+    return () => {
+      active = false;
+    };
   }, [isOpen]);
-
-  const handleRunQuery = async (queryToRun?: string) => {
-    const q = queryToRun || sqlQuery;
-    if (!q.trim()) return;
-
-    setQueryError(null);
-    setMessage(null);
-    try {
-      const results = await executeSqlConsole(q);
-      setQueryResult(results);
-      onDatabaseMutated();
-    } catch (err: any) {
-      console.error(err);
-      setQueryError(err.message || String(err));
-      setQueryResult(null);
-    }
-  };
 
   const handleExportDb = async () => {
     try {
@@ -59,8 +82,9 @@ export const DatabaseModal: React.FC<DatabaseModalProps> = ({
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
       setMessage('SQLite database successfully downloaded.');
-    } catch (err: any) {
-      setQueryError(`Export failed: ${err.message}`);
+    } catch (err: unknown) {
+      const errMsg = err instanceof Error ? err.message : String(err);
+      setQueryError(`Export failed: ${errMsg}`);
     }
   };
 
@@ -74,9 +98,10 @@ export const DatabaseModal: React.FC<DatabaseModalProps> = ({
       await importDatabaseBinary(bytes);
       onDatabaseMutated();
       setMessage(`Successfully imported SQLite database from ${file.name}`);
-      handleRunQuery();
-    } catch (err: any) {
-      setQueryError(`Import failed: ${err.message}`);
+      void handleRunQuery();
+    } catch (err: unknown) {
+      const errMsg = err instanceof Error ? err.message : String(err);
+      setQueryError(`Import failed: ${errMsg}`);
     }
   };
 
@@ -86,9 +111,10 @@ export const DatabaseModal: React.FC<DatabaseModalProps> = ({
       setIsResetConfirmOpen(false);
       onDatabaseMutated();
       setMessage('All study progress reset to new.');
-      handleRunQuery();
-    } catch (err: any) {
-      setQueryError(`Reset failed: ${err.message}`);
+      void handleRunQuery();
+    } catch (err: unknown) {
+      const errMsg = err instanceof Error ? err.message : String(err);
+      setQueryError(`Reset failed: ${errMsg}`);
     }
   };
 

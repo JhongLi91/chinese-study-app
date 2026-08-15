@@ -1,21 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import type {
-  Character,
-  LessonInfo,
-  StudyStats,
-  StudyStatus,
-  ActiveTab,
-} from './types';
-import {
-  getStudyStats,
-  getLessonsSummary,
-  getLessonCharacters,
-  getLearnedCharacters,
-  getInProgressCharacters,
-  getAllCharacters,
-  updateCharacterStatus,
-  batchUpdateStatus,
-} from './db/sqlite';
+import type { Character, ActiveTab } from './types';
+import { useStudyData } from './hooks/useStudyData';
 import { Stopwatch } from './components/Stopwatch';
 import { LessonsView } from './components/LessonsView';
 import { WordListTable } from './components/WordListTable';
@@ -39,115 +24,40 @@ import {
 import { isSoundEnabled, setSoundEnabled, playSound } from './utils/audio';
 
 export function App() {
-  const [isInitializing, setIsInitializing] = useState(true);
-  const [stats, setStats] = useState<StudyStats>({
-    total: 3000,
-    learned: 0,
-    in_progress: 0,
-    new_count: 3000,
-    completed_lessons: 0,
-    total_lessons: 120,
-  });
-  const [lessons, setLessons] = useState<LessonInfo[]>([]);
   const [activeTab, setActiveTab] = useState<ActiveTab>('lessons');
+  const [soundOn, setSoundOn] = useState<boolean>(isSoundEnabled());
 
-  // Lesson view state
-  const [currentLessonNumber, setCurrentLessonNumber] = useState<number | null>(null);
-  const [lessonCharacters, setLessonCharacters] = useState<Character[]>([]);
-  const [isLoadingLesson, setIsLoadingLesson] = useState(false);
+  // Data layer via custom hook
+  const {
+    isInitializing,
+    stats,
+    lessons,
+    learnedList,
+    inProgressList,
+    allCharactersList,
+    currentLessonNumber,
+    lessonCharacters,
+    isLoadingLesson,
+    selectLesson,
+    backToLessons,
+    handleStatusChange,
+    handleBatchStatusChange,
+    refreshData,
+  } = useStudyData(activeTab);
 
-  // Tab lists
-  const [learnedList, setLearnedList] = useState<Character[]>([]);
-  const [inProgressList, setInProgressList] = useState<Character[]>([]);
-  const [allCharactersList, setAllCharactersList] = useState<Character[]>([]);
-
-  // Modals
+  // Modals state
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [quizSourceCards, setQuizSourceCards] = useState<Character[]>([]);
   const [quizTitle, setQuizTitle] = useState('Randomized Flashcard Quiz');
   const [isWordMatchOpen, setIsWordMatchOpen] = useState(false);
   const [isDbModalOpen, setIsDbModalOpen] = useState(false);
   const [isVimModalOpen, setIsVimModalOpen] = useState(false);
-  const [soundOn, setSoundOn] = useState(isSoundEnabled());
 
-  const refreshData = useCallback(async () => {
-    try {
-      const [newStats, newLessons, learned, inProgress] = await Promise.all([
-        getStudyStats(),
-        getLessonsSummary(),
-        getLearnedCharacters(),
-        getInProgressCharacters(),
-      ]);
-
-      setStats(newStats);
-      setLessons(newLessons);
-      setLearnedList(learned);
-      setInProgressList(inProgress);
-
-      if (currentLessonNumber !== null) {
-        const chars = await getLessonCharacters(currentLessonNumber);
-        setLessonCharacters(chars);
-      }
-
-      if (activeTab === 'all') {
-        const allChars = await getAllCharacters();
-        setAllCharactersList(allChars);
-      }
-    } catch (e) {
-      console.error('Error loading data from SQLite DB:', e);
-    }
-  }, [currentLessonNumber, activeTab]);
-
-  useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        setIsInitializing(true);
-        await refreshData();
-      } finally {
-        if (mounted) setIsInitializing(false);
-      }
-    })();
-    return () => {
-      mounted = false;
-    };
-  }, []);
-
-  useEffect(() => {
-    if (activeTab === 'all') {
-      getAllCharacters().then((chars) => setAllCharactersList(chars));
-    } else if (activeTab === 'learned') {
-      getLearnedCharacters().then((chars) => setLearnedList(chars));
-    } else if (activeTab === 'in-progress') {
-      getInProgressCharacters().then((chars) => setInProgressList(chars));
-    }
-  }, [activeTab]);
-
-  const handleSelectLesson = async (lessonNum: number) => {
-    setCurrentLessonNumber(lessonNum);
-    setIsLoadingLesson(true);
-    try {
-      const chars = await getLessonCharacters(lessonNum);
-      setLessonCharacters(chars);
-    } finally {
-      setIsLoadingLesson(false);
-    }
-  };
-
-  const handleBackToLessons = () => {
-    setCurrentLessonNumber(null);
-    setLessonCharacters([]);
-    refreshData();
-  };
-
-  const handleStatusChange = async (characterId: number, status: StudyStatus) => {
-    await updateCharacterStatus(characterId, status);
-    await refreshData();
-  };
-
-  const handleBatchStatusChange = async (characterIds: number[], status: StudyStatus) => {
-    await batchUpdateStatus(characterIds, status);
-    await refreshData();
+  const toggleSound = () => {
+    const next = !soundOn;
+    setSoundOn(next);
+    setSoundEnabled(next);
+    if (next) playSound('click');
   };
 
   const handleStartLearnedQuiz = () => {
@@ -171,38 +81,32 @@ export function App() {
     setIsQuizOpen(true);
   };
 
-  const toggleSound = () => {
-    const next = !soundOn;
-    setSoundOn(next);
-    setSoundEnabled(next);
-    if (next) playSound('click');
-  };
-
-  const handlePrevLesson = () => {
+  const handlePrevLesson = useCallback(() => {
     playSound('click');
     setActiveTab('lessons');
     if (currentLessonNumber !== null) {
       if (currentLessonNumber > 1) {
-        handleSelectLesson(currentLessonNumber - 1);
+        void selectLesson(currentLessonNumber - 1);
       }
     } else {
-      handleSelectLesson(1);
+      void selectLesson(1);
     }
-  };
+  }, [currentLessonNumber, selectLesson]);
 
-  const handleNextLesson = () => {
+  const handleNextLesson = useCallback(() => {
     const maxLessons = lessons.length || 120;
     playSound('click');
     setActiveTab('lessons');
     if (currentLessonNumber !== null) {
       if (currentLessonNumber < maxLessons) {
-        handleSelectLesson(currentLessonNumber + 1);
+        void selectLesson(currentLessonNumber + 1);
       }
     } else {
-      handleSelectLesson(1);
+      void selectLesson(1);
     }
-  };
+  }, [currentLessonNumber, lessons.length, selectLesson]);
 
+  // Global Keyboard Shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
@@ -215,7 +119,7 @@ export function App() {
         else if (isWordMatchOpen) setIsWordMatchOpen(false);
         else if (isDbModalOpen) setIsDbModalOpen(false);
         else if (isVimModalOpen) setIsVimModalOpen(false);
-        else if (currentLessonNumber !== null) handleBackToLessons();
+        else if (currentLessonNumber !== null) backToLessons();
       } else if (e.key === '?') {
         e.preventDefault();
         setIsVimModalOpen((prev) => !prev);
@@ -226,14 +130,11 @@ export function App() {
           setActiveTab('lessons');
         } else if (e.key === '2') {
           setActiveTab('learned');
-          setCurrentLessonNumber(null);
         } else if (e.key === '3') {
           setActiveTab('in-progress');
-          setCurrentLessonNumber(null);
         } else if (e.key === '4') {
           setActiveTab('all');
-          setCurrentLessonNumber(null);
-        } else if (e.key === 'w' || e.key === 'W') {
+        } else if (e.key.toLowerCase() === 'w') {
           e.preventDefault();
           setIsWordMatchOpen((prev) => !prev);
         } else if (e.key === '[') {
@@ -248,12 +149,21 @@ export function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isQuizOpen, isWordMatchOpen, isDbModalOpen, isVimModalOpen, currentLessonNumber, lessons]);
+  }, [
+    isQuizOpen,
+    isWordMatchOpen,
+    isDbModalOpen,
+    isVimModalOpen,
+    currentLessonNumber,
+    backToLessons,
+    handlePrevLesson,
+    handleNextLesson,
+  ]);
 
   if (isInitializing) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#0b0f17] text-slate-100 gap-4">
-        <div className="w-16 h-16 rounded-3xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20 animate-pulse">
+        <div className="w-16 h-16 rounded-3xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20 animate-pulse shadow-lg shadow-sky-500/10">
           <span className="font-serif text-3xl font-bold">字</span>
         </div>
         <div className="text-center">
@@ -261,7 +171,7 @@ export function App() {
             Initializing SQLite Database...
           </h2>
           <p className="text-xs text-slate-400 mt-1">
-            Loading 3,000 Chinese characters & progress from WebAssembly SQLite
+            Loading 3,000 Chinese characters & study progress from WebAssembly SQLite
           </p>
         </div>
       </div>
@@ -273,12 +183,12 @@ export function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#0b0f17] text-slate-100 selection:bg-sky-500 selection:text-white">
       {/* Top Header & Persistent Stopwatch */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-3 sm:px-6">
+      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-2.5 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
           {/* Logo & App Title */}
           <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-serif font-bold text-xl shadow-md shadow-sky-500/20">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-serif font-bold text-xl shadow-md shadow-sky-500/20 shrink-0">
                 字
               </div>
               <div>
@@ -308,7 +218,7 @@ export function App() {
 
           {/* Top Right Utilities */}
           <div className="flex items-center gap-2 w-full md:w-auto justify-between md:justify-end">
-            <div className="flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono">
+            <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono shadow-sm">
               <span className="text-emerald-400 font-bold flex items-center gap-1" title="Learned characters">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>{stats.learned}</span>
@@ -331,7 +241,7 @@ export function App() {
                 playSound('click');
                 setIsWordMatchOpen(true);
               }}
-              className="gap-1.5 border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 font-semibold"
+              className="gap-1.5 border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 font-semibold h-8 text-xs"
               title="2-Character Word Match Game (or press 'w')"
             >
               <Zap className="w-3.5 h-3.5 fill-current" />
@@ -340,27 +250,29 @@ export function App() {
 
             <Button
               variant="outline"
-              size="icon"
+              size="iconSm"
               onClick={toggleSound}
+              className="h-8 w-8 rounded-lg"
               title={soundOn ? 'Sound Effects Enabled (Click to Mute)' : 'Sound Muted (Click to Unmute)'}
             >
-              {soundOn ? <Volume2 className="w-4 h-4 text-slate-300" /> : <VolumeX className="w-4 h-4 text-slate-500" />}
+              {soundOn ? <Volume2 className="w-3.5 h-3.5 text-slate-300" /> : <VolumeX className="w-3.5 h-3.5 text-slate-500" />}
             </Button>
 
             <Button
               variant="outline"
-              size="icon"
+              size="iconSm"
               onClick={() => setIsVimModalOpen(true)}
+              className="h-8 w-8 rounded-lg"
               title="Keyboard & Vim Bindings (?)"
             >
-              <Keyboard className="w-4 h-4 text-slate-300" />
+              <Keyboard className="w-3.5 h-3.5 text-slate-300" />
             </Button>
 
             <Button
               variant="outline"
               size="sm"
               onClick={() => setIsDbModalOpen(true)}
-              className="gap-1.5"
+              className="gap-1.5 h-8 text-xs"
               title="SQLite Database Management & SQL Console"
             >
               <Database className="w-3.5 h-3.5 text-sky-400" />
@@ -372,13 +284,13 @@ export function App() {
 
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 flex-1 flex flex-col gap-6">
-        {/* Tab Switcher Bar */}
-        <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-          <div className="flex items-center gap-2 overflow-x-auto">
+        {/* Modern Tab Switcher Bar */}
+        <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
             <Button
               variant={activeTab === 'lessons' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('lessons')}
-              className="gap-2"
+              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
             >
               <BookOpen className="w-4 h-4" />
               <span>Lessons (120)</span>
@@ -389,11 +301,8 @@ export function App() {
 
             <Button
               variant={activeTab === 'learned' ? 'learned' : 'ghost'}
-              onClick={() => {
-                setActiveTab('learned');
-                setCurrentLessonNumber(null);
-              }}
-              className="gap-2"
+              onClick={() => setActiveTab('learned')}
+              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
             >
               <CheckCircle2 className="w-4 h-4" />
               <span>Learned Words</span>
@@ -407,11 +316,8 @@ export function App() {
 
             <Button
               variant={activeTab === 'in-progress' ? 'inProgress' : 'ghost'}
-              onClick={() => {
-                setActiveTab('in-progress');
-                setCurrentLessonNumber(null);
-              }}
-              className="gap-2"
+              onClick={() => setActiveTab('in-progress')}
+              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
             >
               <Clock className="w-4 h-4" />
               <span>In-Progress Words</span>
@@ -425,11 +331,8 @@ export function App() {
 
             <Button
               variant={activeTab === 'all' ? 'secondary' : 'ghost'}
-              onClick={() => {
-                setActiveTab('all');
-                setCurrentLessonNumber(null);
-              }}
-              className="gap-2"
+              onClick={() => setActiveTab('all')}
+              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
             >
               <Layers className="w-4 h-4" />
               <span>All 3,000 Hanzi</span>
@@ -448,9 +351,9 @@ export function App() {
               currentLessonNumber={currentLessonNumber}
               lessonCharacters={lessonCharacters}
               isLoadingLesson={isLoadingLesson}
-              onSelectLesson={handleSelectLesson}
-              onBackToLessons={handleBackToLessons}
-              onStatusChange={handleStatusChange}
+              onSelectLesson={(num) => void selectLesson(num)}
+              onBackToLessons={backToLessons}
+              onStatusChange={(id, status) => void handleStatusChange(id, status)}
             />
           )}
 
@@ -461,8 +364,8 @@ export function App() {
               characters={learnedList}
               activeStatusTab="learned"
               onStartQuiz={handleStartLearnedQuiz}
-              onStatusChange={handleStatusChange}
-              onBatchStatusChange={handleBatchStatusChange}
+              onStatusChange={(id, status) => void handleStatusChange(id, status)}
+              onBatchStatusChange={(ids, status) => void handleBatchStatusChange(ids, status)}
             />
           )}
 
@@ -473,8 +376,8 @@ export function App() {
               characters={inProgressList}
               activeStatusTab="in-progress"
               onStartQuiz={handleStartInProgressQuiz}
-              onStatusChange={handleStatusChange}
-              onBatchStatusChange={handleBatchStatusChange}
+              onStatusChange={(id, status) => void handleStatusChange(id, status)}
+              onBatchStatusChange={(ids, status) => void handleBatchStatusChange(ids, status)}
             />
           )}
 
@@ -485,8 +388,8 @@ export function App() {
               characters={allCharactersList}
               activeStatusTab="all"
               onStartQuiz={handleStartAllQuiz}
-              onStatusChange={handleStatusChange}
-              onBatchStatusChange={handleBatchStatusChange}
+              onStatusChange={(id, status) => void handleStatusChange(id, status)}
+              onBatchStatusChange={(ids, status) => void handleBatchStatusChange(ids, status)}
             />
           )}
         </main>
@@ -499,9 +402,9 @@ export function App() {
         sourceCards={quizSourceCards}
         onClose={() => {
           setIsQuizOpen(false);
-          refreshData();
+          void refreshData();
         }}
-        onStatusChange={handleStatusChange}
+        onStatusChange={(id, status) => void handleStatusChange(id, status)}
       />
 
       <WordMatchModal
@@ -519,7 +422,7 @@ export function App() {
       <DatabaseModal
         isOpen={isDbModalOpen}
         onClose={() => setIsDbModalOpen(false)}
-        onDatabaseMutated={refreshData}
+        onDatabaseMutated={() => void refreshData()}
       />
 
       <VimHelpModal

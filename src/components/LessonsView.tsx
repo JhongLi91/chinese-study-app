@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import type { Character, LessonInfo, StudyStatus } from '../types';
 import { Flashcard } from './Flashcard';
 import {
@@ -13,6 +13,7 @@ import {
   RotateCcw,
   Trophy,
   List,
+  Sparkles,
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -20,6 +21,7 @@ import { Card, CardTitle, CardDescription } from './ui/card';
 import { Input } from './ui/input';
 import confetti from 'canvas-confetti';
 import { playSound } from '../utils/audio';
+import hanziData from '../data/hanzi_3000.json';
 
 interface LessonsViewProps {
   lessons: LessonInfo[];
@@ -48,12 +50,16 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
   const [isLessonCompleted, setIsLessonCompleted] = useState(false);
   const [lessonViewMode, setLessonViewMode] = useState<'flashcard' | 'list'>('flashcard');
 
-  useEffect(() => {
+  // Reset lesson internal state on lesson switch
+  const [prevLessonNumber, setPrevLessonNumber] = useState<number | null>(null);
+  if (currentLessonNumber !== prevLessonNumber) {
+    setPrevLessonNumber(currentLessonNumber);
     setCurrentCardIndex(0);
     setIsShuffled(false);
+    setShuffledCards([]);
     setIsLessonCompleted(false);
     setLessonViewMode('flashcard');
-  }, [currentLessonNumber]);
+  }
 
   const filteredLessons = useMemo(() => {
     return lessons.filter((lesson) => {
@@ -124,7 +130,9 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
           spread: 60,
           origin: { y: 0.6 },
         });
-      } catch (e) {}
+      } catch {
+        // Ignore confetti error
+      }
     }
   };
 
@@ -136,19 +144,19 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
     return (
       <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto animate-fade-in">
         {/* Lesson Study Header */}
-        <Card className="p-4 sm:p-6">
+        <Card className="p-4 sm:p-5 bg-slate-900/90 border-slate-800 backdrop-blur-md shadow-lg">
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={onBackToLessons}
-                className="gap-1.5"
+                className="gap-1.5 shrink-0"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Lessons</span>
               </Button>
-              <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded-lg p-0.5">
+              <div className="flex items-center gap-0.5 bg-slate-950 border border-slate-800 rounded-xl p-0.5">
                 <Button
                   variant="ghost"
                   size="iconSm"
@@ -158,7 +166,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                     onSelectLesson(currentLessonNumber - 1);
                   }}
                   title="Previous Lesson (or press '[')"
-                  className="rounded-md h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
+                  className="rounded-lg h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </Button>
@@ -171,25 +179,25 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                     onSelectLesson(currentLessonNumber + 1);
                   }}
                   title="Next Lesson (or press ']')"
-                  className="rounded-md h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
+                  className="rounded-lg h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </Button>
               </div>
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-100 flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-bold text-slate-100 flex items-center gap-2">
                   <span>Lesson {currentLessonNumber}</span>
                   <Badge variant="outline" className="font-mono font-normal text-xs text-slate-300">
                     Ranks #{lessonInfo?.start_rank} - #{lessonInfo?.end_rank}
                   </Badge>
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  {learnedInLesson} of 25 learned • {inProgressInLesson} in-progress
+                  <span className="text-emerald-400 font-medium">{learnedInLesson}</span> of 25 learned • <span className="text-amber-400 font-medium">{inProgressInLesson}</span> studying
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 justify-end">
               <Button
                 variant={isShuffled ? 'default' : 'secondary'}
                 size="sm"
@@ -232,13 +240,13 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sky-400"></div>
           </div>
         ) : isLessonCompleted ? (
-          <Card className="flex flex-col items-center justify-center p-8 sm:p-12 text-center shadow-2xl gap-5">
+          <Card className="flex flex-col items-center justify-center p-8 sm:p-12 text-center shadow-2xl gap-5 bg-slate-900/90 border-slate-800">
             <div className="w-20 h-20 rounded-3xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center ring-8 ring-emerald-500/10 animate-bounce">
               <Trophy className="w-10 h-10" />
             </div>
 
             <div>
-              <CardTitle className="text-2xl">
+              <CardTitle className="text-2xl text-slate-100">
                 Lesson {currentLessonNumber} Complete!
               </CardTitle>
               <CardDescription className="text-sm mt-1">
@@ -247,7 +255,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
             </div>
 
             <div className="grid grid-cols-2 gap-4 w-full max-w-sm my-2">
-              <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800">
                 <span className="text-xs text-slate-400 uppercase tracking-wider block mb-1">
                   Learned
                 </span>
@@ -255,7 +263,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                   {learnedInLesson} / 25
                 </span>
               </div>
-              <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+              <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800">
                 <span className="text-xs text-slate-400 uppercase tracking-wider block mb-1">
                   In-Progress
                 </span>
@@ -313,7 +321,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
             />
           </div>
         ) : (
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden border-slate-800 bg-slate-900/90">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-slate-800 bg-slate-950/60 text-[11px] uppercase tracking-wider font-semibold text-slate-400">
@@ -372,29 +380,30 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
   }
 
   const totalLearnedAll = lessons.reduce((acc, l) => acc + l.learned_count, 0);
+  const totalInProgressAll = lessons.reduce((acc, l) => acc + l.in_progress_count, 0);
   const totalCompletedLessons = lessons.filter((l) => l.learned_count === l.total_count).length;
 
   return (
-    <div className="flex flex-col gap-6 w-full max-w-6xl mx-auto">
-      {/* Header Banner */}
-      <Card className="p-6 sm:p-8">
+    <div className="flex flex-col gap-6 w-full max-w-6xl mx-auto animate-fade-in">
+      {/* Curriculum Summary Header Card */}
+      <Card className="p-6 sm:p-8 bg-slate-900/90 border-slate-800 backdrop-blur-md shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl sm:text-3xl font-bold text-slate-100">
+              <h1 className="text-2xl sm:text-3xl font-bold text-slate-100 tracking-tight">
                 Lessons Curriculum
               </h1>
-              <Badge variant="secondary" className="font-mono text-xs px-3 py-1 font-bold text-sky-400">
+              <Badge variant="secondary" className="font-mono text-xs px-3 py-1 font-bold text-sky-400 border-slate-700">
                 120 Lessons • 3,000 Hanzi
               </Badge>
             </div>
-            <p className="text-slate-400 text-sm mt-1 max-w-xl">
-              Characters are organized by frequency into 120 lessons of 25 characters each. Master high-frequency characters first for maximum reading comprehension.
+            <p className="text-slate-400 text-sm mt-1.5 max-w-xl leading-relaxed">
+              Organized strictly by real-world Chinese usage frequency. Master high-frequency characters in 25-card bite-sized modules for optimal recall.
             </p>
           </div>
 
-          <div className="flex items-center gap-4 bg-slate-800/80 p-4 rounded-2xl border border-slate-700 shrink-0">
-            <div className="text-center">
+          <div className="flex items-center gap-4 bg-slate-950/80 p-4 rounded-2xl border border-slate-800 shrink-0">
+            <div className="text-center px-1">
               <span className="block text-2xl font-bold text-emerald-400">
                 {totalCompletedLessons}
               </span>
@@ -402,8 +411,17 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                 Completed
               </span>
             </div>
-            <div className="w-px h-8 bg-slate-700" />
-            <div className="text-center">
+            <div className="w-px h-8 bg-slate-800" />
+            <div className="text-center px-1">
+              <span className="block text-2xl font-bold text-amber-400">
+                {totalInProgressAll}
+              </span>
+              <span className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">
+                In-Progress
+              </span>
+            </div>
+            <div className="w-px h-8 bg-slate-800" />
+            <div className="text-center px-1">
               <span className="block text-2xl font-bold text-sky-400">
                 {((totalLearnedAll / 3000) * 100).toFixed(1)}%
               </span>
@@ -416,7 +434,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
       </Card>
 
       {/* Filter and Search Bar */}
-      <Card className="p-4">
+      <Card className="p-3.5 bg-slate-900/80 border-slate-800">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
           <div className="relative flex-1 min-w-[240px]">
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
@@ -425,11 +443,11 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
               value={searchFilter}
               onChange={(e) => setSearchFilter(e.target.value)}
               placeholder="Search lessons (e.g. 'Lesson 1' or '25')..."
-              className="pl-10"
+              className="pl-10 h-9.5 text-xs sm:text-sm bg-slate-950"
             />
           </div>
 
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
             {(
               [
                 { key: 'all', label: 'All Lessons' },
@@ -443,7 +461,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                 size="sm"
                 variant={statusFilter === item.key ? 'default' : 'secondary'}
                 onClick={() => setStatusFilter(item.key)}
-                className="whitespace-nowrap"
+                className="whitespace-nowrap h-8 text-xs font-semibold"
               >
                 {item.label}
               </Button>
@@ -460,64 +478,85 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
           const percentLearned = (lesson.learned_count / lesson.total_count) * 100;
           const percentInProgress = (lesson.in_progress_count / lesson.total_count) * 100;
 
+          // Get preview characters for this lesson
+          const startIndex = (lesson.lesson_number - 1) * 25;
+          const previewChars = hanziData.slice(startIndex, startIndex + 4);
+
           return (
             <Card
               key={lesson.lesson_number}
               onClick={() => handleStartLesson(lesson.lesson_number)}
-              className="group p-5 hover:border-sky-500/50 hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between gap-4"
+              className="group p-5 bg-slate-900/90 border-slate-800 hover:border-sky-500/50 hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-200 cursor-pointer flex flex-col justify-between gap-4 select-none hover:-translate-y-0.5"
             >
               <div>
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="font-bold text-lg text-slate-100 group-hover:text-sky-400 transition-colors">
+                <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <span className="font-bold text-base sm:text-lg text-slate-100 group-hover:text-sky-400 transition-colors">
                     Lesson {lesson.lesson_number}
                   </span>
                   {isComplete ? (
-                    <Badge variant="learned">
-                      <CheckCircle2 className="w-3 h-3" />
+                    <Badge variant="learned" className="text-[10px] px-2">
+                      <CheckCircle2 className="w-3 h-3" /> Done
                     </Badge>
                   ) : isInProgress ? (
-                    <Badge variant="inProgress">
+                    <Badge variant="inProgress" className="text-[10px] px-2">
                       In-Progress
                     </Badge>
                   ) : (
-                    <Badge variant="outline" className="text-slate-500">
+                    <Badge variant="outline" className="text-slate-500 text-[10px] px-2">
                       New
                     </Badge>
                   )}
                 </div>
 
-                <div className="text-xs font-mono text-slate-500">
+                <div className="text-xs font-mono text-slate-500 mb-3">
                   Rank #{lesson.start_rank} – #{lesson.end_rank}
+                </div>
+
+                {/* Character preview chips */}
+                <div className="flex items-center gap-1.5">
+                  {previewChars.map((p) => (
+                    <span
+                      key={p.frequency_rank}
+                      className="w-7 h-7 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center font-serif text-sm font-bold text-slate-300 group-hover:border-sky-500/30 group-hover:text-slate-100 transition-colors"
+                    >
+                      {p.character}
+                    </span>
+                  ))}
+                  <span className="text-[11px] text-slate-600 font-mono pl-0.5">...</span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden flex">
+                <div className="h-1.5 w-full bg-slate-950 rounded-full overflow-hidden flex border border-slate-850">
                   <div
                     style={{ width: `${percentLearned}%` }}
-                    className="bg-emerald-500 h-full transition-all"
+                    className="bg-emerald-500 h-full transition-all duration-300"
                   />
                   <div
                     style={{ width: `${percentInProgress}%` }}
-                    className="bg-amber-500 h-full transition-all"
+                    className="bg-amber-500 h-full transition-all duration-300"
                   />
                 </div>
 
                 <div className="flex items-center justify-between text-[11px] text-slate-400">
-                  <span className="text-emerald-400 font-semibold">
+                  <span className="text-emerald-400 font-medium">
                     {lesson.learned_count} learned
                   </span>
-                  {lesson.in_progress_count > 0 && (
-                    <span className="text-amber-400 font-semibold">
-                      {lesson.in_progress_count} studying
+                  {lesson.in_progress_count > 0 ? (
+                    <span className="text-amber-400 font-medium">
+                      {lesson.in_progress_count} in-prog
                     </span>
+                  ) : (
+                    <span className="text-slate-500">25 total</span>
                   )}
-                  <span className="text-slate-500">25 total</span>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs font-medium text-slate-400 group-hover:text-sky-400 transition-colors">
-                <span>Study 25 Cards</span>
+              <div className="pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-xs font-medium text-slate-400 group-hover:text-sky-400 transition-colors">
+                <span className="flex items-center gap-1.5">
+                  <Sparkles className="w-3 h-3 text-sky-400/70" />
+                  <span>Study 25 Cards</span>
+                </span>
                 <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </div>
             </Card>
@@ -526,7 +565,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
       </div>
 
       {filteredLessons.length === 0 && (
-        <div className="text-center py-12 text-slate-500">
+        <div className="text-center py-16 text-slate-500 text-sm">
           No lessons match the selected filter.
         </div>
       )}

@@ -1,5 +1,5 @@
 import initSqlJs from 'sql.js';
-import type { Database, SqlJsStatic } from 'sql.js';
+import type { Database, SqlJsStatic, SqlValue } from 'sql.js';
 import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 import hanziData from '../data/hanzi_3000.json';
 import type { Character, LessonInfo, StudyStats, StudyStatus } from '../types';
@@ -137,7 +137,7 @@ export async function getDatabase(): Promise<Database> {
   return initPromise;
 }
 
-let saveTimeout: any = null;
+let saveTimeout: ReturnType<typeof setTimeout> | null = null;
 export async function persistDatabase(db?: Database): Promise<void> {
   const targetDb = db || dbInstance;
   if (!targetDb) return;
@@ -258,19 +258,19 @@ export async function getLessonsSummary(): Promise<LessonInfo[]> {
   return fallbackLessons;
 }
 
-function mapRowToCharacter(row: any[]): Character {
+function mapRowToCharacter(row: SqlValue[]): Character {
   return {
     frequency_rank: row[0] as number,
     character: row[1] as string,
     pinyin: row[2] as string,
-    definition: row[3] as string,
+    definition: (row[3] as string) || '',
     radical: (row[4] as string) || undefined,
     radical_code: (row[5] as string) || undefined,
-    stroke_count: row[6] !== null ? (row[6] as number) : null,
-    hsk_level: row[7] !== null ? (row[7] as number) : null,
+    stroke_count: row[6] !== null && row[6] !== undefined ? (row[6] as number) : null,
+    hsk_level: row[7] !== null && row[7] !== undefined ? (row[7] as number) : null,
     lesson_number: row[8] as number,
     status: (row[9] as StudyStatus) || 'new',
-    updated_at: row[10] !== null ? (row[10] as number) : null,
+    updated_at: row[10] !== null && row[10] !== undefined ? (row[10] as number) : null,
   };
 }
 
@@ -377,7 +377,7 @@ export async function getAllCharacters(filter?: {
       LEFT JOIN progress p ON c.frequency_rank = p.character_id
       WHERE 1=1
     `;
-    const params: any[] = [];
+    const params: (string | number)[] = [];
 
     if (filter?.status) {
       query += ` AND COALESCE(p.status, 'new') = ?`;
@@ -500,9 +500,14 @@ export async function importDatabaseBinary(bytes: Uint8Array): Promise<void> {
   await saveDatabaseBytes(bytes);
 }
 
-export async function executeSqlConsole(sql: string): Promise<{ columns: string[]; values: any[][] }[]> {
+export async function executeSqlConsole(
+  sql: string
+): Promise<{ columns: string[]; values: (string | number | null)[][] }[]> {
   const db = await getDatabase();
-  const results = db.exec(sql);
+  const rawResults = db.exec(sql);
   await persistDatabase(db);
-  return results;
+  return rawResults.map((r) => ({
+    columns: r.columns,
+    values: r.values as (string | number | null)[][],
+  }));
 }

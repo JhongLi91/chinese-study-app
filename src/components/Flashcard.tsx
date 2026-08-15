@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import type { Character, StudyStatus } from '../types';
 import { Volume2, CheckCircle2, Clock, RotateCw, ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
 import { Button } from './ui/button';
@@ -34,6 +34,14 @@ export const Flashcard: React.FC<FlashcardProps> = ({
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const [isExampleOpen, setIsExampleOpen] = useState<boolean>(false);
 
+  // Reset flip and example states when card changes
+  const [prevCardRank, setPrevCardRank] = useState<number>(card.frequency_rank);
+  if (card.frequency_rank !== prevCardRank) {
+    setPrevCardRank(card.frequency_rank);
+    setIsFlipped(false);
+    setIsExampleOpen(false);
+  }
+
   const exampleSentence = useMemo(() => {
     return getExampleSentence(card.character, card.frequency_rank, card.definition);
   }, [card.character, card.frequency_rank, card.definition]);
@@ -42,10 +50,8 @@ export const Flashcard: React.FC<FlashcardProps> = ({
     return getWordAssociations(card.character, card.frequency_rank);
   }, [card.character, card.frequency_rank]);
 
-  // Reset flip state and preload audio when card changes
+  // Preload audio when card changes
   useEffect(() => {
-    setIsFlipped(false);
-    setIsExampleOpen(false);
     if (card?.character) {
       preloadChineseAudio(card.character);
     }
@@ -54,24 +60,24 @@ export const Flashcard: React.FC<FlashcardProps> = ({
     }
   }, [card, cardIndex, cardsList]);
 
-  const handleFlip = () => {
+  const handleFlip = useCallback(() => {
     playSound('flip');
     setIsFlipped((prev) => !prev);
-  };
+  }, []);
 
-  const handleSetLearned = (e?: React.MouseEvent) => {
+  const handleSetLearned = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     playSound('learned');
     onStatusChange(card.frequency_rank, 'learned');
     onNext();
-  };
+  }, [card.frequency_rank, onStatusChange, onNext]);
 
-  const handleSetInProgress = (e?: React.MouseEvent) => {
+  const handleSetInProgress = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     playSound('inProgress');
     onStatusChange(card.frequency_rank, 'in-progress');
     onNext();
-  };
+  }, [card.frequency_rank, onStatusChange, onNext]);
 
   const handleResetToNew = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -79,18 +85,18 @@ export const Flashcard: React.FC<FlashcardProps> = ({
     onStatusChange(card.frequency_rank, 'new');
   };
 
-  const handlePlayAudio = (e?: React.MouseEvent) => {
+  const handlePlayAudio = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     speakChinese(card.character);
-  };
+  }, [card.character]);
 
-  const handleOpenExample = (e?: React.MouseEvent) => {
+  const handleOpenExample = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     if (exampleSentence) {
       playSound('click');
       setIsExampleOpen(true);
     }
-  };
+  }, [exampleSentence]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -153,7 +159,17 @@ export const Flashcard: React.FC<FlashcardProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [cardIndex, totalCards, card, onPrev, onNext, isExampleOpen, exampleSentence]);
+  }, [
+    onPrev,
+    onNext,
+    handleSetLearned,
+    handleSetInProgress,
+    handleFlip,
+    handleOpenExample,
+    handlePlayAudio,
+    isExampleOpen,
+    exampleSentence,
+  ]);
 
   return (
     <div className="flex flex-col items-center w-full max-w-xl mx-auto select-none">

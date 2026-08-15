@@ -1,8 +1,14 @@
 import type { WordAssociation, Character } from '../types';
 import wordAssociationsData from './word_associations.json';
 
-const byChar: Record<string, WordAssociation[]> = (wordAssociationsData as any).by_char || {};
-const byRank: Record<string, WordAssociation[]> = (wordAssociationsData as any).by_rank || {};
+interface WordAssociationsData {
+  by_char?: Record<string, WordAssociation[]>;
+  by_rank?: Record<string, WordAssociation[]>;
+}
+
+const associationsData = wordAssociationsData as unknown as WordAssociationsData;
+const byChar: Record<string, WordAssociation[]> = associationsData.by_char ?? {};
+const byRank: Record<string, WordAssociation[]> = associationsData.by_rank ?? {};
 
 /**
  * Get 2-3 common 2-character word associations for a given character or rank

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { Character, StudyStatus } from '../types';
 import { Flashcard } from './Flashcard';
 import { X, Shuffle, Trophy, RotateCcw } from 'lucide-react';
@@ -31,21 +31,24 @@ export const QuizModal: React.FC<QuizModalProps> = ({
   onClose,
   onStatusChange,
 }) => {
-  const [deck, setDeck] = useState<Character[]>([]);
+  const [deck, setDeck] = useState<Character[]>(() => shuffleArray(sourceCards));
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
   const [learnedCountInSession, setLearnedCountInSession] = useState<number>(0);
   const [inProgressCountInSession, setInProgressCountInSession] = useState<number>(0);
 
-  useEffect(() => {
-    if (isOpen && sourceCards.length > 0) {
-      setDeck(shuffleArray(sourceCards));
-      setCurrentIndex(0);
-      setIsCompleted(false);
-      setLearnedCountInSession(0);
-      setInProgressCountInSession(0);
-    }
-  }, [isOpen, sourceCards]);
+  // Re-initialize whenever modal transitions to open
+  const [prevIsOpen, setPrevIsOpen] = useState(false);
+  if (isOpen && !prevIsOpen) {
+    setPrevIsOpen(true);
+    setDeck(shuffleArray(sourceCards));
+    setCurrentIndex(0);
+    setIsCompleted(false);
+    setLearnedCountInSession(0);
+    setInProgressCountInSession(0);
+  } else if (!isOpen && prevIsOpen) {
+    setPrevIsOpen(false);
+  }
 
   const handleRestart = () => {
     playSound('click');
@@ -81,7 +84,9 @@ export const QuizModal: React.FC<QuizModalProps> = ({
             spread: 70,
             origin: { y: 0.6 },
           });
-        } catch (e) {}
+        } catch {
+          // Ignore confetti error
+        }
       }, 300);
     }
   };
@@ -104,7 +109,9 @@ export const QuizModal: React.FC<QuizModalProps> = ({
           spread: 60,
           origin: { y: 0.6 },
         });
-      } catch (e) {}
+      } catch {
+        // Ignore confetti error
+      }
     }
   };
 

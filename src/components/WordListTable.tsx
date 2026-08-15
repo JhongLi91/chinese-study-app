@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import type { Character, StudyStatus } from '../types';
 import {
   Play,
@@ -48,16 +48,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
   const [sortField, setSortField] = useState<'rank' | 'pinyin' | 'strokes'>('rank');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
   const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
-  const [viewMode, setViewMode] = useState<'tiles' | 'table'>(
-    activeStatusTab === 'learned' ? 'tiles' : 'table'
-  );
-
-  // Automatically default to tiles view when navigating to Learned Words
-  useEffect(() => {
-    if (activeStatusTab === 'learned') {
-      setViewMode('tiles');
-    }
-  }, [activeStatusTab]);
+  const [viewMode, setViewMode] = useState<'tiles' | 'table'>('tiles');
 
   const filteredCharacters = useMemo(() => {
     return characters

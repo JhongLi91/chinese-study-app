@@ -27,13 +27,15 @@ export function isSoundEnabled(): boolean {
 function getAudioContext(): AudioContext | null {
   if (typeof window === 'undefined') return null;
   if (!audioCtx) {
-    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+    const AudioContextClass =
+      window.AudioContext ||
+      (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
     if (AudioContextClass) {
       audioCtx = new AudioContextClass();
     }
   }
   if (audioCtx && audioCtx.state === 'suspended') {
-    audioCtx.resume();
+    void audioCtx.resume();
   }
   return audioCtx;
 }
@@ -99,7 +101,7 @@ export function playSound(type: 'flip' | 'learned' | 'inProgress' | 'click' | 'c
         o.stop(now + 0.5);
       });
     }
-  } catch (e) {
+  } catch {
     // Ignore audio context errors silently
   }
 }
@@ -193,7 +195,7 @@ export function preloadChineseAudio(text: string): void {
     const audio = new Audio();
     audio.preload = 'auto';
     audio.src = getNaturalTtsUrl(text);
-  } catch (e) {
+  } catch {
     // Ignore preloading errors
   }
 }
@@ -244,7 +246,7 @@ export function speakChinese(text: string, rate: number = 1.0): void {
       // Offline or network error -> fallback to Web Speech API
       speakWithWebSpeech(text, Math.min(1.0, Math.max(0.85, rate)));
     };
-  } catch (e) {
+  } catch {
     // Fallback if Audio constructor fails
     speakWithWebSpeech(text, rate);
   }

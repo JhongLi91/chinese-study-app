@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { Character } from '../types';
 import { getWordPairsForQuiz, type WordPairItem } from '../data/words';
 import {
@@ -82,14 +82,17 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
     setRound(roundNum);
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      setScore(0);
-      setStreak(0);
-      setBestStreak(0);
-      startNewRound(1);
-    }
-  }, [isOpen, sourceCards]);
+  // Reset game state whenever modal opens
+  const [prevIsOpen, setPrevIsOpen] = useState(false);
+  if (isOpen && !prevIsOpen) {
+    setPrevIsOpen(true);
+    setScore(0);
+    setStreak(0);
+    setBestStreak(0);
+    startNewRound(1);
+  } else if (!isOpen && prevIsOpen) {
+    setPrevIsOpen(false);
+  }
 
   const handleSelectLeft = (card: ColumnCard) => {
     if (card.isMatched) return;
@@ -153,7 +156,9 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
                 spread: 70,
                 origin: { y: 0.6 },
               });
-            } catch (e) {}
+            } catch {
+              // Ignore confetti error
+            }
           }, 350);
         }
       }
