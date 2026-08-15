@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { Character, ActiveTab } from './types';
 import { useStudyData } from './hooks/useStudyData';
 import { LessonsView } from './components/LessonsView';
@@ -51,6 +51,10 @@ export function App() {
   const [isWordMatchOpen, setIsWordMatchOpen] = useState(false);
   const [isDbModalOpen, setIsDbModalOpen] = useState(false);
   const [isVimModalOpen, setIsVimModalOpen] = useState(false);
+
+  const studiedCharacters = useMemo(() => {
+    return [...learnedList, ...inProgressList];
+  }, [learnedList, inProgressList]);
 
   const toggleSound = () => {
     const next = !soundOn;
@@ -398,13 +402,11 @@ export function App() {
       <WordMatchModal
         isOpen={isWordMatchOpen}
         onClose={() => setIsWordMatchOpen(false)}
-        sourceCards={
-          activeTab === 'learned' && learnedList.length > 0
-            ? learnedList
-            : activeTab === 'in-progress' && inProgressList.length > 0
-            ? inProgressList
-            : allCharactersList
-        }
+        sourceCards={studiedCharacters}
+        onGoToLessons={() => {
+          setIsWordMatchOpen(false);
+          setActiveTab('lessons');
+        }}
       />
 
       <DatabaseModal

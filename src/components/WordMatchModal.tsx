@@ -10,6 +10,7 @@ import {
   ArrowRight,
   Flame,
   CheckCircle2,
+  BookOpen,
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardTitle, CardDescription } from './ui/card';
@@ -22,6 +23,7 @@ interface WordMatchModalProps {
   onClose: () => void;
   sourceCards?: Character[];
   title?: string;
+  onGoToLessons?: () => void;
 }
 
 interface ColumnCard {
@@ -35,7 +37,8 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
   isOpen,
   onClose,
   sourceCards = [],
-  title = '2-Character Word Match Game (组词配对)',
+  title = '2-Character Word Match (Learned & In-Progress)',
+  onGoToLessons,
 }) => {
   const [round, setRound] = useState(1);
   const [score, setScore] = useState(0);
@@ -192,37 +195,44 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
                 <h2 className="text-lg sm:text-xl font-bold text-slate-100">
                   {title}
                 </h2>
-                <Badge variant="hsk" className="text-xs">
-                  Round {round}
-                </Badge>
+                {activePairs.length > 0 && (
+                  <Badge variant="hsk" className="text-xs">
+                    Round {round}
+                  </Badge>
+                )}
               </div>
               <p className="text-xs text-slate-400 mt-0.5">
-                Match 1st and 2nd characters to form legitimate 2-character words
+                Match 1st and 2nd characters to form legitimate 2-character words from your studied vocabulary
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             {/* Score & Streak */}
-            <div className="hidden sm:flex items-center gap-3 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono">
-              <div className="flex items-center gap-1 text-amber-400">
-                <Flame className="w-3.5 h-3.5 fill-current" />
-                <span>Streak: {streak} (Best: {bestStreak})</span>
+            {activePairs.length > 0 && (
+              <div className="hidden sm:flex items-center gap-3 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono">
+                <div className="flex items-center gap-1 text-amber-400">
+                  <Flame className="w-3.5 h-3.5 fill-current" />
+                  <span>Streak: {streak} (Best: {bestStreak})</span>
+                </div>
+                <div className="h-3 w-px bg-slate-700" />
+                <div className="text-emerald-400 font-bold">
+                  {score} pts
+                </div>
               </div>
-              <div className="h-3 w-px bg-slate-700" />
-              <div className="text-emerald-400 font-bold">
-                {score} pts
-              </div>
-            </div>
+            )}
 
-            <Button
-              size="icon"
-              variant="ghost"
-              onClick={() => startNewRound(1)}
-              title="Restart Game"
-            >
-              <RotateCcw className="w-5 h-5" />
-            </Button>
+            {activePairs.length > 0 && (
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => startNewRound(1)}
+                title="Restart Game"
+              >
+                <RotateCcw className="w-5 h-5" />
+              </Button>
+            )}
+
             <Button
               size="icon"
               variant="ghost"
@@ -235,7 +245,39 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
         </div>
 
         {/* Game Area */}
-        {isRoundComplete ? (
+        {activePairs.length === 0 ? (
+          /* EMPTY STATE (NO LEARNED/IN-PROGRESS CHARACTERS WITH WORDS) */
+          <div className="flex flex-col items-center justify-center p-8 sm:p-12 text-center gap-4 animate-fade-in">
+            <div className="w-16 h-16 rounded-3xl bg-amber-500/15 text-amber-400 flex items-center justify-center border border-amber-500/20 shadow-lg shadow-amber-500/5">
+              <Zap className="w-8 h-8" />
+            </div>
+
+            <div>
+              <CardTitle className="text-xl text-slate-100">
+                No Studied Words Yet
+              </CardTitle>
+              <CardDescription className="text-sm mt-1.5 max-w-md mx-auto text-slate-400 leading-relaxed">
+                Word Match tests 2-character compounds from characters you've marked as <strong className="text-emerald-400 font-medium">Learned</strong> or <strong className="text-amber-400 font-medium">In-Progress</strong>. Study cards in the Lessons tab to unlock word matching!
+              </CardDescription>
+            </div>
+
+            <div className="flex items-center gap-3 mt-3">
+              <Button
+                onClick={() => {
+                  onClose();
+                  onGoToLessons?.();
+                }}
+                className="gap-2"
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>Go to Lessons</span>
+              </Button>
+              <Button variant="secondary" onClick={onClose}>
+                Close
+              </Button>
+            </div>
+          </div>
+        ) : isRoundComplete ? (
           /* ROUND COMPLETED SUMMARY */
           <div className="flex flex-col items-center justify-center p-6 text-center gap-5 animate-fade-in">
             <div className="w-20 h-20 rounded-3xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center ring-8 ring-emerald-500/10 animate-bounce">
@@ -403,7 +445,7 @@ export const WordMatchModal: React.FC<WordMatchModalProps> = ({
                       <span className="text-slate-400 text-[11px]">
                         • {p.meaning}
                       </span>
-                      <Volume2 className="w-3 h-3 text-slate-400" />
+                      <Volume2 className="w-3.5 h-3.5 text-slate-400" />
                     </div>
                   ))}
                 </div>
