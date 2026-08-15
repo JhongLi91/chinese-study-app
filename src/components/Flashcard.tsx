@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { SentencePopover } from './SentencePopover';
 import { getExampleSentence } from '../data/sentences';
+import { getWordAssociations } from '../data/words';
 import { playSound, speakChinese, preloadChineseAudio } from '../utils/audio';
 
 interface FlashcardProps {
@@ -36,6 +37,10 @@ export const Flashcard: React.FC<FlashcardProps> = ({
   const exampleSentence = useMemo(() => {
     return getExampleSentence(card.character, card.frequency_rank, card.definition);
   }, [card.character, card.frequency_rank, card.definition]);
+
+  const wordAssociations = useMemo(() => {
+    return getWordAssociations(card.character, card.frequency_rank);
+  }, [card.character, card.frequency_rank]);
 
   // Reset flip state and preload audio when card changes
   useEffect(() => {
@@ -274,16 +279,53 @@ export const Flashcard: React.FC<FlashcardProps> = ({
               </span>
             </div>
 
-            <div className="flex-1 flex flex-col items-center justify-center text-center px-2 py-4 gap-4">
+            <div className="flex-1 flex flex-col items-center justify-center text-center px-2 py-3 gap-3">
               <div className="text-3xl sm:text-4xl font-bold text-sky-400 tracking-wide">
                 {card.pinyin}
               </div>
 
-              <div className="text-lg sm:text-xl text-slate-100 font-medium max-w-md leading-relaxed">
+              <div className="text-base sm:text-lg text-slate-100 font-medium max-w-md leading-relaxed">
                 {card.definition || 'No definition available'}
               </div>
 
-              <div className="flex flex-wrap justify-center gap-2 mt-2 pt-3 border-t border-slate-800 w-full max-w-sm">
+              {/* 2-Character Word Associations (常用组词) */}
+              {wordAssociations.length > 0 && (
+                <div className="w-full max-w-md my-0.5 pt-2 border-t border-slate-800/80">
+                  <span className="text-[10px] uppercase tracking-wider font-mono text-slate-400 block mb-1.5 font-semibold text-center">
+                    Common 2-Character Words (常用组词)
+                  </span>
+                  <div className="flex flex-col gap-1.5 w-full">
+                    {wordAssociations.map((item, idx) => (
+                      <div
+                        key={idx}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speakChinese(item.word);
+                        }}
+                        className="flex items-center justify-between px-3 py-1.5 rounded-xl bg-slate-800/70 hover:bg-slate-750 border border-slate-700/50 transition-all hover:scale-[1.01] hover:border-sky-500/40 cursor-pointer group/word shadow-sm"
+                        title={`Click to listen: ${item.word} (${item.pinyin})`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-base font-serif font-bold text-slate-100 group-hover/word:text-sky-300 transition-colors">
+                            {item.word}
+                          </span>
+                          <span className="text-xs font-semibold text-sky-400 font-sans">
+                            {item.pinyin}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-slate-300 font-normal truncate max-w-[170px] text-right">
+                            {item.meaning}
+                          </span>
+                          <Volume2 className="w-3.5 h-3.5 text-slate-500 group-hover/word:text-sky-400 shrink-0" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="flex flex-wrap justify-center gap-2 mt-1 pt-2 border-t border-slate-800/70 w-full max-w-sm">
                 {card.radical && (
                   <Badge variant="secondary" className="font-normal text-xs text-slate-300">
                     Radical: <strong className="font-serif text-slate-100 ml-1">{card.radical}</strong> ({card.radical_code})

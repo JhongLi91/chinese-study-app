@@ -22,6 +22,7 @@ import { WordListTable } from './components/WordListTable';
 import { QuizModal } from './components/QuizModal';
 import { DatabaseModal } from './components/DatabaseModal';
 import { VimHelpModal } from './components/VimHelpModal';
+import { WordMatchModal } from './components/WordMatchModal';
 import { Button } from './components/ui/button';
 import { Badge } from './components/ui/badge';
 import {
@@ -33,6 +34,7 @@ import {
   Layers,
   Volume2,
   VolumeX,
+  Zap,
 } from 'lucide-react';
 import { isSoundEnabled, setSoundEnabled, playSound } from './utils/audio';
 
@@ -63,6 +65,7 @@ export function App() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [quizSourceCards, setQuizSourceCards] = useState<Character[]>([]);
   const [quizTitle, setQuizTitle] = useState('Randomized Flashcard Quiz');
+  const [isWordMatchOpen, setIsWordMatchOpen] = useState(false);
   const [isDbModalOpen, setIsDbModalOpen] = useState(false);
   const [isVimModalOpen, setIsVimModalOpen] = useState(false);
   const [soundOn, setSoundOn] = useState(isSoundEnabled());
@@ -209,13 +212,14 @@ export function App() {
 
       if (e.key === 'Escape') {
         if (isQuizOpen) setIsQuizOpen(false);
+        else if (isWordMatchOpen) setIsWordMatchOpen(false);
         else if (isDbModalOpen) setIsDbModalOpen(false);
         else if (isVimModalOpen) setIsVimModalOpen(false);
         else if (currentLessonNumber !== null) handleBackToLessons();
       } else if (e.key === '?') {
         e.preventDefault();
         setIsVimModalOpen((prev) => !prev);
-      } else if (isQuizOpen || isDbModalOpen || isVimModalOpen) {
+      } else if (isQuizOpen || isWordMatchOpen || isDbModalOpen || isVimModalOpen) {
         return;
       } else if (!e.ctrlKey && !e.metaKey && !e.altKey) {
         if (e.key === '1') {
@@ -229,6 +233,9 @@ export function App() {
         } else if (e.key === '4') {
           setActiveTab('all');
           setCurrentLessonNumber(null);
+        } else if (e.key === 'w' || e.key === 'W') {
+          e.preventDefault();
+          setIsWordMatchOpen((prev) => !prev);
         } else if (e.key === '[') {
           e.preventDefault();
           handlePrevLesson();
@@ -241,7 +248,7 @@ export function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isQuizOpen, isDbModalOpen, isVimModalOpen, currentLessonNumber, lessons]);
+  }, [isQuizOpen, isWordMatchOpen, isDbModalOpen, isVimModalOpen, currentLessonNumber, lessons]);
 
   if (isInitializing) {
     return (
@@ -316,6 +323,20 @@ export function App() {
                 {masteryPercent}%
               </span>
             </div>
+
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                playSound('click');
+                setIsWordMatchOpen(true);
+              }}
+              className="gap-1.5 border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 font-semibold"
+              title="2-Character Word Match Game (or press 'w')"
+            >
+              <Zap className="w-3.5 h-3.5 fill-current" />
+              <span className="hidden sm:inline">Word Match</span>
+            </Button>
 
             <Button
               variant="outline"
@@ -481,6 +502,18 @@ export function App() {
           refreshData();
         }}
         onStatusChange={handleStatusChange}
+      />
+
+      <WordMatchModal
+        isOpen={isWordMatchOpen}
+        onClose={() => setIsWordMatchOpen(false)}
+        sourceCards={
+          activeTab === 'learned' && learnedList.length > 0
+            ? learnedList
+            : activeTab === 'in-progress' && inProgressList.length > 0
+            ? inProgressList
+            : allCharactersList
+        }
       />
 
       <DatabaseModal

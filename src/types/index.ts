@@ -1,5 +1,11 @@
 export type StudyStatus = 'new' | 'in-progress' | 'learned';
 
+export interface WordAssociation {
+  word: string;
+  pinyin: string;
+  meaning: string;
+}
+
 export interface Character {
   frequency_rank: number;
   character: string;

@@ -25,6 +25,7 @@ export const VimHelpModal: React.FC<VimHelpModalProps> = ({ isOpen, onClose }) =
     { key: '2', desc: 'Switch to Learned Words tab' },
     { key: '3', desc: 'Switch to In-Progress Words tab' },
     { key: '4', desc: 'Switch to All 3,000 Hanzi tab' },
+    { key: 'w', desc: 'Open 2-Character Word Match game (组词配对)' },
     { key: '?', desc: 'Toggle keyboard shortcuts cheat sheet' },
     { key: 'Esc', desc: 'Close open modal or exit quiz' },
   ];

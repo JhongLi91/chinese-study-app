@@ -21,6 +21,7 @@ import {
   TooltipContent,
   TooltipProvider,
 } from './ui/tooltip';
+import { getWordAssociations } from '../data/words';
 import { speakChinese, playSound } from '../utils/audio';
 
 interface WordListTableProps {
@@ -476,6 +477,44 @@ export const WordListTable: React.FC<WordListTableProps> = ({
                               )}
                             </div>
                           )}
+
+                          {/* 2-Character Word Associations */}
+                          {(() => {
+                            const words = getWordAssociations(c.character, c.frequency_rank);
+                            if (words.length === 0) return null;
+                            return (
+                              <div className="pt-1.5 mt-1 border-t border-slate-800/60">
+                                <span className="text-[10px] uppercase tracking-wider font-mono text-slate-400 block mb-1">
+                                  Common Words:
+                                </span>
+                                <div className="flex flex-col gap-1">
+                                  {words.slice(0, 2).map((w, idx) => (
+                                    <div
+                                      key={idx}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        speakChinese(w.word);
+                                      }}
+                                      className="flex items-center justify-between text-xs p-1 px-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-800 border border-slate-750/70 transition-colors cursor-pointer group/w"
+                                      title={`Click to listen: ${w.word} (${w.pinyin})`}
+                                    >
+                                      <div className="flex items-center gap-1.5">
+                                        <span className="font-serif font-bold text-slate-100 group-hover/w:text-sky-300">
+                                          {w.word}
+                                        </span>
+                                        <span className="font-sans text-[11px] text-sky-400">
+                                          {w.pinyin}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-slate-300 truncate max-w-[95px]">
+                                        {w.meaning}
+                                      </span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          })()}
                         </div>
 
                         {/* Status Toggle Actions */}
