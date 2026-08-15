@@ -1,10 +1,26 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { Character, StudyStatus } from '../types';
-import { Play, Volume2, Search, ArrowUpDown, CheckCircle2, Clock, RotateCcw } from 'lucide-react';
+import {
+  Play,
+  Volume2,
+  Search,
+  ArrowUpDown,
+  CheckCircle2,
+  Clock,
+  RotateCcw,
+  LayoutGrid,
+  List,
+} from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
 import { Card, CardTitle, CardDescription } from './ui/card';
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from './ui/tooltip';
 import { speakChinese, playSound } from '../utils/audio';
 
 interface WordListTableProps {
@@ -31,37 +47,49 @@ export const WordListTable: React.FC<WordListTableProps> = ({
   const [sortField, setSortField] = useState<'rank' | 'pinyin' | 'strokes'>('rank');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
   const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
+  const [viewMode, setViewMode] = useState<'tiles' | 'table'>(
+    activeStatusTab === 'learned' ? 'tiles' : 'table'
+  );
+
+  // Automatically default to tiles view when navigating to Learned Words
+  useEffect(() => {
+    if (activeStatusTab === 'learned') {
+      setViewMode('tiles');
+    }
+  }, [activeStatusTab]);
 
   const filteredCharacters = useMemo(() => {
-    return characters.filter((c) => {
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase().trim();
-        const matchesChar = c.character.toLowerCase().includes(q);
-        const matchesPinyin = c.pinyin.toLowerCase().includes(q);
-        const matchesDef = c.definition.toLowerCase().includes(q);
-        if (!matchesChar && !matchesPinyin && !matchesDef) return false;
-      }
-
-      if (selectedHsk !== 'all') {
-        if (selectedHsk === 'none') {
-          if (c.hsk_level !== null) return false;
-        } else {
-          if (c.hsk_level?.toString() !== selectedHsk) return false;
+    return characters
+      .filter((c) => {
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase().trim();
+          const matchesChar = c.character.toLowerCase().includes(q);
+          const matchesPinyin = c.pinyin.toLowerCase().includes(q);
+          const matchesDef = c.definition.toLowerCase().includes(q);
+          if (!matchesChar && !matchesPinyin && !matchesDef) return false;
         }
-      }
 
-      return true;
-    }).sort((a, b) => {
-      let comparison = 0;
-      if (sortField === 'rank') {
-        comparison = a.frequency_rank - b.frequency_rank;
-      } else if (sortField === 'pinyin') {
-        comparison = a.pinyin.localeCompare(b.pinyin);
-      } else if (sortField === 'strokes') {
-        comparison = (a.stroke_count || 0) - (b.stroke_count || 0);
-      }
-      return sortDirection === 'asc' ? comparison : -comparison;
-    });
+        if (selectedHsk !== 'all') {
+          if (selectedHsk === 'none') {
+            if (c.hsk_level !== null) return false;
+          } else {
+            if (c.hsk_level?.toString() !== selectedHsk) return false;
+          }
+        }
+
+        return true;
+      })
+      .sort((a, b) => {
+        let comparison = 0;
+        if (sortField === 'rank') {
+          comparison = a.frequency_rank - b.frequency_rank;
+        } else if (sortField === 'pinyin') {
+          comparison = a.pinyin.localeCompare(b.pinyin);
+        } else if (sortField === 'strokes') {
+          comparison = (a.stroke_count || 0) - (b.stroke_count || 0);
+        }
+        return sortDirection === 'asc' ? comparison : -comparison;
+      });
   }, [characters, searchQuery, selectedHsk, sortField, sortDirection]);
 
   const toggleSort = (field: 'rank' | 'pinyin' | 'strokes') => {
@@ -110,13 +138,14 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               <h1 className="text-2xl sm:text-3xl font-bold text-slate-100">
                 {title}
               </h1>
-              <Badge variant="secondary" className="font-mono text-sm px-3 py-1 font-bold text-sky-400">
+              <Badge
+                variant="secondary"
+                className="font-mono text-sm px-3 py-1 font-bold text-sky-400"
+              >
                 {characters.length} words
               </Badge>
             </div>
-            <p className="text-slate-400 text-sm mt-1">
-              {description}
-            </p>
+            <p className="text-slate-400 text-sm mt-1">{description}</p>
           </div>
 
           <div>
@@ -147,40 +176,92 @@ export const WordListTable: React.FC<WordListTableProps> = ({
             />
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap">
-            <select
-              value={selectedHsk}
-              onChange={(e) => setSelectedHsk(e.target.value)}
-              className="h-10 px-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-400"
-            >
-              <option value="all">All HSK Levels</option>
-              <option value="1">HSK 1</option>
-              <option value="2">HSK 2</option>
-              <option value="3">HSK 3</option>
-              <option value="4">HSK 4</option>
-              <option value="5">HSK 5</option>
-              <option value="6">HSK 6</option>
-              <option value="none">No HSK Level</option>
-            </select>
+          <div className="flex items-center gap-2 flex-wrap justify-between sm:justify-end">
+            <div className="flex items-center gap-2 flex-wrap">
+              <select
+                value={selectedHsk}
+                onChange={(e) => setSelectedHsk(e.target.value)}
+                className="h-10 px-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-400"
+              >
+                <option value="all">All HSK Levels</option>
+                <option value="1">HSK 1</option>
+                <option value="2">HSK 2</option>
+                <option value="3">HSK 3</option>
+                <option value="4">HSK 4</option>
+                <option value="5">HSK 5</option>
+                <option value="6">HSK 6</option>
+                <option value="none">No HSK Level</option>
+              </select>
 
-            <Button
-              variant={sortField === 'rank' ? 'secondary' : 'outline'}
-              size="sm"
-              onClick={() => toggleSort('rank')}
-              className={sortField === 'rank' ? 'border-sky-500/40 text-sky-400 font-semibold' : ''}
-            >
-              <ArrowUpDown className="w-3.5 h-3.5" />
-              <span>Rank {sortField === 'rank' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}</span>
-            </Button>
+              <Button
+                variant={sortField === 'rank' ? 'secondary' : 'outline'}
+                size="sm"
+                onClick={() => toggleSort('rank')}
+                className={
+                  sortField === 'rank'
+                    ? 'border-sky-500/40 text-sky-400 font-semibold'
+                    : ''
+                }
+              >
+                <ArrowUpDown className="w-3.5 h-3.5" />
+                <span>
+                  Rank{' '}
+                  {sortField === 'rank' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
+                </span>
+              </Button>
 
-            <Button
-              variant={sortField === 'pinyin' ? 'secondary' : 'outline'}
-              size="sm"
-              onClick={() => toggleSort('pinyin')}
-              className={sortField === 'pinyin' ? 'border-sky-500/40 text-sky-400 font-semibold' : ''}
-            >
-              <span>Pinyin {sortField === 'pinyin' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}</span>
-            </Button>
+              <Button
+                variant={sortField === 'pinyin' ? 'secondary' : 'outline'}
+                size="sm"
+                onClick={() => toggleSort('pinyin')}
+                className={
+                  sortField === 'pinyin'
+                    ? 'border-sky-500/40 text-sky-400 font-semibold'
+                    : ''
+                }
+              >
+                <span>
+                  Pinyin{' '}
+                  {sortField === 'pinyin' ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
+                </span>
+              </Button>
+            </div>
+
+            {/* View Mode Toggle: 10-per-row Tiles Grid vs Table List */}
+            <div className="flex items-center bg-slate-950 border border-slate-800 rounded-xl p-1 gap-1">
+              <button
+                type="button"
+                onClick={() => {
+                  playSound('click');
+                  setViewMode('tiles');
+                }}
+                title="10-per-row Tiles Grid view (hover for details)"
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                  viewMode === 'tiles'
+                    ? 'bg-sky-500 text-slate-950 font-semibold shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span>Tiles (10/row)</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  playSound('click');
+                  setViewMode('table');
+                }}
+                title="Table List view"
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                  viewMode === 'table'
+                    ? 'bg-sky-500 text-slate-950 font-semibold shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <List className="w-3.5 h-3.5" />
+                <span>Table</span>
+              </button>
+            </div>
           </div>
         </div>
       </Card>
@@ -224,7 +305,7 @@ export const WordListTable: React.FC<WordListTableProps> = ({
         </div>
       )}
 
-      {/* Table / List View */}
+      {/* Empty State */}
       {filteredCharacters.length === 0 ? (
         <Card className="flex flex-col items-center justify-center p-12 text-center">
           <div className="w-16 h-16 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-500 mb-4">
@@ -239,7 +320,236 @@ export const WordListTable: React.FC<WordListTableProps> = ({
               : "No characters match your current search and filter criteria."}
           </CardDescription>
         </Card>
+      ) : viewMode === 'tiles' ? (
+        /* TILES VIEW (10 CHARACTERS PER ROW ON DESKTOP) */
+        <TooltipProvider delayDuration={80} skipDelayDuration={0}>
+          <div className="flex flex-col gap-3">
+            {/* Tile count & Quick Guide */}
+            <div className="flex items-center justify-between text-xs text-slate-400 px-1">
+              <span>
+                Showing <strong className="text-slate-200">{filteredCharacters.length}</strong> characters
+                • 10 per row
+              </span>
+              <span className="italic text-[11px] text-slate-500">
+                Hover over a tile for pinyin & meaning • Click to play audio
+              </span>
+            </div>
+
+            <Card className="p-4 sm:p-6 bg-slate-900/60 border-slate-800">
+              <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 sm:gap-2.5">
+                {filteredCharacters.map((c) => {
+                  const isSelected = selectedIds.has(c.frequency_rank);
+
+                  return (
+                    <Tooltip key={c.frequency_rank}>
+                      <TooltipTrigger asChild>
+                        <div
+                          onClick={() => {
+                            speakChinese(c.character);
+                          }}
+                          className={`group relative aspect-square flex flex-col items-center justify-center p-1.5 rounded-2xl border transition-all duration-150 cursor-pointer select-none ${
+                            isSelected
+                              ? 'border-sky-400 ring-2 ring-sky-400/40 bg-sky-500/15'
+                              : c.status === 'learned'
+                              ? 'bg-slate-900/90 border-slate-800 hover:border-emerald-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/10'
+                              : c.status === 'in-progress'
+                              ? 'bg-slate-900/90 border-slate-800 hover:border-amber-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10'
+                              : 'bg-slate-900/90 border-slate-800 hover:border-sky-400/70 hover:bg-slate-850 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/10'
+                          }`}
+                        >
+                          {/* Selection Checkbox (appears on hover or when selected) */}
+                          <div
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleSelectOne(c.frequency_rank);
+                            }}
+                            className={`absolute top-1.5 left-1.5 p-0.5 rounded transition-opacity ${
+                              isSelected
+                                ? 'opacity-100'
+                                : 'opacity-0 group-hover:opacity-60 hover:!opacity-100'
+                            }`}
+                            title="Select for batch action"
+                          >
+                            <input
+                              type="checkbox"
+                              checked={isSelected}
+                              onChange={() => {}}
+                              className="rounded border-slate-700 cursor-pointer accent-sky-500 w-3 h-3"
+                            />
+                          </div>
+
+                          {/* Hanzi Character */}
+                          <span
+                            className={`text-2xl sm:text-3xl font-serif font-bold transition-colors ${
+                              c.status === 'learned'
+                                ? 'text-slate-100 group-hover:text-emerald-300'
+                                : c.status === 'in-progress'
+                                ? 'text-slate-100 group-hover:text-amber-300'
+                                : 'text-slate-100 group-hover:text-sky-300'
+                            }`}
+                          >
+                            {c.character}
+                          </span>
+
+                          {/* Subtle Rank */}
+                          <span className="text-[10px] font-mono text-slate-500 group-hover:text-slate-400 leading-none mt-1">
+                            #{c.frequency_rank}
+                          </span>
+
+                          {/* Status Dot */}
+                          <div
+                            className={`absolute bottom-1.5 right-1.5 w-1.5 h-1.5 rounded-full ${
+                              c.status === 'learned'
+                                ? 'bg-emerald-400 shadow-sm shadow-emerald-400/50'
+                                : c.status === 'in-progress'
+                                ? 'bg-amber-400 shadow-sm shadow-amber-400/50'
+                                : 'bg-slate-700'
+                            }`}
+                          />
+                        </div>
+                      </TooltipTrigger>
+
+                      {/* Rich Hover Card with Pinyin & Meaning */}
+                      <TooltipContent
+                        side="top"
+                        sideOffset={8}
+                        className="w-64 p-3.5 rounded-2xl bg-slate-900/98 border border-slate-750 text-slate-100 shadow-2xl backdrop-blur-lg animate-fade-in"
+                      >
+                        {/* Header: Hanzi, Pinyin & Audio Button */}
+                        <div className="flex items-start justify-between gap-2 border-b border-slate-800 pb-2 mb-2">
+                          <div className="flex items-center gap-2.5">
+                            <span className="text-3xl font-serif font-bold text-slate-50">
+                              {c.character}
+                            </span>
+                            <div>
+                              <div className="text-base font-bold text-sky-400 leading-tight">
+                                {c.pinyin}
+                              </div>
+                              <div className="text-[10px] font-mono text-slate-400">
+                                Rank #{c.frequency_rank}{' '}
+                                {c.hsk_level ? `• HSK ${c.hsk_level}` : ''}
+                              </div>
+                            </div>
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              speakChinese(c.character);
+                            }}
+                            className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-sky-400 transition-colors cursor-pointer"
+                            title="Play audio (TTS)"
+                          >
+                            <Volume2 className="w-4 h-4" />
+                          </button>
+                        </div>
+
+                        {/* Meaning & Definition */}
+                        <div className="space-y-1.5">
+                          <div className="text-xs text-slate-200 leading-snug font-medium">
+                            {c.definition || (
+                              <span className="text-slate-500 italic">
+                                No definition available
+                              </span>
+                            )}
+                          </div>
+
+                          {(c.radical || c.stroke_count) && (
+                            <div className="flex items-center gap-2 pt-1 text-[10px] text-slate-400 border-t border-slate-800/60 font-mono">
+                              {c.radical && (
+                                <span>
+                                  Radical:{' '}
+                                  <strong className="font-serif text-slate-200">
+                                    {c.radical}
+                                  </strong>{' '}
+                                  ({c.radical_code})
+                                </span>
+                              )}
+                              {c.stroke_count && (
+                                <span>
+                                  Strokes:{' '}
+                                  <strong className="text-slate-200">
+                                    {c.stroke_count}
+                                  </strong>
+                                </span>
+                              )}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Status Toggle Actions */}
+                        <div className="flex items-center justify-between gap-1.5 pt-2 mt-2 border-t border-slate-800">
+                          <span className="text-[10px] font-mono uppercase text-slate-500">
+                            Status:{' '}
+                            <span
+                              className={
+                                c.status === 'learned'
+                                  ? 'text-emerald-400 font-semibold'
+                                  : c.status === 'in-progress'
+                                  ? 'text-amber-400 font-semibold'
+                                  : 'text-slate-400'
+                              }
+                            >
+                              {c.status}
+                            </span>
+                          </span>
+
+                          <div className="flex items-center gap-1">
+                            {c.status !== 'learned' && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  playSound('learned');
+                                  onStatusChange(c.frequency_rank, 'learned');
+                                }}
+                                className="p-1 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-[10px] font-medium flex items-center gap-1 px-1.5 cursor-pointer"
+                                title="Mark Learned"
+                              >
+                                <CheckCircle2 className="w-3 h-3" /> Learned
+                              </button>
+                            )}
+                            {c.status !== 'in-progress' && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  playSound('inProgress');
+                                  onStatusChange(c.frequency_rank, 'in-progress');
+                                }}
+                                className="p-1 rounded bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 text-[10px] font-medium flex items-center gap-1 px-1.5 cursor-pointer"
+                                title="Mark In-Progress"
+                              >
+                                <Clock className="w-3 h-3" /> In-Prog
+                              </button>
+                            )}
+                            {c.status !== 'new' && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  playSound('click');
+                                  onStatusChange(c.frequency_rank, 'new');
+                                }}
+                                className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-400 text-[10px] font-medium flex items-center gap-1 px-1.5 cursor-pointer"
+                                title="Reset to New"
+                              >
+                                <RotateCcw className="w-3 h-3" />
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
+                  );
+                })}
+              </div>
+            </Card>
+          </div>
+        </TooltipProvider>
       ) : (
+        /* TABLE LIST VIEW */
         <Card className="overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
@@ -248,7 +558,10 @@ export const WordListTable: React.FC<WordListTableProps> = ({
                   <th className="py-3 px-4 w-10">
                     <input
                       type="checkbox"
-                      checked={selectedIds.size > 0 && selectedIds.size === filteredCharacters.length}
+                      checked={
+                        selectedIds.size > 0 &&
+                        selectedIds.size === filteredCharacters.length
+                      }
                       onChange={handleSelectAll}
                       className="rounded border-slate-700 cursor-pointer accent-sky-500"
                     />
@@ -305,14 +618,14 @@ export const WordListTable: React.FC<WordListTableProps> = ({
                       </td>
 
                       <td className="py-3 px-4 text-slate-300">
-                        {c.definition || <span className="text-slate-500 italic">None</span>}
+                        {c.definition || (
+                          <span className="text-slate-500 italic">None</span>
+                        )}
                       </td>
 
                       <td className="py-3 px-3 text-center">
                         {c.hsk_level ? (
-                          <Badge variant="hsk">
-                            HSK {c.hsk_level}
-                          </Badge>
+                          <Badge variant="hsk">HSK {c.hsk_level}</Badge>
                         ) : (
                           <span className="text-xs text-slate-600">-</span>
                         )}
@@ -328,20 +641,30 @@ export const WordListTable: React.FC<WordListTableProps> = ({
                               onStatusChange(c.frequency_rank, 'learned');
                             }}
                             title="Mark Learned"
-                            className={c.status !== 'learned' ? 'text-emerald-400 hover:bg-emerald-500/15' : ''}
+                            className={
+                              c.status !== 'learned'
+                                ? 'text-emerald-400 hover:bg-emerald-500/15'
+                                : ''
+                            }
                           >
                             <CheckCircle2 className="w-4 h-4" />
                           </Button>
 
                           <Button
                             size="iconSm"
-                            variant={c.status === 'in-progress' ? 'inProgress' : 'ghost'}
+                            variant={
+                              c.status === 'in-progress' ? 'inProgress' : 'ghost'
+                            }
                             onClick={() => {
                               playSound('inProgress');
                               onStatusChange(c.frequency_rank, 'in-progress');
                             }}
                             title="Mark In-Progress"
-                            className={c.status !== 'in-progress' ? 'text-amber-400 hover:bg-amber-500/15' : ''}
+                            className={
+                              c.status !== 'in-progress'
+                                ? 'text-amber-400 hover:bg-amber-500/15'
+                                : ''
+                            }
                           >
                             <Clock className="w-4 h-4" />
                           </Button>
