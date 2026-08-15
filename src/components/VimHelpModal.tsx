@@ -20,7 +20,6 @@ export const VimHelpModal: React.FC<VimHelpModalProps> = ({ isOpen, onClose }) =
     { key: '; / f', desc: 'Flip flashcard (Front ↔ Back)' },
     { key: 'Space', desc: 'Show example sentence popover (Press any key to close)' },
     { key: 'a', desc: 'Pronounce Mandarin audio (TTS)' },
-    { key: 't', desc: 'Start / Pause top stopwatch' },
     { key: '1', desc: 'Switch to Lessons curriculum tab' },
     { key: '2', desc: 'Switch to Learned Words tab' },
     { key: '3', desc: 'Switch to In-Progress Words tab' },

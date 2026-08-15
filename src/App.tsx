@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Character, ActiveTab } from './types';
 import { useStudyData } from './hooks/useStudyData';
-import { Stopwatch } from './components/Stopwatch';
 import { LessonsView } from './components/LessonsView';
 import { WordListTable } from './components/WordListTable';
 import { QuizModal } from './components/QuizModal';
@@ -182,42 +181,31 @@ export function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0b0f17] text-slate-100 selection:bg-sky-500 selection:text-white">
-      {/* Top Header & Persistent Stopwatch */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-2.5 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      {/* Top Header */}
+      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-3 sm:px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo & App Title */}
-          <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-serif font-bold text-xl shadow-md shadow-sky-500/20 shrink-0">
-                字
-              </div>
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="font-bold text-base text-slate-100 tracking-tight">
-                    HanziStudy
-                  </span>
-                  <Badge variant="hsk" className="text-[10px] px-1.5 py-0">
-                    SQLite3
-                  </Badge>
-                </div>
-                <p className="text-[11px] text-slate-400 hidden sm:block">
-                  3,000 High-Frequency Chinese Characters
-                </p>
-              </div>
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-serif font-bold text-xl shadow-md shadow-sky-500/20 shrink-0">
+              字
             </div>
-
-            <div className="md:hidden">
-              <Stopwatch />
+            <div>
+              <div className="flex items-center gap-1.5">
+                <span className="font-bold text-base text-slate-100 tracking-tight">
+                  HanziStudy
+                </span>
+                <Badge variant="hsk" className="text-[10px] px-1.5 py-0">
+                  SQLite3
+                </Badge>
+              </div>
+              <p className="text-[11px] text-slate-400 hidden sm:block">
+                3,000 High-Frequency Chinese Characters
+              </p>
             </div>
-          </div>
-
-          {/* Desktop Top Stopwatch */}
-          <div className="hidden md:flex items-center justify-center">
-            <Stopwatch />
           </div>
 
           {/* Top Right Utilities */}
-          <div className="flex items-center gap-2 w-full md:w-auto justify-between md:justify-end">
+          <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono shadow-sm">
               <span className="text-emerald-400 font-bold flex items-center gap-1" title="Learned characters">
                 <CheckCircle2 className="w-3.5 h-3.5" />
