@@ -25,7 +25,6 @@ interface SidebarNavProps {
   masteryPercent: string;
   isCollapsed: boolean;
   onToggleCollapse: () => void;
-  onOpenWordMatch: () => void;
   onOpenDbModal: () => void;
   onOpenVimModal: () => void;
   soundOn: boolean;
@@ -41,7 +40,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
   masteryPercent,
   isCollapsed,
   onToggleCollapse,
-  onOpenWordMatch,
   onOpenDbModal,
   onOpenVimModal,
   soundOn,
@@ -228,19 +226,29 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             </div>
           </button>
 
-          {/* Word Match Trigger */}
+          {/* Word Match Page Link */}
           <button
             type="button"
-            onClick={() => {
-              playSound('click');
-              onOpenWordMatch();
-              onCloseMobile();
-            }}
-            className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold text-emerald-400 hover:bg-emerald-500/10 border border-emerald-500/30 transition-all group mt-1"
+            onClick={() => handleNavClick('word-match')}
+            className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group mt-0.5 ${
+              activePage === 'word-match'
+                ? 'bg-gradient-to-r from-amber-500/20 to-emerald-500/20 text-amber-300 border border-amber-500/40 shadow-sm font-bold'
+                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
+            }`}
           >
             <div className="flex items-center gap-3">
-              <Zap className="w-4 h-4 fill-current transition-transform group-hover:scale-110" />
+              <Zap
+                className={`w-4 h-4 transition-transform group-hover:scale-110 ${
+                  activePage === 'word-match' ? 'text-amber-300 fill-current' : 'text-slate-400 group-hover:text-slate-200'
+                }`}
+              />
               <span>Word Match (组词)</span>
+            </div>
+
+            <div className="flex items-center gap-1.5">
+              <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-mono border-amber-500/30 text-amber-300">
+                Game
+              </Badge>
             </div>
           </button>
         </div>
@@ -416,14 +424,18 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           {/* Word Match Icon */}
           <button
             type="button"
-            onClick={() => {
-              playSound('click');
-              onOpenWordMatch();
-            }}
-            className="w-10 h-10 rounded-2xl flex items-center justify-center text-emerald-400 hover:bg-emerald-500/10 border border-emerald-500/30 transition-all hover:scale-105"
-            title="Word Match Game"
+            onClick={() => handleNavClick('word-match')}
+            className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${
+              activePage === 'word-match'
+                ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
+                : 'text-amber-400 hover:text-amber-300 hover:bg-slate-800/70 border border-amber-500/30'
+            }`}
+            title="Word Match (组词配对)"
           >
-            <Zap className="w-4 h-4 fill-current" />
+            <Zap className={`w-4 h-4 fill-current ${activePage === 'word-match' ? 'text-slate-950' : 'text-amber-400'}`} />
+            {activePage === 'word-match' && (
+              <span className="absolute -right-1 top-1 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-slate-900" />
+            )}
           </button>
         </div>
       </div>
