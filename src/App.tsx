@@ -1,30 +1,45 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { Character, ActiveTab } from './types';
 import { useStudyData } from './hooks/useStudyData';
+import { SidebarNav } from './components/SidebarNav';
 import { LessonsView } from './components/LessonsView';
 import { WordListTable } from './components/WordListTable';
 import { QuizModal } from './components/QuizModal';
 import { DatabaseModal } from './components/DatabaseModal';
 import { VimHelpModal } from './components/VimHelpModal';
 import { WordMatchModal } from './components/WordMatchModal';
-import { Button } from './components/ui/button';
+import { StoryReaderView } from './components/StoryReaderView';
 import { Badge } from './components/ui/badge';
 import {
   BookOpen,
   CheckCircle2,
   Clock,
-  Database,
-  Keyboard,
   Layers,
-  Volume2,
-  VolumeX,
-  Zap,
+  ScrollText,
+  Menu,
 } from 'lucide-react';
 import { isSoundEnabled, setSoundEnabled, playSound } from './utils/audio';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('lessons');
   const [soundOn, setSoundOn] = useState<boolean>(isSoundEnabled());
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('hanzi_sidebar_collapsed') === 'true';
+    }
+    return false;
+  });
+
+  const toggleSidebarCollapse = useCallback(() => {
+    setIsSidebarCollapsed((prev) => {
+      const next = !prev;
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('hanzi_sidebar_collapsed', String(next));
+      }
+      return next;
+    });
+  }, []);
 
   // Data layer via custom hook
   const {
@@ -84,6 +99,13 @@ export function App() {
     setIsQuizOpen(true);
   };
 
+  const handleStartCustomQuiz = (cards: Character[], title: string = 'Story Vocabulary Quiz') => {
+    playSound('click');
+    setQuizSourceCards(cards);
+    setQuizTitle(title);
+    setIsQuizOpen(true);
+  };
+
   const handlePrevLesson = useCallback(() => {
     playSound('click');
     setActiveTab('lessons');
@@ -122,12 +144,17 @@ export function App() {
         else if (isWordMatchOpen) setIsWordMatchOpen(false);
         else if (isDbModalOpen) setIsDbModalOpen(false);
         else if (isVimModalOpen) setIsVimModalOpen(false);
+        else if (isMobileNavOpen) setIsMobileNavOpen(false);
         else if (currentLessonNumber !== null) backToLessons();
       } else if (e.key === '?') {
         e.preventDefault();
         setIsVimModalOpen((prev) => !prev);
       } else if (isQuizOpen || isWordMatchOpen || isDbModalOpen || isVimModalOpen) {
         return;
+      } else if (e.key === '\\' || (e.ctrlKey && e.key.toLowerCase() === 'b')) {
+        e.preventDefault();
+        playSound('click');
+        toggleSidebarCollapse();
       } else if (!e.ctrlKey && !e.metaKey && !e.altKey) {
         if (e.key === '1') {
           setActiveTab('lessons');
@@ -137,9 +164,6 @@ export function App() {
           setActiveTab('in-progress');
         } else if (e.key === '4') {
           setActiveTab('all');
-        } else if (e.key.toLowerCase() === 'w') {
-          e.preventDefault();
-          setIsWordMatchOpen((prev) => !prev);
         } else if (e.key === '[') {
           e.preventDefault();
           handlePrevLesson();
@@ -157,10 +181,12 @@ export function App() {
     isWordMatchOpen,
     isDbModalOpen,
     isVimModalOpen,
+    isMobileNavOpen,
     currentLessonNumber,
     backToLessons,
     handlePrevLesson,
     handleNextLesson,
+    toggleSidebarCollapse,
   ]);
 
   if (isInitializing) {
@@ -183,160 +209,122 @@ export function App() {
 
   const masteryPercent = ((stats.learned / 3000) * 100).toFixed(1);
 
+  // Page Header Details
+  const pageMeta = {
+    lessons: {
+      title: 'Lessons Curriculum',
+      subtitle: currentLessonNumber
+        ? `Lesson ${currentLessonNumber} of 120 • 25 Hanzi`
+        : '120 Curated Lessons • 25 High-Frequency Characters each',
+      icon: BookOpen,
+    },
+    stories: {
+      title: 'Story Reader',
+      subtitle: 'Authentic HSK reading passages with sentence-by-sentence audio narration',
+      icon: ScrollText,
+    },
+    learned: {
+      title: 'Learned Words Directory',
+      subtitle: `${stats.learned} characters mastered. Regular flashcard practice solidifies memory`,
+      icon: CheckCircle2,
+    },
+    'in-progress': {
+      title: 'In-Progress Queue',
+      subtitle: `${stats.in_progress} characters currently being learned. Practice in quizzes to promote to Learned`,
+      icon: Clock,
+    },
+    all: {
+      title: '3,000 Hanzi Library',
+      subtitle: 'Complete frequency rank database from #1 to #3,000 with definitions and stroke data',
+      icon: Layers,
+    },
+  }[activeTab];
+
+  const PageIcon = pageMeta.icon;
+
   return (
-    <div className="min-h-screen flex flex-col bg-[#0b0f17] text-slate-100 selection:bg-sky-500 selection:text-white">
-      {/* Top Header */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-3 sm:px-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          {/* Logo & App Title */}
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-serif font-bold text-xl shadow-md shadow-sky-500/20 shrink-0">
-              字
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-base text-slate-100 tracking-tight">
-                  HanziStudy
-                </span>
-                <Badge variant="hsk" className="text-[10px] px-1.5 py-0">
-                  SQLite3
-                </Badge>
+    <div className="min-h-screen flex bg-[#0b0f17] text-slate-100 selection:bg-sky-500 selection:text-white">
+      {/* Side Navbar (Open / Closeable on desktop & mobile) */}
+      <SidebarNav
+        activePage={activeTab}
+        onSelectPage={setActiveTab}
+        stats={stats}
+        masteryPercent={masteryPercent}
+        isCollapsed={isSidebarCollapsed}
+        onToggleCollapse={toggleSidebarCollapse}
+        onOpenWordMatch={() => setIsWordMatchOpen(true)}
+        onOpenDbModal={() => setIsDbModalOpen(true)}
+        onOpenVimModal={() => setIsVimModalOpen(true)}
+        soundOn={soundOn}
+        onToggleSound={toggleSound}
+        isMobileOpen={isMobileNavOpen}
+        onCloseMobile={() => setIsMobileNavOpen(false)}
+      />
+
+      {/* Main Content Area (Fluid padding based on sidebar collapsed state) */}
+      <div
+        className={`flex-1 flex flex-col min-w-0 min-h-screen transition-all duration-300 ease-in-out ${
+          isSidebarCollapsed ? 'md:pl-[72px]' : 'md:pl-64'
+        }`}
+      >
+        {/* Main Content Top Navigation Bar */}
+        <header className="sticky top-0 z-30 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-3 sm:px-8">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            {/* Left: Mobile Menu Toggle & Page Title */}
+            <div className="flex items-center gap-3">
+              {/* Mobile Menu Button */}
+              <button
+                type="button"
+                onClick={() => setIsMobileNavOpen(true)}
+                className="md:hidden p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-slate-800 border border-slate-800"
+                title="Open Navigation Menu"
+              >
+                <Menu className="w-5 h-5" />
+              </button>
+
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20 shrink-0 hidden sm:flex">
+                  <PageIcon className="w-4 h-4" />
+                </div>
+                <div>
+                  <h1 className="font-bold text-sm sm:text-base text-slate-100 leading-tight flex items-center gap-2">
+                    <span>{pageMeta.title}</span>
+                    {activeTab === 'stories' && (
+                      <Badge variant="hsk" className="text-[10px] px-1.5 py-0">
+                        HSK 3+
+                      </Badge>
+                    )}
+                  </h1>
+                  <p className="text-[11px] text-slate-400 line-clamp-1">
+                    {pageMeta.subtitle}
+                  </p>
+                </div>
               </div>
-              <p className="text-[11px] text-slate-400 hidden sm:block">
-                3,000 High-Frequency Chinese Characters
-              </p>
-            </div>
-          </div>
-
-          {/* Top Right Utilities */}
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono shadow-sm">
-              <span className="text-emerald-400 font-bold flex items-center gap-1" title="Learned characters">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>{stats.learned}</span>
-              </span>
-              <span className="text-slate-600">/</span>
-              <span className="text-amber-400 font-bold flex items-center gap-1" title="In-Progress characters">
-                <Clock className="w-3.5 h-3.5" />
-                <span>{stats.in_progress}</span>
-              </span>
-              <span className="text-slate-600">/</span>
-              <span className="text-sky-400 font-semibold" title="Mastery Percentage">
-                {masteryPercent}%
-              </span>
             </div>
 
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                playSound('click');
-                setIsWordMatchOpen(true);
-              }}
-              className="gap-1.5 border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 font-semibold h-8 text-xs"
-              title="2-Character Word Match Game (or press 'w')"
-            >
-              <Zap className="w-3.5 h-3.5 fill-current" />
-              <span className="hidden sm:inline">Word Match</span>
-            </Button>
-
-            <Button
-              variant="outline"
-              size="iconSm"
-              onClick={toggleSound}
-              className="h-8 w-8 rounded-lg"
-              title={soundOn ? 'Sound Effects Enabled (Click to Mute)' : 'Sound Muted (Click to Unmute)'}
-            >
-              {soundOn ? <Volume2 className="w-3.5 h-3.5 text-slate-300" /> : <VolumeX className="w-3.5 h-3.5 text-slate-500" />}
-            </Button>
-
-            <Button
-              variant="outline"
-              size="iconSm"
-              onClick={() => setIsVimModalOpen(true)}
-              className="h-8 w-8 rounded-lg"
-              title="Keyboard & Vim Bindings (?)"
-            >
-              <Keyboard className="w-3.5 h-3.5 text-slate-300" />
-            </Button>
-
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setIsDbModalOpen(true)}
-              className="gap-1.5 h-8 text-xs"
-              title="SQLite Database Management & SQL Console"
-            >
-              <Database className="w-3.5 h-3.5 text-sky-400" />
-              <span className="hidden sm:inline">DB</span>
-            </Button>
+            {/* Right: Mastery Stats Chip */}
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono shadow-sm">
+                <span className="text-emerald-400 font-bold flex items-center gap-1" title="Learned characters">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>{stats.learned}</span>
+                </span>
+                <span className="text-slate-600">/</span>
+                <span className="text-amber-400 font-bold flex items-center gap-1" title="In-Progress characters">
+                  <Clock className="w-3.5 h-3.5" />
+                  <span>{stats.in_progress}</span>
+                </span>
+                <span className="text-slate-600">/</span>
+                <span className="text-sky-400 font-semibold" title="Mastery Percentage">
+                  {masteryPercent}%
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 flex-1 flex flex-col gap-6">
-        {/* Modern Tab Switcher Bar */}
-        <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
-            <Button
-              variant={activeTab === 'lessons' ? 'default' : 'ghost'}
-              onClick={() => setActiveTab('lessons')}
-              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
-            >
-              <BookOpen className="w-4 h-4" />
-              <span>Lessons (120)</span>
-              <kbd className="font-mono text-[10px] px-1 py-0.5 rounded bg-black/20 text-current opacity-80">
-                1
-              </kbd>
-            </Button>
-
-            <Button
-              variant={activeTab === 'learned' ? 'learned' : 'ghost'}
-              onClick={() => setActiveTab('learned')}
-              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
-            >
-              <CheckCircle2 className="w-4 h-4" />
-              <span>Learned Words</span>
-              <span className="font-mono text-xs px-2 py-0.5 rounded-full bg-black/20 font-bold">
-                {stats.learned}
-              </span>
-              <kbd className="font-mono text-[10px] px-1 py-0.5 rounded bg-black/20 text-current opacity-80">
-                2
-              </kbd>
-            </Button>
-
-            <Button
-              variant={activeTab === 'in-progress' ? 'inProgress' : 'ghost'}
-              onClick={() => setActiveTab('in-progress')}
-              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
-            >
-              <Clock className="w-4 h-4" />
-              <span>In-Progress Words</span>
-              <span className="font-mono text-xs px-2 py-0.5 rounded-full bg-black/20 font-bold">
-                {stats.in_progress}
-              </span>
-              <kbd className="font-mono text-[10px] px-1 py-0.5 rounded bg-black/20 text-current opacity-80">
-                3
-              </kbd>
-            </Button>
-
-            <Button
-              variant={activeTab === 'all' ? 'secondary' : 'ghost'}
-              onClick={() => setActiveTab('all')}
-              className="gap-2 h-9 text-xs sm:text-sm font-semibold"
-            >
-              <Layers className="w-4 h-4" />
-              <span>All 3,000 Hanzi</span>
-              <kbd className="font-mono text-[10px] px-1 py-0.5 rounded bg-black/20 text-current opacity-80">
-                4
-              </kbd>
-            </Button>
-          </div>
-        </div>
-
-        {/* Tab Content Panels */}
-        <main className="flex-1">
+        {/* Page Content View */}
+        <main className="max-w-7xl mx-auto w-full px-4 sm:px-8 py-6 flex-1 flex flex-col gap-6">
           {activeTab === 'lessons' && (
             <LessonsView
               lessons={lessons}
@@ -346,6 +334,15 @@ export function App() {
               onSelectLesson={(num) => void selectLesson(num)}
               onBackToLessons={backToLessons}
               onStatusChange={(id, status) => void handleStatusChange(id, status)}
+            />
+          )}
+
+          {activeTab === 'stories' && (
+            <StoryReaderView
+              learnedList={learnedList}
+              inProgressList={inProgressList}
+              onStatusChange={(id, status) => handleStatusChange(id, status)}
+              onStartQuiz={handleStartCustomQuiz}
             />
           )}
 

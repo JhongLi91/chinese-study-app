@@ -417,7 +417,41 @@ export async function getAllCharacters(filter?: {
   }
 }
 
+export async function getCharactersByChars(chars: string[]): Promise<Character[]> {
+  try {
+    const db = await getDatabase();
+    const uniqueChars = Array.from(new Set(chars.filter((c) => c && c.trim())));
+    if (uniqueChars.length === 0) return [];
+
+    const placeholders = uniqueChars.map(() => '?').join(',');
+    const stmt = db.prepare(`
+      SELECT 
+        c.frequency_rank, c.character, c.pinyin, c.definition,
+        c.radical, c.radical_code, c.stroke_count, c.hsk_level,
+        c.lesson_number,
+        COALESCE(p.status, 'new') as status,
+        p.updated_at
+      FROM characters c
+      LEFT JOIN progress p ON c.frequency_rank = p.character_id
+      WHERE c.character IN (${placeholders})
+      ORDER BY c.frequency_rank ASC
+    `);
+
+    stmt.bind(uniqueChars);
+    const results: Character[] = [];
+    while (stmt.step()) {
+      results.push(mapRowToCharacter(stmt.get()));
+    }
+    stmt.free();
+    return results;
+  } catch (err) {
+    console.error('getCharactersByChars error:', err);
+    return [];
+  }
+}
+
 export async function updateCharacterStatus(
+
   characterId: number,
   status: StudyStatus
 ): Promise<void> {

@@ -20,13 +20,15 @@ export const VimHelpModal: React.FC<VimHelpModalProps> = ({ isOpen, onClose }) =
     { key: '; / f', desc: 'Flip flashcard (Front ↔ Back)' },
     { key: 'Space', desc: 'Show example sentence popover (Press any key to close)' },
     { key: 'o', desc: 'Pronounce Mandarin audio (TTS) for character / sentence' },
-    { key: '1', desc: 'Switch to Lessons curriculum tab' },
-    { key: '2', desc: 'Switch to Learned Words tab' },
-    { key: '3', desc: 'Switch to In-Progress Words tab' },
-    { key: '4', desc: 'Switch to All 3,000 Hanzi tab' },
-    { key: 'w', desc: 'Open 2-Character Word Match game (组词配对)' },
+    { key: '1', desc: 'Navigate to Lessons curriculum page' },
+    { key: '2', desc: 'Navigate to Learned Words page' },
+    { key: '3', desc: 'Navigate to In-Progress Words page' },
+    { key: '4', desc: 'Navigate to All 3,000 Hanzi page' },
+    { key: '\\ / Ctrl+B', desc: 'Toggle / Collapse Navigation Sidebar' },
     { key: '?', desc: 'Toggle keyboard shortcuts cheat sheet' },
     { key: 'Esc', desc: 'Close open modal or exit quiz' },
+
+
   ];
 
   return (

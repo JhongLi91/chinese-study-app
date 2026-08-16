@@ -39,4 +39,8 @@ export interface StudyStats {
   total_lessons: number;
 }
 
-export type ActiveTab = 'lessons' | 'learned' | 'in-progress' | 'all';
+export type ActiveTab = 'lessons' | 'learned' | 'in-progress' | 'all' | 'stories';
+
+export type { Story, StoryParagraph, StorySentence, StoryQuestion } from '../data/stories';
+
+
