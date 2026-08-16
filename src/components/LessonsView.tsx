@@ -159,7 +159,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                     playSound('click');
                     onSelectLesson(currentLessonNumber - 1);
                   }}
-                  title="Previous Lesson (or press '[')"
+                  title="Previous Lesson"
                   className="rounded-lg h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -172,7 +172,7 @@ export const LessonsView: React.FC<LessonsViewProps> = ({
                     playSound('click');
                     onSelectLesson(currentLessonNumber + 1);
                   }}
-                  title="Next Lesson (or press ']')"
+                  title="Next Lesson"
                   className="rounded-lg h-7 w-7 text-slate-400 hover:text-slate-100 disabled:opacity-30"
                 >
                   <ChevronRight className="w-4 h-4" />

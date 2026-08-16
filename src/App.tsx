@@ -9,6 +9,7 @@ import { DatabaseModal } from './components/DatabaseModal';
 import { VimHelpModal } from './components/VimHelpModal';
 import { WordMatchModal } from './components/WordMatchModal';
 import { StoryReaderView } from './components/StoryReaderView';
+import { Button } from './components/ui/button';
 import { Badge } from './components/ui/badge';
 import {
   BookOpen,
@@ -17,11 +18,14 @@ import {
   Layers,
   ScrollText,
   Menu,
+  ArrowLeft,
 } from 'lucide-react';
+import { STORIES } from './data/stories';
 import { isSoundEnabled, setSoundEnabled, playSound } from './utils/audio';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('lessons');
+  const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
   const [soundOn, setSoundOn] = useState<boolean>(isSoundEnabled());
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(() => {
@@ -106,31 +110,6 @@ export function App() {
     setIsQuizOpen(true);
   };
 
-  const handlePrevLesson = useCallback(() => {
-    playSound('click');
-    setActiveTab('lessons');
-    if (currentLessonNumber !== null) {
-      if (currentLessonNumber > 1) {
-        void selectLesson(currentLessonNumber - 1);
-      }
-    } else {
-      void selectLesson(1);
-    }
-  }, [currentLessonNumber, selectLesson]);
-
-  const handleNextLesson = useCallback(() => {
-    const maxLessons = lessons.length || 120;
-    playSound('click');
-    setActiveTab('lessons');
-    if (currentLessonNumber !== null) {
-      if (currentLessonNumber < maxLessons) {
-        void selectLesson(currentLessonNumber + 1);
-      }
-    } else {
-      void selectLesson(1);
-    }
-  }, [currentLessonNumber, lessons.length, selectLesson]);
-
   // Global Keyboard Shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -164,12 +143,6 @@ export function App() {
           setActiveTab('in-progress');
         } else if (e.key === '4') {
           setActiveTab('all');
-        } else if (e.key === '[') {
-          e.preventDefault();
-          handlePrevLesson();
-        } else if (e.key === ']') {
-          e.preventDefault();
-          handleNextLesson();
         }
       }
     };
@@ -184,8 +157,6 @@ export function App() {
     isMobileNavOpen,
     currentLessonNumber,
     backToLessons,
-    handlePrevLesson,
-    handleNextLesson,
     toggleSidebarCollapse,
   ]);
 
@@ -282,24 +253,51 @@ export function App() {
                 <Menu className="w-5 h-5" />
               </button>
 
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20 shrink-0 hidden sm:flex">
-                  <PageIcon className="w-4 h-4" />
+              {activeTab === 'stories' && selectedStoryId ? (
+                <div className="flex items-center gap-3">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => {
+                      playSound('click');
+                      setSelectedStoryId(null);
+                    }}
+                    className="h-8 gap-1.5 text-xs font-semibold border-sky-500/40 bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 shadow-sm"
+                    title="Return to Stories Catalog"
+                  >
+                    <ArrowLeft className="w-3.5 h-3.5" />
+                    <span>All Stories</span>
+                  </Button>
+                  <div className="h-4 w-[1px] bg-slate-800 hidden sm:block" />
+                  <div className="hidden sm:flex flex-col">
+                    <span className="font-bold text-xs sm:text-sm text-slate-200 line-clamp-1 font-serif">
+                      {STORIES.find((s) => s.id === selectedStoryId)?.titleZh || 'Story'}
+                    </span>
+                    <span className="text-[10px] text-slate-400 font-mono">
+                      {STORIES.find((s) => s.id === selectedStoryId)?.level || ''}
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <h1 className="font-bold text-sm sm:text-base text-slate-100 leading-tight flex items-center gap-2">
-                    <span>{pageMeta.title}</span>
-                    {activeTab === 'stories' && (
-                      <Badge variant="hsk" className="text-[10px] px-1.5 py-0">
-                        HSK 3+
-                      </Badge>
-                    )}
-                  </h1>
-                  <p className="text-[11px] text-slate-400 line-clamp-1">
-                    {pageMeta.subtitle}
-                  </p>
+              ) : (
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20 shrink-0 hidden sm:flex">
+                    <PageIcon className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h1 className="font-bold text-sm sm:text-base text-slate-100 leading-tight flex items-center gap-2">
+                      <span>{pageMeta.title}</span>
+                      {activeTab === 'stories' && (
+                        <Badge variant="hsk" className="text-[10px] px-1.5 py-0">
+                          HSK 3+
+                        </Badge>
+                      )}
+                    </h1>
+                    <p className="text-[11px] text-slate-400 line-clamp-1">
+                      {pageMeta.subtitle}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Right: Mastery Stats Chip */}
@@ -341,6 +339,8 @@ export function App() {
             <StoryReaderView
               learnedList={learnedList}
               inProgressList={inProgressList}
+              selectedStoryId={selectedStoryId}
+              onSelectStoryId={setSelectedStoryId}
               onStatusChange={(id, status) => handleStatusChange(id, status)}
               onStartQuiz={handleStartCustomQuiz}
             />

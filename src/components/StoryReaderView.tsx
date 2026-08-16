@@ -25,7 +25,6 @@ import {
   RefreshCw,
   Search,
   BookMarked,
-  ArrowLeft,
   ChevronRight,
   ChevronLeft,
   ScrollText,
@@ -38,6 +37,8 @@ import {
 interface StoryReaderViewProps {
   learnedList: Character[];
   inProgressList: Character[];
+  selectedStoryId: string | null;
+  onSelectStoryId: (storyId: string | null) => void;
   onStatusChange: (characterId: number, status: StudyStatus) => Promise<void>;
   onStartQuiz: (cards: Character[], title?: string) => void;
 }
@@ -48,12 +49,11 @@ type FontSize = 'md' | 'lg' | 'xl';
 export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
   learnedList,
   inProgressList,
+  selectedStoryId,
+  onSelectStoryId,
   onStatusChange,
   onStartQuiz,
 }) => {
-  // Selected Story ID (null = Catalog List View, string = Reader View)
-  const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
-
   // Catalog search & level filter
   const [catalogSearch, setCatalogSearch] = useState<string>('');
   const [levelFilter, setLevelFilter] = useState<'all' | 'hsk3' | 'hsk4' | 'hsk5' | 'hsk6'>('all');
@@ -313,7 +313,7 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
     if (currentStoryIndex > 0) {
       handleStopAudio();
       setUserAnswers({});
-      setSelectedStoryId(STORIES[currentStoryIndex - 1].id);
+      onSelectStoryId(STORIES[currentStoryIndex - 1].id);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -322,7 +322,7 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
     if (currentStoryIndex < STORIES.length - 1) {
       handleStopAudio();
       setUserAnswers({});
-      setSelectedStoryId(STORIES[currentStoryIndex + 1].id);
+      onSelectStoryId(STORIES[currentStoryIndex + 1].id);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -538,7 +538,7 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
                 key={item.id}
                 onClick={() => {
                   playSound('click');
-                  setSelectedStoryId(item.id);
+                  onSelectStoryId(item.id);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="group relative flex flex-col justify-between p-6 rounded-3xl bg-slate-900/90 border border-slate-800/90 hover:border-sky-500/50 hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/10 cursor-pointer overflow-hidden"
@@ -657,80 +657,52 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
   // -------------------------------------------------------------
   return (
     <div className="flex flex-col gap-6 animate-fade-in pb-16">
-      {/* Top Breadcrumb & Story Switcher Navigation */}
-      <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3.5 rounded-2xl backdrop-blur-sm shadow-md">
-        {/* Back to Stories Catalog Button */}
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={() => {
-            handleStopAudio();
-            setSelectedStoryId(null);
-            playSound('click');
-          }}
-          className="gap-2 text-xs font-semibold border-slate-700 hover:bg-slate-800 text-slate-200"
-          title="Back to All Stories"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>All Stories</span>
-        </Button>
-
-        {/* Current Story Indicator */}
-        <div className="flex items-center gap-2">
-          <Badge variant="hsk" className="text-xs font-mono hidden sm:inline-flex">
-            {story.level}
-          </Badge>
-          <span className="font-serif font-bold text-sm sm:text-base text-slate-100">
-            {story.titleZh}
-          </span>
-          <span className="text-xs text-slate-400 hidden md:inline">
-            ({currentStoryIndex + 1} of {STORIES.length})
-          </span>
-        </div>
-
-        {/* Previous & Next Story Navigation */}
-        <div className="flex items-center gap-1.5">
-          <Button
-            size="sm"
-            variant="ghost"
-            onClick={handlePrevStory}
-            disabled={currentStoryIndex <= 0}
-            className="h-8 px-2.5 text-xs gap-1 disabled:opacity-30 text-slate-300 hover:text-white"
-            title="Previous Story"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            <span className="hidden sm:inline">Prev</span>
-          </Button>
-
-          <Button
-            size="sm"
-            variant="ghost"
-            onClick={handleNextStory}
-            disabled={currentStoryIndex >= STORIES.length - 1}
-            className="h-8 px-2.5 text-xs gap-1 disabled:opacity-30 text-slate-300 hover:text-white"
-            title="Next Story"
-          >
-            <span className="hidden sm:inline">Next</span>
-            <ChevronRight className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
-
       {/* Story Hero Header Card */}
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-900 border border-slate-800 p-6 sm:p-8 shadow-xl">
         <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-6">
           <div className="flex flex-col gap-2 max-w-3xl">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="hsk" className="px-2.5 py-0.5 text-xs font-mono">
-                {story.level}
-              </Badge>
-              <Badge variant="secondary" className="px-2.5 py-0.5 text-xs">
-                {story.source}
-              </Badge>
-              <Badge variant="outline" className="px-2.5 py-0.5 text-xs border-sky-400/40 text-sky-300">
-                {story.paragraphs.length} Paragraphs • {allSentences.length} Sentences
-              </Badge>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge variant="hsk" className="px-2.5 py-0.5 text-xs font-mono">
+                  {story.level}
+                </Badge>
+                <Badge variant="secondary" className="px-2.5 py-0.5 text-xs">
+                  {story.source}
+                </Badge>
+                <Badge variant="outline" className="px-2.5 py-0.5 text-xs border-sky-400/40 text-sky-300">
+                  {story.paragraphs.length} Paragraphs • {allSentences.length} Sentences
+                </Badge>
+              </div>
+
+              {/* Story Prev/Next Switcher */}
+              <div className="flex items-center gap-1 bg-slate-950/80 border border-slate-800/90 rounded-xl p-1">
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={handlePrevStory}
+                  disabled={currentStoryIndex <= 0}
+                  className="h-7 px-2 text-xs gap-1 disabled:opacity-30 text-slate-300 hover:text-white"
+                  title="Previous Story"
+                >
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Prev</span>
+                </Button>
+                <span className="text-[10px] text-slate-400 font-mono px-1">
+                  {currentStoryIndex + 1}/{STORIES.length}
+                </span>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={handleNextStory}
+                  disabled={currentStoryIndex >= STORIES.length - 1}
+                  className="h-7 px-2 text-xs gap-1 disabled:opacity-30 text-slate-300 hover:text-white"
+                  title="Next Story"
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </Button>
+              </div>
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-serif font-bold text-slate-100 tracking-tight mt-1">
