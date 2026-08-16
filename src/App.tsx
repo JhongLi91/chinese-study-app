@@ -286,16 +286,6 @@ export function App() {
         e.preventDefault();
         playSound('click');
         toggleSidebarCollapse();
-      } else if (!e.ctrlKey && !e.metaKey && !e.altKey) {
-        if (e.key === '1') {
-          navigate('/lessons');
-        } else if (e.key === '2') {
-          navigate('/learned');
-        } else if (e.key === '3') {
-          navigate('/in-progress');
-        } else if (e.key === '4') {
-          navigate('/all');
-        }
       }
     };
 

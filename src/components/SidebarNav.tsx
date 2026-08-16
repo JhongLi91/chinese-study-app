@@ -59,7 +59,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     icon: React.ElementType;
     badge?: string | number;
     badgeVariant?: 'default' | 'secondary' | 'learned' | 'inProgress' | 'hsk' | 'outline';
-    shortcut: string;
   }[] = [
     {
       id: 'lessons',
@@ -67,7 +66,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       icon: BookOpen,
       badge: '120',
       badgeVariant: 'secondary',
-      shortcut: '1',
     },
     {
       id: 'learned',
@@ -75,7 +73,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       icon: CheckCircle2,
       badge: stats.learned,
       badgeVariant: 'learned',
-      shortcut: '2',
     },
     {
       id: 'in-progress',
@@ -83,7 +80,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       icon: Clock,
       badge: stats.in_progress,
       badgeVariant: 'inProgress',
-      shortcut: '3',
     },
     {
       id: 'all',
@@ -91,7 +87,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       icon: Layers,
       badge: '3,000',
       badgeVariant: 'secondary',
-      shortcut: '4',
     },
   ];
 
@@ -185,9 +180,6 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                       {item.badge}
                     </Badge>
                   )}
-                  <kbd className="font-mono text-[9px] px-1 py-0.5 rounded bg-black/40 text-slate-500 border border-slate-800 opacity-80">
-                    {item.shortcut}
-                  </kbd>
                 </div>
               </button>
             );
@@ -389,7 +381,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                     ? 'bg-sky-500 text-slate-950 font-bold shadow-md shadow-sky-500/20'
                     : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/70'
                 }`}
-                title={`${item.label} (${item.shortcut})`}
+                title={item.label}
               >
                 <Icon className="w-4 h-4" />
                 {isActive && (
