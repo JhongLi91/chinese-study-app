@@ -1001,4 +1001,178 @@ export const STORIES: Story[] = [
       },
     ],
   },
+
+  // ==========================================
+  // STORY 6: HSK 5 - 草船借箭：诸葛亮的智谋
+  // ==========================================
+  {
+    id: 'hsk5-caochuan',
+    titleZh: '草船借箭：诸葛亮的智谋',
+    titlePy: 'Cǎo Chuán Jiè Jiàn: Zhūgě Liàng de Zhìmóu',
+    titleEn: 'Borrowing Arrows with Thatched Boats: The Resourcefulness of Zhuge Liang',
+    level: 'HSK 5 • Three Kingdoms Classic',
+    source: 'Romance of the Three Kingdoms (三国演义) & HSK 5 Advanced Literature',
+    lessonTarget: 'Vocabulary: HSK 4-5 Strategy, Warfare, and Classical Narratives',
+    description:
+      'The legendary Three Kingdoms tale of Zhuge Liang, who used twenty straw-covered boats in a thick fog to trick Cao Cao into shooting over 100,000 arrows, outsmarting Zhou Yu\'s impossible deadline.',
+    paragraphs: [
+      {
+        id: 'p1',
+        zh: '三国时期，东吴大都督周瑜看到刘备的军师诸葛亮才智过人，心中十分妒忌，总想找机会除掉他。当时，孙权和刘备联手对抗曹操的大军。在一次军事会议上，周瑜故意对诸葛亮说：“水战以弓箭为先。如今我军缺少箭支，希望先生能在十天之内造好十万支箭，以备大战之用。”诸葛亮神色自若，微笑着回答：“大战在即，十天太慢了。我只需三天，便可交出十万支箭，若完不成甘愿受军法处置。”周瑜暗自窃喜，以为诸葛亮自投罗网，便立下了军令状。',
+        py: 'Sānguó shíqī, Dōng Wú dà dūdu Zhōu Yú kàndào Liú Bèi de jūnshī Zhūgě Liàng cáizhì guòrén, xīnzhōng shífēn dùjì, zǒng xiǎng zhǎo jīhuì chúdiào tā. Dāngshí, Sūn Quán hé Liú Bèi liánshǒu duìkàng Cáo Cāo de dàjūn. Zài yí cì jūnshì huìyì shang, Zhōu Yú gùyì duì Zhūgě Liàng shuō: "Shuǐzhàn yǐ gōngjiàn wéi xiān. Rújīn wǒ jūn quēshǎo jiànzhī, xīwàng xiānsheng néng zài shí tiān zhīnèi zào hǎo shí wàn zhī jiàn, yǐ bèi dàzhàn zhī yòng." Zhūgě Liàng shénsè zìruò, wēixiàozhe huídá: "Dàzhàn zàijí, shí tiān tài màn le. Wǒ zhǐ xū sān tiān, biàn kě jiāochū shí wàn zhī jiàn, ruò wán bu chéng gānyuàn shòu jūnfǎ chǔzhì." Zhōu Yú ànzì qièxǐ, yǐwéi Zhūgě Liàng zìtóuluówǎng, biàn lì xià le jūnlìngzhuàng.',
+        en: 'During the Three Kingdoms period, Commander Zhou Yu of Eastern Wu was deeply jealous of Zhuge Liang\'s brilliant intellect. Allied against Cao Cao, Zhou Yu sought a pretext to eliminate him and challenged: "In naval warfare, arrows come first. Can you manufacture 100,000 arrows in ten days?" Zhuge Liang smiled calmly: "Ten days is too slow; I will deliver 100,000 arrows in three days, accepting military punishment if I fail." Zhou Yu rejoiced secretly, believing Zhuge Liang had walked into a fatal trap.',
+        sentences: [
+          {
+            id: 's1-1',
+            zh: '三国时期，东吴大都督周瑜看到刘备的军师诸葛亮才智过人，心中十分妒忌，总想找机会除掉他。',
+            py: 'Sānguó shíqī, Dōng Wú dà dūdu Zhōu Yú kàndào Liú Bèi de jūnshī Zhūgě Liàng cáizhì guòrén, xīnzhōng shífēn dùjì, zǒng xiǎng zhǎo jīhuì chúdiào tā.',
+            en: 'During the Three Kingdoms era, Zhou Yu envied Zhuge Liang\'s superior intellect and sought a pretext to remove him.',
+          },
+          {
+            id: 's1-2',
+            zh: '在一次军事会议上，周瑜故意对诸葛亮说：“水战以弓箭为先。如今我军缺少箭支，希望先生能在十天之内造好十万支箭，以备大战之用。”',
+            py: 'Zài yí cì jūnshì huìyì shang, Zhōu Yú gùyì duì Zhūgě Liàng shuō: "Shuǐzhàn yǐ gōngjiàn wéi xiān. Rújīn wǒ jūn quēshǎo jiànzhī, xīwàng xiānsheng néng zài shí tiān zhīnèi zào hǎo shí wàn zhī jiàn, yǐ bèi dàzhàn zhī yòng."',
+            en: 'Zhou Yu challenged him: "We lack arrows for the naval battle; can you forge 100,000 arrows within ten days?"',
+          },
+          {
+            id: 's1-3',
+            zh: '诸葛亮神色自若，微笑着回答：“大战在即，十天太慢了。我只需三天，便可交出十万支箭，若完不成甘愿受军法处置。”',
+            py: 'Zhūgě Liàng shénsè zìruò, wēixiàozhe huídá: "Dàzhàn zàijí, shí tiān tài màn le. Wǒ zhǐ xū sān tiān, biàn kě jiāochū shí wàn zhī jiàn, ruò wán bu chéng gānyuàn shòu jūnfǎ chǔzhì."',
+            en: 'Zhuge Liang replied with poise: "Ten days is too long. Give me three days, or I shall accept military execution."',
+          },
+          {
+            id: 's1-4',
+            zh: '周瑜暗自窃喜，以为诸葛亮自投罗网，便立下了军令状。',
+            py: 'Zhōu Yú ànzì qièxǐ, yǐwéi Zhūgě Liàng zìtóuluówǎng, biàn lì xià le jūnlìngzhuàng.',
+            en: 'Delighted that Zhuge Liang had fallen into his snare, Zhou Yu drew up the pledge of military accountability.',
+          },
+        ],
+      },
+      {
+        id: 'p2',
+        zh: '立下军令状后，诸葛亮并没有急着召集工匠采伐竹木，第一天和第二天甚至毫无动静。私下里，诸葛亮找来了忠厚老实的东吴官员鲁肃，秘密向他借了二十条轻便快船。每条船上配置三十名士兵，并用青布幔子将船身遮盖严实，两边整整齐齐扎满了一千多个稻草人。诸葛亮特意叮嘱鲁肃：“千万不可将此事透露给周瑜，否则我的全盘计划便无法实现。”鲁肃信守诺言，果然没有向周瑜报告。',
+        py: 'Lì xià jūnlìngzhuàng hòu, Zhūgě Liàng bìng méiyǒu jízhe zhàojí gōngjiàng cǎifá zhúmù, dì-yī tiān hé dì-èr tiān shènzhì háo wú dòngjìng. Sīxià lǐ, Zhūgě Liàng zhǎo lái le zhōnghòu lǎoshi de Dōng Wú guānyuán Lǔ Sù, mìmì xiàng tā jiè le èrshí tiáo qīngbiàn kuàichuán. Měi tiáo chuán shang pèizhì sānshí míng shìbīng, bìng yòng qīngbù mànzi jiāng chuánshēn zhēgài yánshi, liǎngbiān zhěngzhěng-qíqí zhāmǎn le yìqiān duō gè dàocǎorén. Zhūgě Liàng tèyì dīngzhǔ Lǔ Sù: "Qiānwàn bùkě jiāng cǐ shì tòulù gěi Zhōu Yú, fǒuzé wǒ de quánpán jìhuà biàn wúfǎ shíxiàn." Lǔ Sù xìnshǒu nuòyán, guǒrán méiyǒu xiàng Zhōu Yú bàogào.',
+        en: 'Zhuge Liang did nothing on the first and second days. Privately, he turned to honest official Lu Su and borrowed twenty fast boats, thirty soldiers per boat, wrapped in dark cloth and lined with over a thousand straw figures. He cautioned Lu Su: "Tell Zhou Yu nothing of this, or my design will fail." Lu Su kept his promise.',
+        sentences: [
+          {
+            id: 's2-1',
+            zh: '立下军令状后，诸葛亮并没有急着召集工匠采伐竹木，第一天和第二天甚至毫无动静。',
+            py: 'Lì xià jūnlìngzhuàng hòu, Zhūgě Liàng bìng méiyǒu jízhe zhàojí gōngjiàng cǎifá zhúmù, dì-yī tiān hé dì-èr tiān shènzhì háo wú dòngjìng.',
+            en: 'After signing the pledge, Zhuge Liang showed no rush to gather artisans or timber, doing nothing for two days.',
+          },
+          {
+            id: 's2-2',
+            zh: '私下里，诸葛亮找来了忠厚老实的东吴官员鲁肃，秘密向他借了二十条轻便快船。',
+            py: 'Sīxià lǐ, Zhūgě Liàng zhǎo lái le zhōnghòu lǎoshi de Dōng Wú guānyuán Lǔ Sù, mìmì xiàng tā jiè le èrshí tiáo qīngbiàn kuàichuán.',
+            en: 'Secretly, Zhuge Liang approached the trustworthy official Lu Su to borrow twenty agile boats.',
+          },
+          {
+            id: 's2-3',
+            zh: '每条船上配置三十名士兵，并用青布幔子将船身遮盖严实，两边整整齐齐扎满了一千多个稻草人。',
+            py: 'Měi tiáo chuán shang pèizhì sānshí míng shìbīng, bìng yòng qīngbù mànzi jiāng chuánshēn zhēgài yánshi, liǎngbiān zhěngzhěng-qíqí zhāmǎn le yìqiān duō gè dàocǎorén.',
+            en: 'Each vessel had thirty soldiers, screened with dark canvas and flanked by over a thousand straw dummies.',
+          },
+          {
+            id: 's2-4',
+            zh: '诸葛亮特意叮嘱鲁肃：“千万不可将此事透露给周瑜，否则我的全盘计划便无法实现。”',
+            py: 'Zhūgě Liàng tèyì dīngzhǔ Lǔ Sù: "Qiānwàn bùkě jiāng cǐ shì tòulù gěi Zhōu Yú, fǒuzé wǒ de quánpán jìhuà biàn wúfǎ shíxiàn."',
+            en: 'Zhuge Liang reminded Lu Su: "Do not mention a word to Zhou Yu, or the entire plan is ruined."',
+          },
+        ],
+      },
+      {
+        id: 'p3',
+        zh: '直到第三天四更时分（大约凌晨三四点），江面上突然升起了漫天大雾，咫尺之内几乎辨不清人影。诸葛亮秘密邀请鲁肃一同上船，说要带他一起去“取箭”。诸葛亮命人用长绳将二十条船连结在一起，直奔曹操在江北设立的水军大寨。拂晓时分，船队逼近曹军水寨。诸葛亮下令将船队排成一字横队，头西尾东，让士兵们在船上擂鼓呐喊，制造出大军渡江突袭的浩大声势。',
+        py: 'Zhídào dì-sān tiān sìgèng shífēn (dàyuē língchén sān sì diǎn), jiāngmiàn shang tūrán shēngqǐ le màntiān dàwù, zhǐchǐ zhīnèi jīhū biàn bu qīng rényǐng. Zhūgě Liàng mìmì yāoqǐng Lǔ Sù yìtóng shàngchuán, shuō yào dài tā yìqǐ qù "qǔ jiàn". Zhūgě Liàng mìng rén yòng chángshéng jiāng èrshí tiáo chuán liánjié zài yìqǐ, zhíbèn Cáo Cāo zài jiāngběi shèlì de shuǐjūn dàzhài. Fúxiǎo shífēn, chuánduì bījìn Cáo jūn shuǐzhài. Zhūgě Liàng xiàlìng jiāng chuánduì páichéng yízì héngduì, tóu xī wěi dōng, ràng shìbīngmen zài chuán shang léigǔ nàhǎn, zhìzào chū dàjūn dùjiāng tūxí de hàodà shēngshì.',
+        en: 'At the fourth watch on the third night, a dense fog enveloped the Yangtze River, obscuring vision completely. Zhuge Liang invited Lu Su aboard to "collect the arrows." Chaining the twenty boats together, they sailed toward Cao Cao\'s northern camp. At daybreak, lined up abreast from west to east, the soldiers beat war drums and shouted loud battle cries, simulating an amphibious assault.',
+        sentences: [
+          {
+            id: 's3-1',
+            zh: '直到第三天四更时分，江面上突然升起了漫天大雾，咫尺之内几乎辨不清人影。',
+            py: 'Zhídào dì-sān tiān sìgèng shífēn, jiāngmiàn shang tūrán shēngqǐ le màntiān dàwù, zhǐchǐ zhīnèi jīhū biàn bu qīng rényǐng.',
+            en: 'By the fourth watch on the third night, a heavy fog covered the river, reducing visibility to zero.',
+          },
+          {
+            id: 's3-2',
+            zh: '诸葛亮秘密邀请鲁肃一同上船，说要带他一起去“取箭”。',
+            py: 'Zhūgě Liàng mìmì yāoqǐng Lǔ Sù yìtóng shàngchuán, shuō yào dài tā yìqǐ qù "qǔ jiàn".',
+            en: 'Zhuge Liang invited Lu Su onto the boat, claiming they were going together to "fetch arrows."',
+          },
+          {
+            id: 's3-3',
+            zh: '诸葛亮下令将船队排成一字横队，头西尾东，让士兵们在船上擂鼓呐喊，制造出大军渡江突袭的浩大声势。',
+            py: 'Zhūgě Liàng xiàlìng jiāng chuánduì páichéng yízì héngduì, tóu xī wěi dōng, ràng shìbīngmen zài chuán shang léigǔ nàhǎn, zhìzào chū dàjūn dùjiāng tūxí de hàodà shēngshì.',
+            en: 'Lining the fleet in a row, he ordered troops to beat war drums and roar in unison to simulate an impending ambush.',
+          },
+        ],
+      },
+      {
+        id: 'p4',
+        zh: '曹操听到战鼓震天与喊杀之声，见大雾漫江、深不可测，唯恐中伏，急忙传令水军与陆军弓箭手朝江面密集放箭。顿时，一万多名弓弩手万箭齐发，利箭如雨点般飞向船队，密密麻麻地插满了稻草人。待船身一侧插满箭支、船体发生倾斜时，诸葛亮又下令将船队掉头，头东尾西，让另一侧继续受箭。天光大亮时，二十条船两侧的稻草人上插满了数十万支箭。诸葛亮命士兵齐声高呼：“谢曹丞相赐箭！”随后顺风顺水，全速返航。',
+        py: 'Cáo Cāo tīngdào zhàngǔ zhèntiān yǔ hǎnshā zhī shēng, jiàn dàwù màn jiāng, shēn bùkě cè, wéikǒng zhòngfú, jímáng chuánlìng shuǐjūn yǔ lùjūn gōngjiànshǒu cháo jiāngmiàn mìjí fàngjiàn. Dòngshí, yí wàn duō míng gōngnǔshǒu wànjiànqífā, lìjiàn rú yǔdiǎn bān fēixiàng chuánduì, mìmimámá de chāmǎn le dàocǎorén. Dài chuánshēn yícè chāmǎn jiànzhī, chuántǐ fāshēng qīngxié shí, Zhūgě Liàng yòu xiàlìng jiāng chuánduì diàotóu, tóu dōng wěi xī, ràng lìng yícè jìxù shòujiàn. Tiānguāng dàliàng shí, èrshí tiáo chuán liǎngcè de dàocǎorén shang chāmǎn le shù shí wàn zhī jiàn. Zhūgě Liàng mìng shìbīng qíshēng gāohū: "Xiè Cáo chéngxiàng cì jiàn!" Suíhòu shùnfēng-shùnshuǐ, quánsù fǎnháng.',
+        en: 'Hearing the deafening drums and blind to the river in the fog, Cao Cao feared an ambush and ordered his archers to fire relentlessly. Over ten thousand archers shot arrows like torrential rain, lodging them densely into the straw men. When one side was weighed down, Zhuge Liang turned the boats around to catch arrows on the other side. By sunrise, over 100,000 arrows were captured. Zhuge Liang ordered his men to shout: "Thank you, Chancellor Cao, for the arrows!" and sped back with the current.',
+        sentences: [
+          {
+            id: 's4-1',
+            zh: '曹操听到战鼓震天与喊杀之声，见大雾漫江、深不可测，唯恐中伏，急忙传令弓弩手朝江面密集放箭。',
+            py: 'Cáo Cāo tīngdào zhàngǔ zhèntiān yǔ hǎnshā zhī shēng, jiàn dàwù màn jiāng, shēn bùkě cè, wéikǒng zhòngfú, jímáng chuánlìng gōngnǔshǒu cháo jiāngmiàn mìjí fàngjiàn.',
+            en: 'Hearing the drums in thick fog, Cao Cao feared an ambush and commanded thousands of archers to rain arrows onto the water.',
+          },
+          {
+            id: 's4-2',
+            zh: '待船身一侧插满箭支、船体发生倾斜时，诸葛亮又下令将船队掉头，头东尾西，让另一侧继续受箭。',
+            py: 'Dài chuánshēn yícè chāmǎn jiànzhī, chuántǐ fāshēng qīngxié shí, Zhūgě Liàng yòu xiàlìng jiāng chuánduì diàotóu, tóu dōng wěi xī, ràng lìng yícè jìxù shòujiàn.',
+            en: 'When one side was bristling with arrows and tipping, Zhuge Liang turned the ships around so the other side received arrows.',
+          },
+          {
+            id: 's4-3',
+            zh: '天光大亮时，诸葛亮命士兵齐声高呼：“谢曹丞相赐箭！”随后顺风顺水，全速返航。',
+            py: 'Tiānguāng dàliàng shí, Zhūgě Liàng mìng shìbīng qíshēng gāohū: "Xiè Cáo chéngxiàng cì jiàn!" Suíhòu shùnfēng-shùnshuǐ, quánsù fǎnháng.',
+            en: 'As dawn broke, soldiers cheered: "We thank Chancellor Cao for the arrows!" and sailed swiftly back.',
+          },
+        ],
+      },
+      {
+        id: 'p5',
+        zh: '当二十条草船满载着十万多支箭驶回东吴大营时，周瑜早已在岸边等候。清点完毕后，箭支总数足足有十余万支。鲁肃将诸葛亮借船、利用大雾受箭的经过一五一十地告诉了周瑜。周瑜听后大惊失色，自愧不如地长叹道：“诸葛亮神机妙算，知天文、懂地理、识人心，我的才智确实远远不如他啊！”这个脍炙人口的历史典故生动展示了知己知彼、善用自然规律与心理战术的卓越智慧。',
+        py: 'Dāng èrshí tiáo cǎochuán mǎnzàizhe shí wàn duō zhī jiàn shǐ huí Dōng Wú dàyíng shí, Zhōu Yú zǎoyǐ zài ànbiān děnghòu. Qīngdiǎn wánbì hòu, jiànzhī zǒngshù zúzú yǒu shí yú wàn zhī. Lǔ Sù jiāng Zhūgě Liàng jiè chuán, lìyòng dàwù shòujiàn de jīngguò yīwǔyīshí de gàosu le Zhōu Yú. Zhōu Yú tīng hòu dàjīngshīsè, zìkuìbùrú de chángtàn dào: "Zhūgě Liàng shénjīmiàosuàn, zhī tiānwén, dǒng dìlǐ, shí rénxīn, wǒ de cáizhì quèshí yuǎnyuǎn bùrú tā a!" Zhè gè kuàizhìrénkǒu de lìshǐ diǎngù shēngdòng zhǎnshì le zhījǐzhībǐ, shànyòng zìrán guīlǜ yǔ xīnlǐ zhànshù de zhuóyuè zhìhuì.',
+        en: 'When the fleet returned laden with over 100,000 arrows, Zhou Yu awaited on shore. Lu Su recounted the entire scheme in detail. Aghast and humbled, Zhou Yu sighed: "Zhuge Liang is resourceful beyond measure; knowing astronomy, geography, and human psychology, I am truly no match for him!" This classic story demonstrates the brilliance of knowing oneself and one\'s adversary, leveraging natural elements, and mastering psychological warfare.',
+        sentences: [
+          {
+            id: 's5-1',
+            zh: '当二十条草船满载着十万多支箭驶回东吴大营时，周瑜早已在岸边等候。',
+            py: 'Dāng èrshí tiáo cǎochuán mǎnzàizhe shí wàn duō zhī jiàn shǐ huí Dōng Wú dàyíng shí, Zhōu Yú zǎoyǐ zài ànbiān děnghòu.',
+            en: 'When the twenty straw-covered boats returned carrying over 100,000 arrows, Zhou Yu was waiting on the riverbank.',
+          },
+          {
+            id: 's5-2',
+            zh: '周瑜听后大惊失色，自愧不如地长叹道：“诸葛亮神机妙算，知天文、懂地理、识人心，我的才智确实远远不如他啊！”',
+            py: 'Zhōu Yú tīng hòu dàjīngshīsè, zìkuìbùrú de chángtàn dào: "Zhūgě Liàng shénjīmiàosuàn, zhī tiānwén, dǒng dìlǐ, shí rénxīn, wǒ de cáizhì quèshí yuǎnyuǎn bùrú tā a!"',
+            en: 'Astounded, Zhou Yu conceded with a sigh: "Zhuge Liang possesses astounding foresight; I am indeed far behind him!"',
+          },
+          {
+            id: 's5-3',
+            zh: '这个脍炙人口的历史典故生动展示了知己知彼、善用自然规律与心理战术的卓越智慧。',
+            py: 'Zhè gè kuàizhìrénkǒu de lìshǐ diǎngù shēngdòng zhǎnshì le zhījǐzhībǐ, shànyòng zìrán guīlǜ yǔ xīnlǐ zhànshù de zhuóyuè zhìhuì.',
+            en: 'This classic story illustrates the power of psychological strategy, meteorological foresight, and tactical genius.',
+          },
+        ],
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        question: '诸葛亮为什么敢立下“三天之内造好十万支箭”的军令状？ (Why did Zhuge Liang dare to pledge 100,000 arrows in three days?)',
+        options: [
+          '因为他花重金聘请了上千名顶级造箭工匠 (Because he hired thousands of elite craftsmen)',
+          '因为他提前预测到第三天夜里会有江面大雾，算准了曹操生性多疑必然放箭 (Because he foresaw the heavy river fog and calculated that Cao Cao\'s suspicion would make him shoot arrows)',
+          '因为东吴仓库里本来就有现成的弓箭 (Because the Eastern Wu armory already had arrows in store)',
+          '因为刘备派人从别处送来了十万支箭 (Because Liu Bei shipped arrows from elsewhere)',
+        ],
+        correctAnswer: 1,
+        explanation: '诸葛亮精通天文气象与曹操的疑心性格，巧妙地借用大雾向曹操“借箭”。(Zhuge Liang calculated the river fog and Cao Cao\'s tactical hesitation.)',
+      },
+    ],
+  },
 ];
+
