@@ -60,35 +60,35 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     badge?: string | number;
     badgeVariant?: 'default' | 'secondary' | 'learned' | 'inProgress' | 'hsk' | 'outline';
   }[] = [
-    {
-      id: 'lessons',
-      label: 'Lessons Curriculum',
-      icon: BookOpen,
-      badge: '120',
-      badgeVariant: 'secondary',
-    },
-    {
-      id: 'learned',
-      label: 'Learned Words',
-      icon: CheckCircle2,
-      badge: stats.learned,
-      badgeVariant: 'learned',
-    },
-    {
-      id: 'in-progress',
-      label: 'In-Progress Words',
-      icon: Clock,
-      badge: stats.in_progress,
-      badgeVariant: 'inProgress',
-    },
-    {
-      id: 'all',
-      label: 'All 3,000 Hanzi',
-      icon: Layers,
-      badge: '3,000',
-      badgeVariant: 'secondary',
-    },
-  ];
+      {
+        id: 'lessons',
+        label: 'Lessons Curriculum',
+        icon: BookOpen,
+        badge: '120',
+        badgeVariant: 'secondary',
+      },
+      {
+        id: 'learned',
+        label: 'Learned Words',
+        icon: CheckCircle2,
+        badge: stats.learned,
+        badgeVariant: 'learned',
+      },
+      {
+        id: 'in-progress',
+        label: 'In-Progress Words',
+        icon: Clock,
+        badge: stats.in_progress,
+        badgeVariant: 'inProgress',
+      },
+      {
+        id: 'all',
+        label: 'All 3,000 Hanzi',
+        icon: Layers,
+        badge: '3,000',
+        badgeVariant: 'secondary',
+      },
+    ];
 
   // Render Full Expanded Sidebar View
   const renderExpandedContent = () => (
@@ -97,19 +97,16 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       <div className="p-4 sm:p-5 flex items-center justify-between border-b border-slate-800/80">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 font-serif font-bold text-2xl shadow-md shadow-sky-500/20 shrink-0">
-            字
+            学
           </div>
           <div className="flex flex-col">
             <div className="flex items-center gap-1.5">
               <span className="font-bold text-base text-slate-100 tracking-tight">
-                HanziStudy
+                中文
               </span>
-              <Badge variant="hsk" className="text-[9px] px-1 py-0 font-mono">
-                SQLite
-              </Badge>
             </div>
             <span className="text-[11px] text-slate-400">
-              3,000 Chinese Characters
+              3,000 Characters
             </span>
           </div>
         </div>
@@ -154,19 +151,17 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                 key={item.id}
                 type="button"
                 onClick={() => handleNavClick(item.id)}
-                className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group ${
-                  isActive
-                    ? 'bg-sky-500/15 text-sky-400 border border-sky-500/30 shadow-sm'
-                    : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
-                }`}
+                className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group ${isActive
+                  ? 'bg-sky-500/15 text-sky-400 border border-sky-500/30 shadow-sm'
+                  : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Icon
-                    className={`w-4 h-4 transition-transform group-hover:scale-110 ${
-                      isActive
-                        ? 'text-sky-400'
-                        : 'text-slate-400 group-hover:text-slate-200'
-                    }`}
+                    className={`w-4 h-4 transition-transform group-hover:scale-110 ${isActive
+                      ? 'text-sky-400'
+                      : 'text-slate-400 group-hover:text-slate-200'
+                      }`}
                   />
                   <span>{item.label}</span>
                 </div>
@@ -196,17 +191,15 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <button
             type="button"
             onClick={() => handleNavClick('stories')}
-            className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group ${
-              activePage === 'stories'
-                ? 'bg-gradient-to-r from-sky-500/20 to-emerald-500/20 text-sky-300 border border-sky-500/40 shadow-sm font-bold'
-                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
-            }`}
+            className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group ${activePage === 'stories'
+              ? 'bg-gradient-to-r from-sky-500/20 to-emerald-500/20 text-sky-300 border border-sky-500/40 shadow-sm font-bold'
+              : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
+              }`}
           >
             <div className="flex items-center gap-3">
               <ScrollText
-                className={`w-4 h-4 transition-transform group-hover:scale-110 ${
-                  activePage === 'stories' ? 'text-sky-300' : 'text-slate-400 group-hover:text-slate-200'
-                }`}
+                className={`w-4 h-4 transition-transform group-hover:scale-110 ${activePage === 'stories' ? 'text-sky-300' : 'text-slate-400 group-hover:text-slate-200'
+                  }`}
               />
               <span>Story Reader</span>
             </div>
@@ -222,17 +215,15 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <button
             type="button"
             onClick={() => handleNavClick('word-match')}
-            className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group mt-0.5 ${
-              activePage === 'word-match'
-                ? 'bg-gradient-to-r from-amber-500/20 to-emerald-500/20 text-amber-300 border border-amber-500/40 shadow-sm font-bold'
-                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
-            }`}
+            className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-semibold transition-all group mt-0.5 ${activePage === 'word-match'
+              ? 'bg-gradient-to-r from-amber-500/20 to-emerald-500/20 text-amber-300 border border-amber-500/40 shadow-sm font-bold'
+              : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60 border border-transparent'
+              }`}
           >
             <div className="flex items-center gap-3">
               <Zap
-                className={`w-4 h-4 transition-transform group-hover:scale-110 ${
-                  activePage === 'word-match' ? 'text-amber-300 fill-current' : 'text-slate-400 group-hover:text-slate-200'
-                }`}
+                className={`w-4 h-4 transition-transform group-hover:scale-110 ${activePage === 'word-match' ? 'text-amber-300 fill-current' : 'text-slate-400 group-hover:text-slate-200'
+                  }`}
               />
               <span>Word Match (组词)</span>
             </div>
@@ -376,11 +367,10 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                 key={item.id}
                 type="button"
                 onClick={() => handleNavClick(item.id)}
-                className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${
-                  isActive
-                    ? 'bg-sky-500 text-slate-950 font-bold shadow-md shadow-sky-500/20'
-                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/70'
-                }`}
+                className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${isActive
+                  ? 'bg-sky-500 text-slate-950 font-bold shadow-md shadow-sky-500/20'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/70'
+                  }`}
                 title={item.label}
               >
                 <Icon className="w-4 h-4" />
@@ -400,11 +390,10 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <button
             type="button"
             onClick={() => handleNavClick('stories')}
-            className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${
-              activePage === 'stories'
-                ? 'bg-gradient-to-tr from-sky-500 to-emerald-500 text-slate-950 font-bold shadow-md shadow-sky-500/20'
-                : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/70'
-            }`}
+            className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${activePage === 'stories'
+              ? 'bg-gradient-to-tr from-sky-500 to-emerald-500 text-slate-950 font-bold shadow-md shadow-sky-500/20'
+              : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/70'
+              }`}
             title="Story Reader"
           >
             <ScrollText className="w-4 h-4" />
@@ -417,11 +406,10 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <button
             type="button"
             onClick={() => handleNavClick('word-match')}
-            className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${
-              activePage === 'word-match'
-                ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
-                : 'text-amber-400 hover:text-amber-300 hover:bg-slate-800/70 border border-amber-500/30'
-            }`}
+            className={`relative w-10 h-10 rounded-2xl flex items-center justify-center transition-all group ${activePage === 'word-match'
+              ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
+              : 'text-amber-400 hover:text-amber-300 hover:bg-slate-800/70 border border-amber-500/30'
+              }`}
             title="Word Match (组词配对)"
           >
             <Zap className={`w-4 h-4 fill-current ${activePage === 'word-match' ? 'text-slate-950' : 'text-amber-400'}`} />
@@ -484,9 +472,8 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     <>
       {/* Desktop Fixed Side Navigation (Collapsible w-64 / w-[72px]) */}
       <aside
-        className={`hidden md:flex flex-col shrink-0 fixed inset-y-0 left-0 z-40 transition-all duration-300 ease-in-out ${
-          isCollapsed ? 'w-[72px]' : 'w-64'
-        }`}
+        className={`hidden md:flex flex-col shrink-0 fixed inset-y-0 left-0 z-40 transition-all duration-300 ease-in-out ${isCollapsed ? 'w-[72px]' : 'w-64'
+          }`}
       >
         {isCollapsed ? renderCollapsedContent() : renderExpandedContent()}
       </aside>
