@@ -221,11 +221,6 @@ export function App() {
     [navigate]
   );
 
-  // Studied characters (Learned + In Progress) for Word Match game
-  const studiedCharacters = useMemo(() => {
-    return [...learnedList, ...inProgressList];
-  }, [learnedList, inProgressList]);
-
   // Quiz launcher
   const handleStartLearnedQuiz = () => {
     if (learnedList.length === 0) return;
@@ -557,7 +552,8 @@ export function App() {
               path="/word-match"
               element={
                 <WordMatchView
-                  sourceCards={studiedCharacters}
+                  learnedCharacters={learnedList}
+                  inProgressCharacters={inProgressList}
                   allCharacters={allCharactersList}
                   onGoToLessons={() => navigate('/lessons')}
                 />

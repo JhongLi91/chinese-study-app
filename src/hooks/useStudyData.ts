@@ -67,7 +67,7 @@ export function useStudyData(activeTab: ActiveTab): UseStudyDataReturn {
         setLessonCharacters(chars);
       }
 
-      if (activeTab === 'all') {
+      if (activeTab === 'all' || activeTab === 'word-match') {
         const allChars = await getAllCharacters();
         setAllCharactersList(allChars);
       }
@@ -108,9 +108,9 @@ export function useStudyData(activeTab: ActiveTab): UseStudyDataReturn {
     };
   }, []);
 
-  // Fetch all characters when switching to 'all' tab if not yet loaded
+  // Fetch all characters when switching to 'all' or 'word-match' tab if not yet loaded
   useEffect(() => {
-    if (activeTab === 'all' && allCharactersList.length === 0) {
+    if ((activeTab === 'all' || activeTab === 'word-match') && allCharactersList.length === 0) {
       void getAllCharacters().then((chars) => {
         setAllCharactersList(chars);
       });

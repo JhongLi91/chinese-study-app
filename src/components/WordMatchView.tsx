@@ -6,21 +6,20 @@ import { Badge } from './ui/badge';
 import { Card } from './ui/card';
 import {
   RotateCcw,
-  Trophy,
   Volume2,
   ArrowRight,
   CheckCircle2,
   Sparkles,
   BookOpen,
   HelpCircle,
-  Flame,
   Layers,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { speakChinese, playSound } from '../utils/audio';
 
 interface WordMatchViewProps {
-  sourceCards: Character[];
+  learnedCharacters?: Character[];
+  inProgressCharacters?: Character[];
   allCharacters: Character[];
   onGoToLessons: () => void;
 }
@@ -33,20 +32,22 @@ interface ColumnCard {
 }
 
 type DifficultyLevel = 4 | 6 | 8;
-type PoolFilter = 'studied' | 'hsk_core' | 'all';
+type PoolFilter = 'studied' | 'custom';
 
 export const WordMatchView: React.FC<WordMatchViewProps> = ({
-  sourceCards = [],
+  learnedCharacters = [],
+  inProgressCharacters = [],
   allCharacters = [],
   onGoToLessons,
 }) => {
   const [difficulty, setDifficulty] = useState<DifficultyLevel>(6);
   const [poolFilter, setPoolFilter] = useState<PoolFilter>('studied');
+  const [customRangeStart, setCustomRangeStart] = useState<number | ''>(400);
+  const [customRangeEnd, setCustomRangeEnd] = useState<number | ''>(800);
+  const [includeInProgress, setIncludeInProgress] = useState<boolean>(true);
+  const [includeLearned, setIncludeLearned] = useState<boolean>(true);
 
   const [round, setRound] = useState(1);
-  const [score, setScore] = useState(0);
-  const [streak, setStreak] = useState(0);
-  const [bestStreak, setBestStreak] = useState(0);
 
   const [activePairs, setActivePairs] = useState<WordPairItem[]>([]);
   const [leftCards, setLeftCards] = useState<ColumnCard[]>([]);
@@ -61,15 +62,27 @@ export const WordMatchView: React.FC<WordMatchViewProps> = ({
   // Selected Character Pool
   const effectivePool = useMemo(() => {
     if (poolFilter === 'studied') {
-      if (sourceCards.length >= 4) return sourceCards;
+      const studied = [];
+      if (includeLearned) {
+        studied.push(...learnedCharacters);
+      }
+      if (includeInProgress) {
+        studied.push(...inProgressCharacters);
+      }
+      if (studied.length >= 4) return studied;
       // Fallback to core if studied pool is too small
       return allCharacters.slice(0, 300);
     }
-    if (poolFilter === 'hsk_core') {
-      return allCharacters.slice(0, 600);
+    if (poolFilter === 'custom') {
+      const start = customRangeStart === '' ? 1 : customRangeStart;
+      const end = customRangeEnd === '' ? 1 : customRangeEnd;
+      return allCharacters.slice(
+        Math.max(0, start - 1),
+        Math.min(allCharacters.length, end)
+      );
     }
     return allCharacters;
-  }, [poolFilter, sourceCards, allCharacters]);
+  }, [poolFilter, learnedCharacters, inProgressCharacters, allCharacters, includeInProgress, includeLearned, customRangeStart, customRangeEnd]);
 
   // Start / Reset Round
   const startNewRound = useCallback(
@@ -150,13 +163,6 @@ export const WordMatchView: React.FC<WordMatchViewProps> = ({
           }
           return next;
         });
-
-        setScore((prev) => prev + 10 + streak * 2);
-        setStreak((prev) => {
-          const next = prev + 1;
-          setBestStreak((b) => Math.max(b, next));
-          return next;
-        });
       }
 
       setSelectedLeftId(null);
@@ -165,7 +171,6 @@ export const WordMatchView: React.FC<WordMatchViewProps> = ({
       // INCORRECT MATCH
       playSound('flip');
       setWrongMatch({ leftId, rightId });
-      setStreak(0);
 
       setTimeout(() => {
         setWrongMatch(null);
@@ -220,29 +225,6 @@ export const WordMatchView: React.FC<WordMatchViewProps> = ({
               Match the first character (字头) on the left with the second character (字尾) on the right to construct real 2-character Chinese words. Test your character combinations and reinforce associative memory.
             </p>
           </div>
-
-          {/* Realtime Stats Pills */}
-          <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <div className="flex items-center gap-2.5 bg-slate-950/80 border border-slate-800 px-4 py-3 rounded-2xl shadow-sm">
-              <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400">
-                <Trophy className="w-5 h-5" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-slate-400 font-mono uppercase">Score</span>
-                <span className="text-base font-bold font-mono text-slate-100">{score} pts</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2.5 bg-slate-950/80 border border-slate-800 px-4 py-3 rounded-2xl shadow-sm">
-              <div className="p-2 rounded-xl bg-rose-500/10 text-rose-400">
-                <Flame className="w-5 h-5" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-slate-400 font-mono uppercase">Streak (Best: {bestStreak})</span>
-                <span className="text-base font-bold font-mono text-rose-400">{streak} 🔥</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -262,29 +244,19 @@ export const WordMatchView: React.FC<WordMatchViewProps> = ({
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
             }`}
           >
-            My Studied Words ({sourceCards.length})
+            My Studied Words ({(includeLearned ? learnedCharacters.length : 0) + (includeInProgress ? inProgressCharacters.length : 0)})
           </button>
+
           <button
             type="button"
-            onClick={() => setPoolFilter('hsk_core')}
+            onClick={() => setPoolFilter('custom')}
             className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
-              poolFilter === 'hsk_core'
-                ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
+              poolFilter === 'custom'
+                ? 'bg-fuchsia-500 text-white font-bold shadow-sm'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
             }`}
           >
-            HSK Core (Top 600)
-          </button>
-          <button
-            type="button"
-            onClick={() => setPoolFilter('all')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
-              poolFilter === 'all'
-                ? 'bg-indigo-500 text-white font-bold shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
-            }`}
-          >
-            All 3,000 Hanzi
+            Custom Range
           </button>
         </div>
 
@@ -336,17 +308,67 @@ export const WordMatchView: React.FC<WordMatchViewProps> = ({
         </div>
       </div>
 
+      {/* Extra Options Strip */}
+      {(poolFilter === 'custom' || poolFilter === 'studied') && (
+        <div className="flex flex-wrap items-center gap-4 bg-slate-900/40 border border-slate-800/60 p-3 rounded-xl backdrop-blur-sm -mt-2">
+          {poolFilter === 'custom' && (
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-slate-400 font-medium">Rank Range:</span>
+              <input
+                type="number"
+                min={1}
+                max={3000}
+                value={customRangeStart}
+                onChange={(e) => setCustomRangeStart(e.target.value === '' ? '' : Number(e.target.value))}
+                className="w-16 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-slate-200 outline-none focus:border-fuchsia-500"
+              />
+              <span className="text-slate-500">to</span>
+              <input
+                type="number"
+                min={1}
+                max={3000}
+                value={customRangeEnd}
+                onChange={(e) => setCustomRangeEnd(e.target.value === '' ? '' : Number(e.target.value))}
+                className="w-16 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-slate-200 outline-none focus:border-fuchsia-500"
+              />
+            </div>
+          )}
+          {poolFilter === 'studied' && (
+            <div className="flex items-center gap-4">
+              <label className="flex items-center gap-2 text-xs cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={includeLearned}
+                  onChange={(e) => setIncludeLearned(e.target.checked)}
+                  className="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500/30 w-4 h-4"
+                />
+                <span className="text-slate-300 font-medium">Include Learned Words ({learnedCharacters.length})</span>
+              </label>
+              <label className="flex items-center gap-2 text-xs cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={includeInProgress}
+                  onChange={(e) => setIncludeInProgress(e.target.checked)}
+                  className="rounded border-slate-700 bg-slate-950 text-sky-500 focus:ring-sky-500/30 w-4 h-4"
+                />
+                <span className="text-slate-300 font-medium">Include In-Progress Words ({inProgressCharacters.length})</span>
+              </label>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Main Matching Arena */}
       {activePairs.length === 0 ? (
         <Card className="p-12 text-center bg-slate-900/60 border border-slate-800 rounded-3xl flex flex-col items-center justify-center gap-4">
           <BookOpen className="w-12 h-12 text-slate-500" />
           <h3 className="text-lg font-bold text-slate-200">No Word Associations Available Yet</h3>
           <p className="text-xs text-slate-400 max-w-md">
-            You don't have enough learned or in-progress characters yet to generate custom pairs. Try switching the pool to <b>HSK Core</b> or complete your first lessons.
+            You don't have enough learned or in-progress characters yet to generate custom pairs. Try complete your first lessons or using a Custom Range.
           </p>
           <div className="flex items-center gap-3 mt-2">
-            <Button size="sm" variant="default" onClick={() => setPoolFilter('hsk_core')}>
-              Play with HSK Core Pool
+            <Button size="sm" variant="default" onClick={() => setPoolFilter('custom')}>
+              Play with Custom Range
             </Button>
             <Button size="sm" variant="outline" onClick={onGoToLessons}>
               Go to Lessons
