@@ -467,7 +467,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
                   onClick={() => onJumpToCard?.(idx)}
                   title={`#${item.frequency_rank}: ${item.character} (${item.pinyin}) - ${item.status}`}
                   className={`h-2.5 rounded-full transition-all flex-1 min-w-[8px] cursor-pointer ${dotColor} ${
-                    isCurrent ? 'ring-2 ring-sky-400 ring-offset-2 ring-offset-[#0b0f17] scale-110' : 'opacity-70 hover:opacity-100'
+                    isCurrent ? 'ring-2 ring-sky-400 ring-offset-2 ring-offset-[slate-950] scale-110' : 'opacity-70 hover:opacity-100'
                   }`}
                 />
               );

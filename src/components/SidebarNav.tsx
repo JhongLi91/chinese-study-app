@@ -92,7 +92,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
   // Render Full Expanded Sidebar View
   const renderExpandedContent = () => (
-    <div className="flex flex-col h-full bg-[#0d131f] border-r border-slate-800/80 text-slate-200">
+    <div className="flex flex-col h-full bg-[slate-950] border-r border-slate-800/80 text-slate-200">
       {/* Brand & App Title Header */}
       <div className="p-4 sm:p-5 flex items-center justify-between border-b border-slate-800/80">
         <div className="flex items-center gap-3">
@@ -327,7 +327,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
   // Render Compact Collapsed Sidebar View (Desktop only)
   const renderCollapsedContent = () => (
-    <div className="flex flex-col h-full bg-[#0d131f] border-r border-slate-800/80 text-slate-200 items-center justify-between py-3 px-2">
+    <div className="flex flex-col h-full bg-[slate-950] border-r border-slate-800/80 text-slate-200 items-center justify-between py-3 px-2">
       {/* Top Logo & Expand Button */}
       <div className="flex flex-col items-center gap-4 w-full">
         <button

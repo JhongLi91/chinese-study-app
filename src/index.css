@@ -1,5 +1,53 @@
 @import "tailwindcss";
 
+@theme {
+  --color-slate-50: var(--theme-slate-50);
+  --color-slate-100: var(--theme-slate-100);
+  --color-slate-200: var(--theme-slate-200);
+  --color-slate-300: var(--theme-slate-300);
+  --color-slate-400: var(--theme-slate-400);
+  --color-slate-500: var(--theme-slate-500);
+  --color-slate-600: var(--theme-slate-600);
+  --color-slate-700: var(--theme-slate-700);
+  --color-slate-800: var(--theme-slate-800);
+  --color-slate-900: var(--theme-slate-900);
+  --color-slate-950: var(--theme-slate-950);
+}
+
+:root {
+  --theme-slate-50: #f8fafc;
+  --theme-slate-100: #f1f5f9;
+  --theme-slate-200: #e2e8f0;
+  --theme-slate-300: #cbd5e1;
+  --theme-slate-400: #94a3b8;
+  --theme-slate-500: #64748b;
+  --theme-slate-600: #475569;
+  --theme-slate-700: #334155;
+  --theme-slate-800: #1e293b;
+  --theme-slate-900: #0f172a;
+  --theme-slate-950: #020617;
+  
+  --bg-body: #0b0f17;
+  --text-body: #f8fafc;
+}
+
+html.light {
+  --theme-slate-950: #f8fafc;
+  --theme-slate-900: #f1f5f9;
+  --theme-slate-800: #e2e8f0;
+  --theme-slate-700: #cbd5e1;
+  --theme-slate-600: #94a3b8;
+  --theme-slate-500: #64748b;
+  --theme-slate-400: #475569;
+  --theme-slate-300: #334155;
+  --theme-slate-200: #1e293b;
+  --theme-slate-100: #0f172a;
+  --theme-slate-50: #020617;
+
+  --bg-body: #ffffff;
+  --text-body: #020617;
+}
+
 @layer base {
   :root {
     --font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
@@ -9,8 +57,8 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #0b0f17;
-    color: #f8fafc;
+    background-color: var(--bg-body);
+    color: var(--text-body);
     min-height: 100vh;
   }
 }
@@ -59,13 +107,12 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111827;
+  background: var(--theme-slate-900);
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: var(--theme-slate-700);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: var(--theme-slate-600);
 }
-

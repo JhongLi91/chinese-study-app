@@ -28,6 +28,8 @@ import {
   Menu,
   ArrowLeft,
   Zap,
+  Moon,
+  Sun,
 } from 'lucide-react';
 import { STORIES } from './data/stories';
 import { isSoundEnabled, setSoundEnabled, playSound } from './utils/audio';
@@ -139,6 +141,30 @@ export function App() {
   const navigate = useNavigate();
 
   const [soundOn, setSoundOn] = useState<boolean>(isSoundEnabled());
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('hanzi_theme');
+      if (stored) return stored === 'dark';
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.add('light');
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      localStorage.setItem('hanzi_theme', next ? 'dark' : 'light');
+      playSound('click');
+      return next;
+    });
+  };
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
@@ -299,7 +325,7 @@ export function App() {
 
   if (isInitializing) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-[#0b0f17] text-slate-100 gap-4">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-transparent text-slate-100 gap-4">
         <div className="w-16 h-16 rounded-3xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20 animate-pulse shadow-lg shadow-sky-500/10">
           <span className="font-serif text-3xl font-bold">字</span>
         </div>
@@ -358,7 +384,7 @@ export function App() {
   const PageIcon = pageMeta.icon;
 
   return (
-    <div className="min-h-screen flex bg-[#0b0f17] text-slate-100 selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen flex bg-transparent text-slate-100 selection:bg-sky-500 selection:text-white">
       {/* Side Navbar (Open / Closeable on desktop & mobile) */}
       <SidebarNav
         activePage={activeTab}
@@ -382,7 +408,7 @@ export function App() {
         }`}
       >
         {/* Main Content Top Navigation Bar */}
-        <header className="sticky top-0 z-30 w-full backdrop-blur-md bg-[#0b0f17]/90 border-b border-slate-800/80 px-4 py-3 sm:px-8">
+        <header className="sticky top-0 z-30 w-full backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80 px-4 py-3 sm:px-8">
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
             {/* Left: Mobile Menu Toggle & Page Title */}
             <div className="flex items-center gap-3">
@@ -473,8 +499,17 @@ export function App() {
               )}
             </div>
 
-            {/* Right: Mastery Stats Chip */}
+            {/* Right: Theme Toggle & Mastery Stats Chip */}
             <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="p-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-400 hover:text-sky-400 hover:border-sky-400/50 transition-colors shadow-sm"
+                title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              >
+                {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </button>
+
               <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono shadow-sm">
                 <span className="text-emerald-400 font-bold flex items-center gap-1" title="Learned characters">
                   <CheckCircle2 className="w-3.5 h-3.5" />

@@ -388,7 +388,7 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
     return (
       <div className="flex flex-col gap-6 animate-fade-in">
         {/* Catalog Banner & Header */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-900 border border-slate-800 p-6 sm:p-8 shadow-xl">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[slate-900] to-slate-900 border border-slate-800 p-6 sm:p-8 shadow-xl">
           <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex flex-col gap-2 max-w-2xl">
@@ -658,7 +658,7 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
   return (
     <div className="flex flex-col gap-6 animate-fade-in pb-16">
       {/* Story Hero Header Card */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-900 border border-slate-800 p-6 sm:p-8 shadow-xl">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[slate-900] to-slate-900 border border-slate-800 p-6 sm:p-8 shadow-xl">
         <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-6">
           <div className="flex flex-col gap-2 max-w-3xl">
@@ -1033,7 +1033,7 @@ export const StoryReaderView: React.FC<StoryReaderViewProps> = ({
       )}
 
       {/* Main Passage Reader Content */}
-      <div className="flex flex-col gap-6 bg-[#0c121e] border border-slate-800/80 p-6 sm:p-10 rounded-3xl shadow-xl">
+      <div className="flex flex-col gap-6 bg-[slate-950] border border-slate-800/80 p-6 sm:p-10 rounded-3xl shadow-xl">
         {story.paragraphs.map((para, pIdx) => {
           const isParagraphActive = activeParagraphIndex === pIdx;
 
